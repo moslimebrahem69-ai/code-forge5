@@ -775,11 +775,11 @@ function FAQ({ t, lang }: { t: typeof T.ar; lang: Lang }) {
 function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   const [sent, setSent] = useState(false);
   const socials = [
-    { n: "Facebook", icon: "fa-facebook", c: "#1877F2" },
-    { n: "GitHub", icon: "fa-github", c: "#fff" },
-    { n: "LinkedIn", icon: "fa-linkedin", c: "#0A66C2" },
-    { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366" },
-    { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true },
+    { n: "Facebook", icon: "fa-facebook", c: "#1877F2", url: "https://www.facebook.com/share/1Fb8A9FZSV/" },
+    { n: "GitHub", icon: "fa-github", c: "#fff", url: "#" },
+    { n: "LinkedIn", icon: "fa-linkedin", c: "#0A66C2", url: "#" },
+    { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366", url: "#" },
+    { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true, url: "mailto:hello@software-engineer.dev" },
   ];
   return (
     <section id="contact" className="py-20">
