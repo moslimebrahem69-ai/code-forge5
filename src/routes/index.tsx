@@ -396,7 +396,7 @@ function Hero({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-white/15 hover:ring-cyan-400/50 glass">
               <i className="fa-solid fa-route" /> {t.ctaRoadmaps}
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-blue-400/40 glass">
+            <a href="https://www.facebook.com/share/1Fb8A9FZSV/" target="_blank" rel="noreferrer" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-blue-400/40 glass">
               <i className="fa-brands fa-facebook text-blue-400" /> {t.ctaFb}
             </a>
             <a href="#courses" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-violet-400/40 glass">
