@@ -396,7 +396,7 @@ function Hero({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-white/15 hover:ring-cyan-400/50 glass">
               <i className="fa-solid fa-route" /> {t.ctaRoadmaps}
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-blue-400/40 glass">
+            <a href="https://www.facebook.com/share/1Fb8A9FZSV/" target="_blank" rel="noreferrer" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-blue-400/40 glass">
               <i className="fa-brands fa-facebook text-blue-400" /> {t.ctaFb}
             </a>
             <a href="#courses" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-violet-400/40 glass">
@@ -775,11 +775,11 @@ function FAQ({ t, lang }: { t: typeof T.ar; lang: Lang }) {
 function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   const [sent, setSent] = useState(false);
   const socials = [
-    { n: "Facebook", icon: "fa-facebook", c: "#1877F2" },
-    { n: "GitHub", icon: "fa-github", c: "#fff" },
-    { n: "LinkedIn", icon: "fa-linkedin", c: "#0A66C2" },
-    { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366" },
-    { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true },
+    { n: "Facebook", icon: "fa-facebook", c: "#1877F2", url: "https://www.facebook.com/share/1Fb8A9FZSV/" },
+    { n: "GitHub", icon: "fa-github", c: "#fff", url: "#" },
+    { n: "LinkedIn", icon: "fa-linkedin", c: "#0A66C2", url: "#" },
+    { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366", url: "#" },
+    { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true, url: "mailto:hello@software-engineer.dev" },
   ];
   return (
     <section id="contact" className="py-20">
@@ -791,7 +791,7 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             <p className="text-white/65 text-sm">{lang === "ar" ? "تواصل مع مجتمع Software Engineer عبر منصاتنا." : "Connect with the Software Engineer community."}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {socials.map(s => (
-                <a key={s.n} href="#" className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
+                <a key={s.n} href={s.url} target={s.url.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
                   <i className={`${s.solid ? "fa-solid" : "fa-brands"} ${s.icon} text-2xl`} style={{ color: s.c }} />
                   <span className="text-xs font-bold text-white">{s.n}</span>
                 </a>
@@ -855,8 +855,8 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         <div>
           <h4 className="font-bold text-white mb-3">{lang === "ar" ? "تابعنا" : "Social"}</h4>
           <div className="flex flex-wrap gap-2">
-            {[{ i: "fa-facebook", c: "#1877F2" },{ i: "fa-github", c: "#fff" },{ i: "fa-linkedin", c: "#0A66C2" },{ i: "fa-whatsapp", c: "#25D366" },{ i: "fa-youtube", c: "#FF0000" }].map((s, idx) => (
-              <a key={idx} href="#" aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
+            {[{ i: "fa-facebook", c: "#1877F2", u: "https://www.facebook.com/share/1Fb8A9FZSV/" },{ i: "fa-github", c: "#fff", u: "#" },{ i: "fa-linkedin", c: "#0A66C2", u: "#" },{ i: "fa-whatsapp", c: "#25D366", u: "#" },{ i: "fa-youtube", c: "#FF0000", u: "#" }].map((s, idx) => (
+              <a key={idx} href={s.u} target={s.u.startsWith("http") ? "_blank" : undefined} rel="noreferrer" aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
                 <i className={`fa-brands ${s.i}`} style={{ color: s.c }} />
               </a>
             ))}
