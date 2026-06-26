@@ -791,7 +791,7 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             <p className="text-white/65 text-sm">{lang === "ar" ? "تواصل مع مجتمع Software Engineer عبر منصاتنا." : "Connect with the Software Engineer community."}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {socials.map(s => (
-                <a key={s.n} href="#" className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
+                <a key={s.n} href={s.url} target={s.url.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
                   <i className={`${s.solid ? "fa-solid" : "fa-brands"} ${s.icon} text-2xl`} style={{ color: s.c }} />
                   <span className="text-xs font-bold text-white">{s.n}</span>
                 </a>
