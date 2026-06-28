@@ -865,9 +865,32 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
           </div>
         </div>
       </div>
+      <div className="mx-auto max-w-7xl px-4 mt-10">
+        <div className="glass-strong rounded-2xl p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-start">
+          <div className="relative shrink-0">
+            <div className="h-20 w-20 rounded-2xl grid place-items-center text-3xl font-extrabold text-[#0b1120] ring-2 ring-cyan-400/40" style={{ background: "linear-gradient(135deg,#00f5ff,#a855f7)" }}>ME</div>
+            <span className="absolute -bottom-1 -end-1 grid place-items-center h-7 w-7 rounded-full bg-[#0b1120] ring-1 ring-cyan-400/50"><i className="fa-solid fa-code text-cyan-300 text-xs" /></span>
+          </div>
+          <div className="flex-1">
+            <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
+              <h3 className="text-lg font-extrabold text-white">{lang === "ar" ? "عن المطوّر — Moslim Ebrahim" : "About the Developer — Moslim Ebrahim"}</h3>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-300 ring-1 ring-cyan-400/30 rounded-full px-2 py-0.5">{lang === "ar" ? "مصمم ومطوّر" : "Designer & Developer"}</span>
+            </div>
+            <p className="mt-2 text-sm text-white/70 max-w-2xl">{lang === "ar" ? "أنا مسلم إبراهيم، أتعلم مجال البرمجة ولديّ خبرة في تصميم المواقع وتطويرها، وأمتلك العديد من المشاريع والتطبيقات." : "I'm Moslim Ebrahim, a self-taught developer with experience in web design and development, and a portfolio of projects and applications."}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <a href="tel:+201017098353" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
+              <i className="fa-solid fa-phone" /> 01017098353
+            </a>
+            <a href="https://wa.me/201017098353" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="grid place-items-center h-11 w-11 rounded-xl glass hover:scale-110 transition">
+              <i className="fa-brands fa-whatsapp text-emerald-300 text-lg" />
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="mx-auto max-w-7xl px-4 mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-white/50">
         <p>© {new Date().getFullYear()} Software Engineer — {t.rights}.</p>
-        <p className="font-mono">{"<built with ❤️ & ☕ />"}</p>
+        <p className="font-mono">{lang === "ar" ? "تصميم وتطوير " : "Designed & developed by "}<a href="tel:+201017098353" className="text-cyan-300 hover:text-white transition">Moslim Ebrahim</a></p>
       </div>
     </footer>
   );
