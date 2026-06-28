@@ -525,10 +525,10 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                   <span><i className="fa-solid fa-clock me-1 text-violet-300" /> {c.dur}</span>
                 </div>
                 <div className="mt-5 flex items-center gap-2">
-                  <button className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
+                  <a href={c.url} target="_blank" rel="noopener noreferrer" className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
                     <i className="fa-solid fa-play" /> {t.watch}
-                  </button>
-                  <button aria-label="Like" className="grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10 hover:ring-rose-400/40 transition">
+                  </a>
+                  <button aria-label="Like" className="grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10 hover:ring-rose-400/40 transition cursor-pointer">
                     <i className="fa-regular fa-heart text-rose-300" />
                   </button>
                 </div>
