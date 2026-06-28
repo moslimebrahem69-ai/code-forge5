@@ -118,21 +118,22 @@ const COURSES = [
 ];
 
 const TOOLS = [
-  { name: "VS Code", icon: "fa-code", color: "#007ACC" },
-  { name: "Git", icon: "fa-git-alt", brand: "fab", color: "#F05032" },
-  { name: "GitHub", icon: "fa-github", brand: "fab", color: "#fff" },
-  { name: "Docker", icon: "fa-docker", brand: "fab", color: "#2496ED" },
-  { name: "Linux", icon: "fa-linux", brand: "fab", color: "#FCC624" },
-  { name: "Postman", icon: "fa-paper-plane", color: "#FF6C37" },
-  { name: "Figma", icon: "fa-figma", brand: "fab", color: "#A259FF" },
-  { name: "Android Studio", icon: "fa-android", brand: "fab", color: "#3DDC84" },
-  { name: "PyCharm", icon: "fa-python", brand: "fab", color: "#21D789" },
-  { name: "IntelliJ", icon: "fa-cube", color: "#FE2857" },
-  { name: "Cursor AI", icon: "fa-i-cursor", color: "#00F5FF" },
-  { name: "Claude", icon: "fa-comment-dots", color: "#D97757" },
-  { name: "ChatGPT", icon: "fa-comments", color: "#10A37F" },
-  { name: "Gemini", icon: "fa-gem", color: "#8B5CF6" },
+  { name: "VS Code", icon: "fa-code", color: "#007ACC", url: "https://code.visualstudio.com/" },
+  { name: "Git", icon: "fa-git-alt", brand: "fab", color: "#F05032", url: "https://git-scm.com/" },
+  { name: "GitHub", icon: "fa-github", brand: "fab", color: "#fff", url: "https://github.com/" },
+  { name: "Docker", icon: "fa-docker", brand: "fab", color: "#2496ED", url: "https://www.docker.com/" },
+  { name: "Linux", icon: "fa-linux", brand: "fab", color: "#FCC624", url: "https://www.linux.org/" },
+  { name: "Postman", icon: "fa-paper-plane", color: "#FF6C37", url: "https://www.postman.com/" },
+  { name: "Figma", icon: "fa-figma", brand: "fab", color: "#A259FF", url: "https://www.figma.com/" },
+  { name: "Android Studio", icon: "fa-android", brand: "fab", color: "#3DDC84", url: "https://developer.android.com/studio" },
+  { name: "PyCharm", icon: "fa-python", brand: "fab", color: "#21D789", url: "https://www.jetbrains.com/pycharm/" },
+  { name: "IntelliJ", icon: "fa-cube", color: "#FE2857", url: "https://www.jetbrains.com/idea/" },
+  { name: "Cursor AI", icon: "fa-i-cursor", color: "#00F5FF", url: "https://cursor.com/" },
+  { name: "Claude", icon: "fa-comment-dots", color: "#D97757", url: "https://claude.ai/login" },
+  { name: "ChatGPT", icon: "fa-comments", color: "#10A37F", url: "https://chatgpt.com/" },
+  { name: "Gemini", icon: "fa-gem", color: "#8B5CF6", url: "https://gemini.google.com/app" },
 ];
+
 
 const BLOG = [
   { title: { ar: "10 نصائح لتحسين كودك", en: "10 Tips to Improve Your Code" }, cat: "Tips", icon: "fa-lightbulb" },
@@ -578,7 +579,7 @@ function ToolsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               </div>
               <div className="min-w-0">
                 <h3 className="font-bold text-white text-sm truncate">{tool.name}</h3>
-                <a href="#" className="text-[11px] text-white/55 hover:text-cyan-300 transition">{lang === "ar" ? "زيارة الأداة" : "Visit tool"} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" /></a>
+                <a href={tool.url} target="_blank" rel="noopener noreferrer" className="text-[11px] text-white/55 hover:text-cyan-300 transition">{lang === "ar" ? "زيارة الأداة" : "Visit tool"} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" /></a>
               </div>
             </article>
           ))}
