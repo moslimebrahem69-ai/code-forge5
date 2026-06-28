@@ -108,12 +108,13 @@ const LANGUAGES = [
 ];
 
 const COURSES = [
-  { title: { ar: "أساسيات الويب الحديث", en: "Modern Web Fundamentals" }, cat: "Frontend", level: "Beginner", dur: "12h", grad: "from-cyan-500/30 to-blue-600/30", icon: "fa-globe" },
-  { title: { ar: "React من الصفر للاحتراف", en: "React from Zero to Hero" }, cat: "Frontend", level: "Intermediate", dur: "18h", grad: "from-cyan-400/30 to-violet-600/30", icon: "fa-react", brand: "fab" },
-  { title: { ar: "Node.js و REST APIs", en: "Node.js & REST APIs" }, cat: "Backend", level: "Intermediate", dur: "14h", grad: "from-emerald-400/30 to-teal-600/30", icon: "fa-node-js", brand: "fab" },
-  { title: { ar: "Python للذكاء الاصطناعي", en: "Python for AI" }, cat: "AI", level: "Advanced", dur: "22h", grad: "from-yellow-400/30 to-blue-500/30", icon: "fa-brain" },
-  { title: { ar: "هياكل البيانات والخوارزميات", en: "Data Structures & Algorithms" }, cat: "CS", level: "Intermediate", dur: "20h", grad: "from-violet-400/30 to-fuchsia-600/30", icon: "fa-diagram-project" },
-  { title: { ar: "أمن المعلومات للمبتدئين", en: "Cybersecurity Basics" }, cat: "Security", level: "Beginner", dur: "10h", grad: "from-red-400/30 to-orange-500/30", icon: "fa-shield-halved" },
+  { title: { ar: "أساسيات الويب الحديث", en: "Modern Web Fundamentals" }, cat: "Frontend", level: "Beginner", dur: "12h", grad: "from-cyan-500/30 to-blue-600/30", icon: "fa-globe", url: "https://youtube.com/playlist?list=PL7VOgFQ42C7e-lWJiV4QeqRg3GqCOgoab" },
+  { title: { ar: "React من الصفر للاحتراف", en: "React from Zero to Hero" }, cat: "Frontend", level: "Intermediate", dur: "18h", grad: "from-cyan-400/30 to-violet-600/30", icon: "fa-react", brand: "fab", url: "https://youtube.com/playlist?list=PL8q8h6vqfkSVeuw14BwrtJRIg3tAwq0ds" },
+  { title: { ar: "Node.js و REST APIs", en: "Node.js & REST APIs" }, cat: "Backend", level: "Intermediate", dur: "14h", grad: "from-emerald-400/30 to-teal-600/30", icon: "fa-node-js", brand: "fab", url: "https://youtu.be/pLl1aQv07D0" },
+  { title: { ar: "Next.js المتقدم", en: "Advanced Next.js" }, cat: "Frontend", level: "Advanced", dur: "16h", grad: "from-slate-400/30 to-zinc-700/30", icon: "fa-n", url: "https://youtube.com/playlist?list=PLQtNtS-WfRa8OF9juY3k6WUWayMfDKHK2" },
+  { title: { ar: "Python للذكاء الاصطناعي", en: "Python for AI" }, cat: "AI", level: "Advanced", dur: "22h", grad: "from-yellow-400/30 to-blue-500/30", icon: "fa-brain", url: "https://youtube.com/playlist?list=PLXlHqMRg9lAbzySbK_1P6ZNAqI0ckBzqO" },
+  { title: { ar: "هياكل البيانات والخوارزميات", en: "Data Structures & Algorithms" }, cat: "CS", level: "Intermediate", dur: "20h", grad: "from-violet-400/30 to-fuchsia-600/30", icon: "fa-diagram-project", url: "https://youtube.com/playlist?list=PLL2zWZTDFZzjxarUL23ydiOgibhRipGYC" },
+  { title: { ar: "الأمن السيبراني", en: "Cybersecurity" }, cat: "Security", level: "Beginner", dur: "10h", grad: "from-red-400/30 to-orange-500/30", icon: "fa-shield-halved", url: "https://youtube.com/playlist?list=PLMuAdKgHarVrcZCqzJFdNlTiKz66U19Xk" },
 ];
 
 const TOOLS = [
@@ -524,10 +525,10 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                   <span><i className="fa-solid fa-clock me-1 text-violet-300" /> {c.dur}</span>
                 </div>
                 <div className="mt-5 flex items-center gap-2">
-                  <button className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
+                  <a href={c.url} target="_blank" rel="noopener noreferrer" className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
                     <i className="fa-solid fa-play" /> {t.watch}
-                  </button>
-                  <button aria-label="Like" className="grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10 hover:ring-rose-400/40 transition">
+                  </a>
+                  <button aria-label="Like" className="grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10 hover:ring-rose-400/40 transition cursor-pointer">
                     <i className="fa-regular fa-heart text-rose-300" />
                   </button>
                 </div>
@@ -776,9 +777,10 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   const [sent, setSent] = useState(false);
   const socials = [
     { n: "Facebook", icon: "fa-facebook", c: "#1877F2", url: "https://www.facebook.com/share/1Fb8A9FZSV/" },
+    { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366", url: "https://wa.me/201017098353" },
+    { n: "Phone", icon: "fa-phone", c: "#00F5FF", solid: true, url: "tel:+201017098353" },
     { n: "GitHub", icon: "fa-github", c: "#fff", url: "#" },
     { n: "LinkedIn", icon: "fa-linkedin", c: "#0A66C2", url: "#" },
-    { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366", url: "#" },
     { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true, url: "mailto:hello@software-engineer.dev" },
   ];
   return (
@@ -863,9 +865,32 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
           </div>
         </div>
       </div>
+      <div className="mx-auto max-w-7xl px-4 mt-10">
+        <div className="glass-strong rounded-2xl p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-start">
+          <div className="relative shrink-0">
+            <div className="h-20 w-20 rounded-2xl grid place-items-center text-3xl font-extrabold text-[#0b1120] ring-2 ring-cyan-400/40" style={{ background: "linear-gradient(135deg,#00f5ff,#a855f7)" }}>ME</div>
+            <span className="absolute -bottom-1 -end-1 grid place-items-center h-7 w-7 rounded-full bg-[#0b1120] ring-1 ring-cyan-400/50"><i className="fa-solid fa-code text-cyan-300 text-xs" /></span>
+          </div>
+          <div className="flex-1">
+            <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
+              <h3 className="text-lg font-extrabold text-white">{lang === "ar" ? "عن المطوّر — Moslim Ebrahim" : "About the Developer — Moslim Ebrahim"}</h3>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-300 ring-1 ring-cyan-400/30 rounded-full px-2 py-0.5">{lang === "ar" ? "مصمم ومطوّر" : "Designer & Developer"}</span>
+            </div>
+            <p className="mt-2 text-sm text-white/70 max-w-2xl">{lang === "ar" ? "أنا مسلم إبراهيم، أتعلم مجال البرمجة ولديّ خبرة في تصميم المواقع وتطويرها، وأمتلك العديد من المشاريع والتطبيقات." : "I'm Moslim Ebrahim, a self-taught developer with experience in web design and development, and a portfolio of projects and applications."}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <a href="tel:+201017098353" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
+              <i className="fa-solid fa-phone" /> 01017098353
+            </a>
+            <a href="https://wa.me/201017098353" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="grid place-items-center h-11 w-11 rounded-xl glass hover:scale-110 transition">
+              <i className="fa-brands fa-whatsapp text-emerald-300 text-lg" />
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="mx-auto max-w-7xl px-4 mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-white/50">
         <p>© {new Date().getFullYear()} Software Engineer — {t.rights}.</p>
-        <p className="font-mono">{"<built with ❤️ & ☕ />"}</p>
+        <p className="font-mono">{lang === "ar" ? "تصميم وتطوير " : "Designed & developed by "}<a href="tel:+201017098353" className="text-cyan-300 hover:text-white transition">Moslim Ebrahim</a></p>
       </div>
     </footer>
   );
