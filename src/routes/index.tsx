@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, useMemo } from "react";
+import webFundamentalsBg from "@/assets/web-fundamentals-bg.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -108,7 +109,7 @@ const LANGUAGES = [
 ];
 
 const COURSES = [
-  { title: { ar: "أساسيات الويب الحديث", en: "Modern Web Fundamentals" }, cat: "Frontend", level: "Beginner", dur: "12h", grad: "from-cyan-500/30 to-blue-600/30", icon: "fa-globe", url: "https://youtube.com/playlist?list=PL7VOgFQ42C7e-lWJiV4QeqRg3GqCOgoab" },
+  { title: { ar: "أساسيات الويب الحديث", en: "Modern Web Fundamentals" }, cat: "Frontend", level: "Beginner", dur: "12h", grad: "from-cyan-500/30 to-blue-600/30", icon: "fa-globe", bg: webFundamentalsBg.url, url: "https://youtube.com/playlist?list=PL7VOgFQ42C7e-lWJiV4QeqRg3GqCOgoab" },
   { title: { ar: "React من الصفر للاحتراف", en: "React from Zero to Hero" }, cat: "Frontend", level: "Intermediate", dur: "18h", grad: "from-cyan-400/30 to-violet-600/30", icon: "fa-react", brand: "fab", url: "https://youtube.com/playlist?list=PL8q8h6vqfkSVeuw14BwrtJRIg3tAwq0ds" },
   { title: { ar: "Node.js و REST APIs", en: "Node.js & REST APIs" }, cat: "Backend", level: "Intermediate", dur: "14h", grad: "from-emerald-400/30 to-teal-600/30", icon: "fa-node-js", brand: "fab", url: "https://youtu.be/pLl1aQv07D0" },
   { title: { ar: "Next.js المتقدم", en: "Advanced Next.js" }, cat: "Frontend", level: "Advanced", dur: "16h", grad: "from-slate-400/30 to-zinc-700/30", icon: "fa-n", url: "https://youtube.com/playlist?list=PLQtNtS-WfRa8OF9juY3k6WUWayMfDKHK2" },
@@ -511,10 +512,14 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {COURSES.map((c, i) => (
             <article key={i} className="card-hover glass rounded-2xl overflow-hidden group">
-              <div className={`relative h-40 bg-gradient-to-br ${c.grad} grid place-items-center`}>
-                <i className={`${c.brand === "fab" ? "fa-brands" : "fa-solid"} ${c.icon} text-6xl text-white/85 drop-shadow-[0_4px_20px_rgba(0,245,255,0.4)]`} />
-                <span className="absolute top-3 left-3 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase bg-black/40 backdrop-blur-md text-cyan-200 ring-1 ring-cyan-400/30">{c.cat}</span>
-                <button onClick={() => setLiked(s => ({ ...s, [i]: !s[i] }))} aria-label="Bookmark" className="absolute top-3 right-3 grid place-items-center h-9 w-9 rounded-xl bg-black/40 backdrop-blur-md ring-1 ring-white/10 hover:scale-110 transition">
+              <div className={`relative h-40 bg-gradient-to-br ${c.grad} grid place-items-center overflow-hidden`}>
+                {c.bg ? (
+                  <img src={c.bg} alt={c.title[lang]} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+                ) : (
+                  <i className={`${c.brand === "fab" ? "fa-brands" : "fa-solid"} ${c.icon} text-6xl text-white/85 drop-shadow-[0_4px_20px_rgba(0,245,255,0.4)]`} />
+                )}
+                <span className="absolute top-3 left-3 z-10 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase bg-black/40 backdrop-blur-md text-cyan-200 ring-1 ring-cyan-400/30">{c.cat}</span>
+                <button onClick={() => setLiked(s => ({ ...s, [i]: !s[i] }))} aria-label="Bookmark" className="absolute top-3 right-3 z-10 grid place-items-center h-9 w-9 rounded-xl bg-black/40 backdrop-blur-md ring-1 ring-white/10 hover:scale-110 transition">
                   <i className={`fa-${liked[i] ? "solid" : "regular"} fa-bookmark ${liked[i] ? "text-cyan-300" : "text-white/80"}`} />
                 </button>
               </div>
