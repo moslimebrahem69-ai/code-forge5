@@ -794,7 +794,7 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             <p className="text-white/65 text-sm">{lang === "ar" ? "تواصل مع مجتمع Software Engineer عبر منصاتنا." : "Connect with the Software Engineer community."}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {socials.map(s => (
-                <a key={s.n} href={s.url} target={s.url.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
+                <a key={s.n} href={s.url} className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
                   <i className={`${s.solid ? "fa-solid" : "fa-brands"} ${s.icon} text-2xl`} style={{ color: s.c }} />
                   <span className="text-xs font-bold text-white">{s.n}</span>
                 </a>
@@ -859,7 +859,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
           <h4 className="font-bold text-white mb-3">{lang === "ar" ? "تابعنا" : "Social"}</h4>
           <div className="flex flex-wrap gap-2">
             {[{ i: "fa-facebook", c: "#1877F2", u: "https://www.facebook.com/share/1Fb8A9FZSV/" },{ i: "fa-github", c: "#fff", u: "#" },{ i: "fa-linkedin", c: "#0A66C2", u: "#" },{ i: "fa-whatsapp", c: "#25D366", u: "#" },{ i: "fa-youtube", c: "#FF0000", u: "#" }].map((s, idx) => (
-              <a key={idx} href={s.u} target={s.u.startsWith("http") ? "_blank" : undefined} rel="noreferrer" aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
+              <a key={idx} href={s.u} aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
                 <i className={`fa-brands ${s.i}`} style={{ color: s.c }} />
               </a>
             ))}
