@@ -398,7 +398,7 @@ function Hero({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-white/15 hover:ring-cyan-400/50 glass">
               <i className="fa-solid fa-route" /> {t.ctaRoadmaps}
             </a>
-            <a href="https://www.facebook.com/share/1Fb8A9FZSV/" target="_blank" rel="noreferrer" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-blue-400/40 glass">
+            <a href="https://www.facebook.com/share/1Fb8A9FZSV/" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-blue-400/40 glass">
               <i className="fa-brands fa-facebook text-blue-400" /> {t.ctaFb}
             </a>
             <a href="#courses" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-violet-400/40 glass">
@@ -449,7 +449,7 @@ function RoadmapsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                   <div className="h-full rounded-full transition-all duration-700 group-hover:brightness-125" style={{ width: `${r.pct}%`, background: "linear-gradient(90deg,#00f5ff,#8b5cf6)" }} />
                 </div>
               </div>
-              <a href={r.url} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition">
+              <a href={r.url} className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition">
                 {lang === "ar" ? "ابدأ المسار" : "Start path"} <i className="fa-solid fa-arrow-left rtl:fa-arrow-left ltr:fa-arrow-right" />
               </a>
             </article>
@@ -526,7 +526,7 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                   <span><i className="fa-solid fa-clock me-1 text-violet-300" /> {c.dur}</span>
                 </div>
                 <div className="mt-5 flex items-center gap-2">
-                  <a href={c.url} target="_blank" rel="noopener noreferrer" className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
+                  <a href={c.url} className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
                     <i className="fa-solid fa-play" /> {t.watch}
                   </a>
                   <button aria-label="Like" className="grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10 hover:ring-rose-400/40 transition cursor-pointer">
@@ -579,7 +579,7 @@ function ToolsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               </div>
               <div className="min-w-0">
                 <h3 className="font-bold text-white text-sm truncate">{tool.name}</h3>
-                <a href={tool.url} target="_blank" rel="noopener noreferrer" className="text-[11px] text-white/55 hover:text-cyan-300 transition">{lang === "ar" ? "زيارة الأداة" : "Visit tool"} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" /></a>
+                <a href={tool.url} className="text-[11px] text-white/55 hover:text-cyan-300 transition">{lang === "ar" ? "زيارة الأداة" : "Visit tool"} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" /></a>
               </div>
             </article>
           ))}
@@ -883,7 +883,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             <a href="tel:+201017098353" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
               <i className="fa-solid fa-phone" /> 01017098353
             </a>
-            <a href="https://wa.me/201017098353" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="grid place-items-center h-11 w-11 rounded-xl glass hover:scale-110 transition">
+            <a href="https://wa.me/201017098353" aria-label="WhatsApp" className="grid place-items-center h-11 w-11 rounded-xl glass hover:scale-110 transition">
               <i className="fa-brands fa-whatsapp text-emerald-300 text-lg" />
             </a>
           </div>
