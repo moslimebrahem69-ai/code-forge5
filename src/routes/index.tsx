@@ -512,10 +512,14 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {COURSES.map((c, i) => (
             <article key={i} className="card-hover glass rounded-2xl overflow-hidden group">
-              <div className={`relative h-40 bg-gradient-to-br ${c.grad} grid place-items-center`}>
-                <i className={`${c.brand === "fab" ? "fa-brands" : "fa-solid"} ${c.icon} text-6xl text-white/85 drop-shadow-[0_4px_20px_rgba(0,245,255,0.4)]`} />
-                <span className="absolute top-3 left-3 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase bg-black/40 backdrop-blur-md text-cyan-200 ring-1 ring-cyan-400/30">{c.cat}</span>
-                <button onClick={() => setLiked(s => ({ ...s, [i]: !s[i] }))} aria-label="Bookmark" className="absolute top-3 right-3 grid place-items-center h-9 w-9 rounded-xl bg-black/40 backdrop-blur-md ring-1 ring-white/10 hover:scale-110 transition">
+              <div className={`relative h-40 bg-gradient-to-br ${c.grad} grid place-items-center overflow-hidden`}>
+                {c.bg ? (
+                  <img src={c.bg} alt={c.title[lang]} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+                ) : (
+                  <i className={`${c.brand === "fab" ? "fa-brands" : "fa-solid"} ${c.icon} text-6xl text-white/85 drop-shadow-[0_4px_20px_rgba(0,245,255,0.4)]`} />
+                )}
+                <span className="absolute top-3 left-3 z-10 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase bg-black/40 backdrop-blur-md text-cyan-200 ring-1 ring-cyan-400/30">{c.cat}</span>
+                <button onClick={() => setLiked(s => ({ ...s, [i]: !s[i] }))} aria-label="Bookmark" className="absolute top-3 right-3 z-10 grid place-items-center h-9 w-9 rounded-xl bg-black/40 backdrop-blur-md ring-1 ring-white/10 hover:scale-110 transition">
                   <i className={`fa-${liked[i] ? "solid" : "regular"} fa-bookmark ${liked[i] ? "text-cyan-300" : "text-white/80"}`} />
                 </button>
               </div>
