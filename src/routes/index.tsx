@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, useMemo } from "react";
+import webFundamentalsBg from "@/assets/web-fundamentals-bg.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
