@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, useMemo } from "react";
 import webFundamentalsBg from "@/assets/web-fundamentals-bg.png.asset.json";
+import reactCourseBg from "@/assets/react-course.png.asset.json";
+import nodejsCourseBg from "@/assets/nodejs-course.png.asset.json";
+import nextjsCourseBg from "@/assets/nextjs-course.png.asset.json";
+import pythonCourseBg from "@/assets/python-course.png.asset.json";
+import dsaCourseBg from "@/assets/dsa-course.png.asset.json";
+import cybersecCourseBg from "@/assets/cybersec-course.png.asset.json";
+import * as THREE from "three";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -110,12 +117,12 @@ const LANGUAGES = [
 
 const COURSES = [
   { title: { ar: "أساسيات الويب الحديث", en: "Modern Web Fundamentals" }, cat: "Frontend", level: "Beginner", dur: "12h", grad: "from-cyan-500/30 to-blue-600/30", icon: "fa-globe", bg: webFundamentalsBg.url, url: "https://youtube.com/playlist?list=PL7VOgFQ42C7e-lWJiV4QeqRg3GqCOgoab" },
-  { title: { ar: "React من الصفر للاحتراف", en: "React from Zero to Hero" }, cat: "Frontend", level: "Intermediate", dur: "18h", grad: "from-cyan-400/30 to-violet-600/30", icon: "fa-react", brand: "fab", url: "https://youtube.com/playlist?list=PL8q8h6vqfkSVeuw14BwrtJRIg3tAwq0ds" },
-  { title: { ar: "Node.js و REST APIs", en: "Node.js & REST APIs" }, cat: "Backend", level: "Intermediate", dur: "14h", grad: "from-emerald-400/30 to-teal-600/30", icon: "fa-node-js", brand: "fab", url: "https://youtu.be/pLl1aQv07D0" },
-  { title: { ar: "Next.js المتقدم", en: "Advanced Next.js" }, cat: "Frontend", level: "Advanced", dur: "16h", grad: "from-slate-400/30 to-zinc-700/30", icon: "fa-n", url: "https://youtube.com/playlist?list=PLQtNtS-WfRa8OF9juY3k6WUWayMfDKHK2" },
-  { title: { ar: "Python للذكاء الاصطناعي", en: "Python for AI" }, cat: "AI", level: "Advanced", dur: "22h", grad: "from-yellow-400/30 to-blue-500/30", icon: "fa-brain", url: "https://youtube.com/playlist?list=PLXlHqMRg9lAbzySbK_1P6ZNAqI0ckBzqO" },
-  { title: { ar: "هياكل البيانات والخوارزميات", en: "Data Structures & Algorithms" }, cat: "CS", level: "Intermediate", dur: "20h", grad: "from-violet-400/30 to-fuchsia-600/30", icon: "fa-diagram-project", url: "https://youtube.com/playlist?list=PLL2zWZTDFZzjxarUL23ydiOgibhRipGYC" },
-  { title: { ar: "الأمن السيبراني", en: "Cybersecurity" }, cat: "Security", level: "Beginner", dur: "10h", grad: "from-red-400/30 to-orange-500/30", icon: "fa-shield-halved", url: "https://youtube.com/playlist?list=PLMuAdKgHarVrcZCqzJFdNlTiKz66U19Xk" },
+  { title: { ar: "React من الصفر للاحتراف", en: "React from Zero to Hero" }, cat: "Frontend", level: "Intermediate", dur: "18h", grad: "from-cyan-400/30 to-violet-600/30", icon: "fa-react", brand: "fab", bg: reactCourseBg.url, url: "https://youtube.com/playlist?list=PL8q8h6vqfkSVeuw14BwrtJRIg3tAwq0ds" },
+  { title: { ar: "Node.js و REST APIs", en: "Node.js & REST APIs" }, cat: "Backend", level: "Intermediate", dur: "14h", grad: "from-emerald-400/30 to-teal-600/30", icon: "fa-node-js", brand: "fab", bg: nodejsCourseBg.url, url: "https://youtu.be/pLl1aQv07D0" },
+  { title: { ar: "Next.js المتقدم", en: "Advanced Next.js" }, cat: "Frontend", level: "Advanced", dur: "16h", grad: "from-slate-400/30 to-zinc-700/30", icon: "fa-n", bg: nextjsCourseBg.url, url: "https://youtube.com/playlist?list=PLQtNtS-WfRa8OF9juY3k6WUWayMfDKHK2" },
+  { title: { ar: "Python للذكاء الاصطناعي", en: "Python for AI" }, cat: "AI", level: "Advanced", dur: "22h", grad: "from-yellow-400/30 to-blue-500/30", icon: "fa-brain", bg: pythonCourseBg.url, url: "https://youtube.com/playlist?list=PLXlHqMRg9lAbzySbK_1P6ZNAqI0ckBzqO" },
+  { title: { ar: "هياكل البيانات والخوارزميات", en: "Data Structures & Algorithms" }, cat: "CS", level: "Intermediate", dur: "20h", grad: "from-violet-400/30 to-fuchsia-600/30", icon: "fa-diagram-project", bg: dsaCourseBg.url, url: "https://youtube.com/playlist?list=PLL2zWZTDFZzjxarUL23ydiOgibhRipGYC" },
+  { title: { ar: "الأمن السيبراني", en: "Cybersecurity" }, cat: "Security", level: "Beginner", dur: "10h", grad: "from-red-400/30 to-orange-500/30", icon: "fa-shield-halved", bg: cybersecCourseBg.url, url: "https://youtube.com/playlist?list=PLMuAdKgHarVrcZCqzJFdNlTiKz66U19Xk" },
 ];
 
 const TOOLS = [
@@ -503,27 +510,162 @@ function Bar({ label, value, color }: { label: string; value: number; color: str
   );
 }
 
+function CoursesThreeBG() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, el.clientWidth / el.clientHeight, 0.1, 1000);
+    camera.position.z = 40;
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(el.clientWidth, el.clientHeight);
+    renderer.setClearColor(0x000000, 0);
+    el.appendChild(renderer.domElement);
+
+    // Particle field
+    const count = 900;
+    const positions = new Float32Array(count * 3);
+    const colors = new Float32Array(count * 3);
+    const c1 = new THREE.Color(0x00f5ff);
+    const c2 = new THREE.Color(0xa855f7);
+    for (let i = 0; i < count; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 120;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 80;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 80;
+      const mix = Math.random();
+      const col = c1.clone().lerp(c2, mix);
+      colors[i * 3] = col.r; colors[i * 3 + 1] = col.g; colors[i * 3 + 2] = col.b;
+    }
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    geo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+    const mat = new THREE.PointsMaterial({ size: 0.35, vertexColors: true, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, depthWrite: false });
+    const points = new THREE.Points(geo, mat);
+    scene.add(points);
+
+    // Floating torus knots
+    const knots: THREE.Mesh[] = [];
+    for (let i = 0; i < 3; i++) {
+      const g = new THREE.TorusKnotGeometry(3 + i, 0.35, 120, 16);
+      const m = new THREE.MeshBasicMaterial({ color: i === 0 ? 0x00f5ff : i === 1 ? 0xa855f7 : 0x00ffa3, wireframe: true, transparent: true, opacity: 0.25 });
+      const k = new THREE.Mesh(g, m);
+      k.position.set((i - 1) * 22, (i % 2 === 0 ? 1 : -1) * 8, -10);
+      scene.add(k);
+      knots.push(k);
+    }
+
+    const mouse = { x: 0, y: 0 };
+    const onMove = (e: MouseEvent) => {
+      const r = el.getBoundingClientRect();
+      mouse.x = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      mouse.y = ((e.clientY - r.top) / r.height - 0.5) * 2;
+    };
+    window.addEventListener("mousemove", onMove);
+
+    let raf = 0;
+    const clock = new THREE.Clock();
+    const animate = () => {
+      const dt = clock.getDelta();
+      const t = clock.getElapsedTime();
+      points.rotation.y += dt * 0.05;
+      points.rotation.x += dt * 0.02;
+      knots.forEach((k, i) => {
+        k.rotation.x = t * (0.3 + i * 0.1);
+        k.rotation.y = t * (0.2 + i * 0.15);
+        k.position.y += Math.sin(t + i) * 0.005;
+      });
+      camera.position.x += (mouse.x * 5 - camera.position.x) * 0.03;
+      camera.position.y += (-mouse.y * 3 - camera.position.y) * 0.03;
+      camera.lookAt(0, 0, 0);
+      renderer.render(scene, camera);
+      raf = requestAnimationFrame(animate);
+    };
+    animate();
+
+    const onResize = () => {
+      if (!el) return;
+      camera.aspect = el.clientWidth / el.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(el.clientWidth, el.clientHeight);
+    };
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("resize", onResize);
+      geo.dispose(); mat.dispose();
+      knots.forEach(k => { k.geometry.dispose(); (k.material as THREE.Material).dispose(); });
+      renderer.dispose();
+      if (renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
+    };
+  }, []);
+  return <div ref={ref} aria-hidden className="absolute inset-0 -z-0 pointer-events-none opacity-70" />;
+}
+
 function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   const [liked, setLiked] = useState<Record<number, boolean>>({});
+  const onCardMove = (e: React.MouseEvent<HTMLElement>) => {
+    const el = e.currentTarget;
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    const y = (e.clientY - r.top) / r.height;
+    const rx = (0.5 - y) * 12;
+    const ry = (x - 0.5) * 14;
+    el.style.setProperty("--rx", `${rx}deg`);
+    el.style.setProperty("--ry", `${ry}deg`);
+    el.style.setProperty("--mx", `${x * 100}%`);
+    el.style.setProperty("--my", `${y * 100}%`);
+  };
+  const onCardLeave = (e: React.MouseEvent<HTMLElement>) => {
+    const el = e.currentTarget;
+    el.style.setProperty("--rx", `0deg`);
+    el.style.setProperty("--ry", `0deg`);
+  };
   return (
-    <section id="courses" className="py-20">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="courses" className="relative py-20 overflow-hidden">
+      <CoursesThreeBG />
+      <div className="relative z-10 mx-auto max-w-7xl px-4">
         <SectionTitle kicker="courses" title={t.coursesTitle} sub={t.coursesSub} />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ perspective: "1200px" }}>
           {COURSES.map((c, i) => (
-            <article key={i} className="card-hover glass rounded-2xl overflow-hidden group">
-              <div className={`relative h-40 bg-gradient-to-br ${c.grad} grid place-items-center overflow-hidden`}>
+            <article
+              key={i}
+              onMouseMove={onCardMove}
+              onMouseLeave={onCardLeave}
+              className="course-card group relative glass rounded-2xl overflow-hidden animate-fade-in"
+              style={{
+                animationDelay: `${i * 80}ms`,
+                transform: "perspective(1200px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))",
+                transformStyle: "preserve-3d",
+                transition: "transform 200ms ease-out, box-shadow 300ms ease",
+              }}
+            >
+              <div
+                className="pointer-events-none absolute inset-0 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ background: "radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(0,245,255,0.18), transparent 45%)" }}
+              />
+              <div className={`relative h-44 bg-gradient-to-br ${c.grad} grid place-items-center overflow-hidden`}>
                 {c.bg ? (
-                  <img src={c.bg} alt={c.title[lang]} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+                  <img
+                    src={c.bg}
+                    alt={c.title[lang]}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
+                  />
                 ) : (
-                  <i className={`${c.brand === "fab" ? "fa-brands" : "fa-solid"} ${c.icon} text-6xl text-white/85 drop-shadow-[0_4px_20px_rgba(0,245,255,0.4)]`} />
+                  <i className={`${c.brand === "fab" ? "fa-brands" : "fa-solid"} ${c.icon} text-6xl text-white/85 drop-shadow-[0_4px_20px_rgba(0,245,255,0.4)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6`} />
                 )}
-                <span className="absolute top-3 left-3 z-10 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase bg-black/40 backdrop-blur-md text-cyan-200 ring-1 ring-cyan-400/30">{c.cat}</span>
-                <button onClick={() => setLiked(s => ({ ...s, [i]: !s[i] }))} aria-label="Bookmark" className="absolute top-3 right-3 z-10 grid place-items-center h-9 w-9 rounded-xl bg-black/40 backdrop-blur-md ring-1 ring-white/10 hover:scale-110 transition">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%)" }} />
+                <span className="absolute top-3 left-3 z-10 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase bg-black/50 backdrop-blur-md text-cyan-200 ring-1 ring-cyan-400/40">{c.cat}</span>
+                <button onClick={() => setLiked(s => ({ ...s, [i]: !s[i] }))} aria-label="Bookmark" className="absolute top-3 right-3 z-10 grid place-items-center h-9 w-9 rounded-xl bg-black/50 backdrop-blur-md ring-1 ring-white/10 hover:scale-110 hover:ring-cyan-400/50 transition">
                   <i className={`fa-${liked[i] ? "solid" : "regular"} fa-bookmark ${liked[i] ? "text-cyan-300" : "text-white/80"}`} />
                 </button>
               </div>
-              <div className="p-5">
+              <div className="relative p-5" style={{ transform: "translateZ(30px)" }}>
                 <h3 className="font-bold text-white text-lg">{c.title[lang]}</h3>
                 <p className="text-white/60 text-sm mt-1">{lang === "ar" ? "كورس عملي بمشاريع حقيقية." : "Hands-on course with real projects."}</p>
                 <div className="flex items-center gap-3 mt-3 text-[11px] text-white/55 font-mono">
@@ -531,10 +673,10 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                   <span><i className="fa-solid fa-clock me-1 text-violet-300" /> {c.dur}</span>
                 </div>
                 <div className="mt-5 flex items-center gap-2">
-                  <a href={c.url} target="_top" rel="noopener" className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
+                  <a href={c.url} target="_top" rel="noopener" className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120] transition-transform hover:scale-[1.03]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
                     <i className="fa-solid fa-play" /> {t.watch}
                   </a>
-                  <button aria-label="Like" className="grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10 hover:ring-rose-400/40 transition cursor-pointer">
+                  <button aria-label="Like" className="grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10 hover:ring-rose-400/40 hover:scale-110 transition cursor-pointer">
                     <i className="fa-regular fa-heart text-rose-300" />
                   </button>
                 </div>
