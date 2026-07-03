@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, useMemo } from "react";
 import webFundamentalsBg from "@/assets/web-fundamentals-bg.png.asset.json";
+import reactCourseBg from "@/assets/react-course.png.asset.json";
+import nodejsCourseBg from "@/assets/nodejs-course.png.asset.json";
+import nextjsCourseBg from "@/assets/nextjs-course.png.asset.json";
+import pythonCourseBg from "@/assets/python-course.png.asset.json";
+import dsaCourseBg from "@/assets/dsa-course.png.asset.json";
+import cybersecCourseBg from "@/assets/cybersec-course.png.asset.json";
+import * as THREE from "three";
 
 export const Route = createFileRoute("/")({
   head: () => ({
