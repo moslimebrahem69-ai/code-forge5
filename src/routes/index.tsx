@@ -888,7 +888,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             <a href="tel:+201017098353" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0b1120]" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
               <i className="fa-solid fa-phone" /> 01017098353
             </a>
-            <a href="https://wa.me/201017098353" aria-label="WhatsApp" className="grid place-items-center h-11 w-11 rounded-xl glass hover:scale-110 transition">
+            <a href="https://wa.me/201017098353" target="_top" rel="noopener" aria-label="WhatsApp" className="grid place-items-center h-11 w-11 rounded-xl glass hover:scale-110 transition">
               <i className="fa-brands fa-whatsapp text-emerald-300 text-lg" />
             </a>
           </div>
