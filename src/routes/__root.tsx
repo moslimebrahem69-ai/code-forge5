@@ -87,8 +87,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Software Engineer — تعلم البرمجة واحترف هندسة البرمجيات" },
       { name: "twitter:description", content: "أكاديمية Software Engineer: تعلّم البرمجة من الصفر للاحتراف عبر مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wlzWZTDoVwWNjXJA4sjY216eQm53/social-images/social-1782452268431-1781377978714.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wlzWZTDoVwWNjXJA4sjY216eQm53/social-images/social-1782452268431-1781377978714.webp" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wlzWZTDoVwWNjXJA4sjY216eQm53/social-images/social-1783074796216-صوره_الميديا.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wlzWZTDoVwWNjXJA4sjY216eQm53/social-images/social-1783074796216-صوره_الميديا.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
