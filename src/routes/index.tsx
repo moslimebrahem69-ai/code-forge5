@@ -864,7 +864,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
           <h4 className="font-bold text-white mb-3">{lang === "ar" ? "تابعنا" : "Social"}</h4>
           <div className="flex flex-wrap gap-2">
             {[{ i: "fa-facebook", c: "#1877F2", u: "https://www.facebook.com/share/1Fb8A9FZSV/" },{ i: "fa-github", c: "#fff", u: "#" },{ i: "fa-linkedin", c: "#0A66C2", u: "#" },{ i: "fa-whatsapp", c: "#25D366", u: "#" },{ i: "fa-youtube", c: "#FF0000", u: "#" }].map((s, idx) => (
-              <a key={idx} href={s.u} aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
+              <a key={idx} href={s.u} target="_top" rel="noopener" aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
                 <i className={`fa-brands ${s.i}`} style={{ color: s.c }} />
               </a>
             ))}
