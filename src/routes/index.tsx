@@ -584,7 +584,7 @@ function ToolsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               </div>
               <div className="min-w-0">
                 <h3 className="font-bold text-white text-sm truncate">{tool.name}</h3>
-                <a href={tool.url} className="text-[11px] text-white/55 hover:text-cyan-300 transition">{lang === "ar" ? "زيارة الأداة" : "Visit tool"} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" /></a>
+                <a href={tool.url} target="_top" rel="noopener" className="text-[11px] text-white/55 hover:text-cyan-300 transition">{lang === "ar" ? "زيارة الأداة" : "Visit tool"} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" /></a>
               </div>
             </article>
           ))}
