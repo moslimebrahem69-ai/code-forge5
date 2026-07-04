@@ -1137,6 +1137,14 @@ function Home() {
       document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     }
   }, [lang]);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+    if ("scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="relative min-h-screen">
       <MatrixBackground />
@@ -1144,7 +1152,6 @@ function Home() {
       <Navbar lang={lang} setLang={setLang} t={t} />
       <main>
         <Hero t={t} lang={lang} />
-        <StatsSection t={t} lang={lang} />
         <RoadmapsSection t={t} lang={lang} />
         <LanguagesSection t={t} lang={lang} />
         <CoursesSection t={t} lang={lang} />
