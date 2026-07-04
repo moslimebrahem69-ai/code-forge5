@@ -402,7 +402,7 @@ function HeroLaptop({ lang }: { lang: Lang }) {
           <span className="h-3 w-3 rounded-full bg-red-400/80" />
           <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
           <span className="h-3 w-3 rounded-full bg-emerald-400/80" />
-          <span className="ms-3 text-[11px] text-white/60 font-mono">~/software-engineer/start.js</span>
+          <span className="ms-3 text-[11px] text-white/60 font-mono">~/moslim/portfolio.js</span>
         </div>
         <div className="rounded-xl bg-[#070b16]/90 ring-1 ring-cyan-400/20 p-4 font-mono text-[12.5px] leading-6 min-h-[230px] overflow-hidden">
           <pre className="whitespace-pre-wrap"><span className="text-cyan-300">{typed}</span><span className="inline-block w-2 h-4 align-[-2px] bg-cyan-300 animate-blink" /></pre>
