@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "software-engineer-academy",
+      "version": "0.1.0",
+      "title": "Software Engineer Academy"
+    },
+    "tools": [
+      {
+        "name": "list_courses",
+        "title": "List courses",
+        "description": "List Software Engineer academy courses, optionally filtered by category (Frontend, Backend, AI, CS, Security) or level (Beginner, Intermediate, Advanced).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "category": {
+              "description": "Filter by category (case-insensitive).",
+              "type": "string"
+            },
+            "level": {
+              "description": "Filter by level (case-insensitive).",
+              "type": "string"
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_roadmaps",
+        "title": "List learning roadmaps",
+        "description": "List all learning roadmaps offered by the Software Engineer academy (Frontend, Backend, AI, and more) with their reference URLs.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "search": {
+              "description": "Optional keyword to match in the roadmap name (English or Arabic).",
+              "type": "string"
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_languages",
+        "title": "List programming languages",
+        "description": "List programming languages covered by the academy along with difficulty (1-5), estimated learn time, jobs score, and popularity.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "max_difficulty": {
+              "description": "Only include languages with difficulty <= this value.",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            }
+          }
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
