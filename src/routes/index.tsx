@@ -128,7 +128,6 @@ const COURSES = [
 const TOOLS = [
   { name: "VS Code", icon: "fa-code", color: "#007ACC", url: "https://code.visualstudio.com/" },
   { name: "Git", icon: "fa-git-alt", brand: "fab", color: "#F05032", url: "https://git-scm.com/" },
-  { name: "GitHub", icon: "fa-github", brand: "fab", color: "#fff", url: "https://github.com/" },
   { name: "Docker", icon: "fa-docker", brand: "fab", color: "#2496ED", url: "https://www.docker.com/" },
   { name: "Linux", icon: "fa-linux", brand: "fab", color: "#FCC624", url: "https://www.linux.org/" },
   { name: "Postman", icon: "fa-paper-plane", color: "#FF6C37", url: "https://www.postman.com/" },
@@ -136,10 +135,7 @@ const TOOLS = [
   { name: "Android Studio", icon: "fa-android", brand: "fab", color: "#3DDC84", url: "https://developer.android.com/studio" },
   { name: "PyCharm", icon: "fa-python", brand: "fab", color: "#21D789", url: "https://www.jetbrains.com/pycharm/" },
   { name: "IntelliJ", icon: "fa-cube", color: "#FE2857", url: "https://www.jetbrains.com/idea/" },
-  { name: "Cursor AI", icon: "fa-i-cursor", color: "#00F5FF", url: "https://cursor.com/" },
-  { name: "Claude", icon: "fa-comment-dots", color: "#D97757", url: "https://claude.ai/login" },
-  { name: "ChatGPT", icon: "fa-comments", color: "#10A37F", url: "https://chatgpt.com/" },
-  { name: "Gemini", icon: "fa-gem", color: "#8B5CF6", url: "https://gemini.google.com/app" },
+  { name: "Cursor", icon: "fa-i-cursor", color: "#00F5FF", url: "https://cursor.com/" },
 ];
 
 
