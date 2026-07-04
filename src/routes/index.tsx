@@ -268,6 +268,32 @@ function FloatingSnippets() {
 }
 
 // ============ Components ============
+function MosLogo({ size = 36, showText = false }: { size?: number; showText?: boolean }) {
+  return (
+    <span className="inline-flex items-center gap-2" aria-label="Moslim Ebrahim">
+      <svg width={size} height={size} viewBox="0 0 48 48" fill="none" role="img">
+        <defs>
+          <linearGradient id="me-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor="#00f5ff" />
+            <stop offset="0.55" stopColor="#8b5cf6" />
+            <stop offset="1" stopColor="#00ffa3" />
+          </linearGradient>
+        </defs>
+        <rect x="2.5" y="2.5" width="43" height="43" rx="12" fill="#0b1120" stroke="url(#me-grad)" strokeWidth="1.5" />
+        <path d="M14 30 L8 24 L14 18" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M34 18 L40 24 L34 30" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M28 14 L20 34" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" />
+      </svg>
+      {showText && (
+        <span className="font-extrabold tracking-tight text-white leading-none">
+          Moslim<span className="text-gradient"> Ebrahim</span>
+        </span>
+      )}
+    </span>
+  );
+}
+
+
 function ScrollProgress() {
   const [w, setW] = useState(0);
   useEffect(() => {
