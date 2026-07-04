@@ -1075,7 +1075,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
           <div className="flex flex-wrap gap-2">
             {[{ i: "fa-facebook", c: "#1877F2", u: "https://www.facebook.com/share/1Fb8A9FZSV/", brand: true },{ i: "fa-whatsapp", c: "#25D366", u: "https://wa.me/201017098353", brand: true },{ i: "fa-envelope", c: "#00F5FF", u: "mailto:hello@moslimebrahim.dev", brand: false },{ i: "fa-phone", c: "#00ffa3", u: "tel:+201017098353", brand: false }].map((s, idx) => (
               <a key={idx} href={s.u} target="_top" rel="noopener" aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
-                <i className={`fa-brands ${s.i}`} style={{ color: s.c }} />
+                <i className={`${s.brand ? "fa-brands" : "fa-solid"} ${s.i}`} style={{ color: s.c }} />
               </a>
             ))}
           </div>
@@ -1084,8 +1084,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       <div className="mx-auto max-w-7xl px-4 mt-10">
         <div className="glass-strong rounded-2xl p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-start">
           <div className="relative shrink-0">
-            <div className="h-20 w-20 rounded-2xl grid place-items-center text-3xl font-extrabold text-[#0b1120] ring-2 ring-cyan-400/40" style={{ background: "linear-gradient(135deg,#00f5ff,#a855f7)" }}>ME</div>
-            <span className="absolute -bottom-1 -end-1 grid place-items-center h-7 w-7 rounded-full bg-[#0b1120] ring-1 ring-cyan-400/50"><i className="fa-solid fa-code text-cyan-300 text-xs" /></span>
+            <div className="h-20 w-20 rounded-2xl grid place-items-center bg-[#0b1120] ring-2 ring-cyan-400/40"><MosLogo size={56} /></div>
           </div>
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
