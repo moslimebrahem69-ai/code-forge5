@@ -332,12 +332,9 @@ function Navbar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => void; 
       <div className="mx-auto max-w-7xl px-4">
         <nav className={`glass-strong rounded-2xl px-4 sm:px-5 py-3 flex items-center gap-3 ${scrolled ? "shadow-[0_10px_40px_-15px_rgba(0,245,255,0.35)]" : ""}`}>
           <a href="#home" className="flex items-center gap-2 shrink-0 group">
-            <span className="relative grid place-items-center h-9 w-9 rounded-xl bg-[#0b1120] ring-1 ring-cyan-400/40 overflow-hidden">
-              <span className="absolute inset-0 animate-gradient" style={{ background: "linear-gradient(135deg,#00f5ff,#8b5cf6,#00ffa3)", opacity: .25 }} />
-              <i className="fa-solid fa-code text-cyan-300" />
-            </span>
-            <span className="font-extrabold tracking-tight">
-              <span className="text-gradient">Software</span> <span className="text-white">Engineer</span>
+            <MosLogo size={38} />
+            <span className="font-extrabold tracking-tight leading-none">
+              <span className="text-white">Moslim</span> <span className="text-gradient">Ebrahim</span>
             </span>
           </a>
           <ul className="hidden lg:flex items-center gap-1 mx-auto">
