@@ -1053,7 +1053,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <span className="grid place-items-center h-9 w-9 rounded-xl bg-[#0b1120] ring-1 ring-cyan-400/40"><i className="fa-solid fa-code text-cyan-300" /></span>
+            <MosLogo size={36} />
             <span className="font-extrabold text-lg"><span className="text-gradient">Software</span> <span className="text-white">Engineer</span></span>
           </div>
           <p className="mt-3 text-white/60 text-sm max-w-md">{lang === "ar" ? "أكاديمية عربية لتعلم البرمجة وهندسة البرمجيات بأسلوب عصري." : "An Arabic-first academy for coding & software engineering."}</p>
