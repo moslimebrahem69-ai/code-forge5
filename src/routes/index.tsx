@@ -375,14 +375,14 @@ function HeroLaptop({ lang }: { lang: Lang }) {
   const [typed, setTyped] = useState("");
   const [done, setDone] = useState(false);
   const code = useMemo(() => [
-    "// build your future",
-    "function start() {",
-    "  const skills = ['HTML','CSS','JS'];",
-    "  skills.push('React','Node','AI');",
-    "  return launchCareer(skills);",
-    "}",
+    "// portfolio.js — Moslim Ebrahim",
+    "const me = {",
+    "  name: 'Moslim Ebrahim',",
+    "  stack: ['React','Node','Next.js'],",
+    "  focus: 'Web & Software',",
+    "};",
     "",
-    "start(); // 🚀",
+    "buildProjects(me); // 🚀",
   ].join("\n"), []);
   useEffect(() => {
     let i = 0;
