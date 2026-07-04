@@ -484,28 +484,43 @@ function SectionTitle({ kicker, title, sub }: { kicker?: string; title: string; 
 
 function RoadmapsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   return (
-    <section id="roadmaps" className="py-20">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="roadmaps" className="py-16 sm:py-20 relative">
+      <div className="absolute inset-x-0 top-0 h-40 -z-0 pointer-events-none" style={{ background: "radial-gradient(60% 100% at 50% 0%, rgba(0,245,255,0.10), transparent 70%)" }} />
+      <div className="mx-auto max-w-7xl px-4 relative">
         <SectionTitle kicker="roadmaps" title={t.roadmapsTitle} sub={t.roadmapsSub} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {ROADMAPS.map((r) => (
-            <article key={r.en} className="card-hover glass rounded-2xl p-5 relative overflow-hidden group">
-              <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full opacity-20 blur-2xl" style={{ background: `linear-gradient(135deg,#00f5ff,#8b5cf6)` }} />
-              <div className={`h-11 w-11 rounded-xl grid place-items-center bg-gradient-to-br ${r.color} text-[#0b1120]`}>
-                <i className={`${r.brand === "fab" ? "fa-brands" : "fa-solid"} ${r.icon} text-lg`} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+          {ROADMAPS.map((r, idx) => (
+            <article
+              key={r.en}
+              className="card-hover glass rounded-2xl p-5 sm:p-6 relative overflow-hidden group animate-fade-in"
+              style={{ animationDelay: `${idx * 40}ms` }}
+            >
+              <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full opacity-25 blur-3xl transition-opacity duration-500 group-hover:opacity-60" style={{ background: `linear-gradient(135deg,#00f5ff,#8b5cf6)` }} />
+              <div className="relative flex items-start justify-between gap-3">
+                <div className={`h-12 w-12 shrink-0 rounded-2xl grid place-items-center bg-gradient-to-br ${r.color} text-[#0b1120] shadow-lg`}>
+                  <i className={`${r.brand === "fab" ? "fa-brands" : "fa-solid"} ${r.icon} text-xl`} />
+                </div>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-300/80 ring-1 ring-cyan-400/20 rounded-full px-2 py-0.5">
+                  {r.pct}%
+                </span>
               </div>
-              <h3 className="mt-4 font-bold text-white text-lg">{lang === "ar" ? r.ar : r.en}</h3>
-              <p className="text-white/55 text-sm mt-1">{lang === "ar" ? "مسار متكامل من الأساسيات للاحتراف." : "Complete path from basics to mastery."}</p>
-              <div className="mt-4">
-                <div className="flex justify-between text-[11px] text-white/55 mb-1.5">
-                  <span>{lang === "ar" ? "شيوع المسار" : "Path demand"}</span><span>{r.pct}%</span>
+              <h3 className="mt-4 font-extrabold text-white text-xl tracking-tight leading-tight">
+                {lang === "ar" ? r.ar : r.en}
+              </h3>
+              <p className="text-white/60 text-[13px] mt-1.5 leading-relaxed">
+                {lang === "ar" ? "خطة تعلّم متكاملة من الأساسيات وحتى المشاريع الحقيقية." : "A full learning plan from fundamentals to real-world projects."}
+              </p>
+              <div className="mt-5">
+                <div className="flex justify-between text-[11px] text-white/55 mb-1.5 font-medium">
+                  <span>{lang === "ar" ? "شيوع المسار في السوق" : "Market demand"}</span>
                 </div>
                 <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-                  <div className="h-full rounded-full transition-all duration-700 group-hover:brightness-125" style={{ width: `${r.pct}%`, background: "linear-gradient(90deg,#00f5ff,#8b5cf6)" }} />
+                  <div className="h-full rounded-full transition-all duration-700 group-hover:brightness-125" style={{ width: `${r.pct}%`, background: "linear-gradient(90deg,#00f5ff,#8b5cf6,#00ffa3)" }} />
                 </div>
               </div>
-              <a href={r.url} target="_top" rel="noopener" className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition">
-                {lang === "ar" ? "ابدأ المسار" : "Start path"} <i className="fa-solid fa-arrow-left rtl:fa-arrow-left ltr:fa-arrow-right" />
+              <a href={r.url} target="_top" rel="noopener" className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition group/link">
+                {lang === "ar" ? "ابدأ المسار" : "Start path"}
+                <i className="fa-solid fa-arrow-left rtl:fa-arrow-left ltr:fa-arrow-right transition-transform group-hover/link:-translate-x-1 ltr:group-hover/link:translate-x-1" />
               </a>
             </article>
           ))}
