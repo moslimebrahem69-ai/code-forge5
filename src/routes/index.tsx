@@ -140,10 +140,38 @@ const TOOLS = [
 
 
 const BLOG = [
-  { title: { ar: "10 نصائح لتحسين كودك", en: "10 Tips to Improve Your Code" }, cat: "Tips", icon: "fa-lightbulb" },
-  { title: { ar: "كيف تستعد لمقابلات العمل", en: "How to Prep for Interviews" }, cat: "Career", icon: "fa-briefcase" },
-  { title: { ar: "خوارزميات الفرز الأساسية", en: "Essential Sorting Algorithms" }, cat: "Algorithms", icon: "fa-diagram-project" },
-  { title: { ar: "أحدث أخبار الذكاء الاصطناعي", en: "Latest AI News" }, cat: "AI", icon: "fa-brain" },
+  {
+    title: { ar: "10 نصائح عملية لتحسين كودك", en: "10 Practical Tips to Improve Your Code" },
+    cat: "Tips", icon: "fa-lightbulb",
+    body: {
+      ar: "الكود الجيد ليس مجرد كود يعمل، بل كود يفهمه أي مطور بعد ستة أشهر. ابدأ باختيار أسماء متغيرات تشرح النية بدل التعليقات: اسم مثل activeUsersCount أفضل من x مع تعليق طويل. قسّم الدوال الطويلة إلى دوال صغيرة تفعل شيئًا واحدًا فقط؛ لو احتجت لكلمة 'و' في وصف الدالة فهي تفعل أكثر من اللازم. تجنّب التكرار عبر استخراج المشترك في دالة أو ملف مساعد. اهتم بمعالجة الأخطاء بدل ابتلاعها في try/catch فارغ. اكتب اختبارات لأي منطق حساس قبل النشر. استخدم Git commits قصيرة ووصفية بدل commit ضخم كل يومين. قِس الأداء قبل التحسين المسبق، فمعظم بطء التطبيقات يأتي من مكان لا تتوقعه. تعلّم اختصارات محررك يوميًا فهي توفّر ساعات أسبوعيًا. وأخيرًا اقرأ كودًا أفضل من كودك: مشاريع مفتوحة المصدر هي أفضل معلّم.",
+      en: "Good code isn't code that works — it's code any developer will understand six months later. Start with variable names that show intent instead of comments: activeUsersCount beats x + a paragraph of docs. Split long functions into small ones that do one thing; if you need 'and' to describe a function, it does too much. Kill duplication early. Handle errors — never swallow them in empty try/catch. Write tests for anything critical before shipping. Keep git commits small and descriptive instead of one massive daily dump. Measure before you optimize; slowness usually hides where you least expect. Learn editor shortcuts daily — they save hours weekly. Finally, read code better than yours: open source is the best mentor.",
+    },
+  },
+  {
+    title: { ar: "كيف تستعد لمقابلات العمل التقنية", en: "How to Prepare for Technical Interviews" },
+    cat: "Career", icon: "fa-briefcase",
+    body: {
+      ar: "المقابلة التقنية عبارة عن ثلاث معارك: الخوارزميات، تصميم النظام، والسلوكيات. للخوارزميات، حل مسألة أو مسألتين يوميًا على LeetCode مع التركيز على الأنماط بدل الحفظ: النافذة المنزلقة، المؤشرين، BFS/DFS، البرمجة الديناميكية، وHash Maps. لتصميم النظام، افهم أساسيات الـScalability والـCaching وقواعد البيانات وRate Limiting، وارسم دائمًا قبل الكلام. للسلوكيات، جهّز 5 قصص من حياتك بصيغة STAR (الموقف، المهمة، الإجراء، النتيجة). لا تُهمل مشروعًا واحدًا تعرفه من الداخل لتشرحه بثقة. تدرّب على شرح تفكيرك بصوت عالٍ حتى وأنت وحيد. راجع أساسيات HTTP، وGit، وSQL. حضّر ثلاث أسئلة ذكية للمُقابِل عن الفريق والتقنيات والتحديات — هذا يُظهر أنك مهتم فعلًا.",
+      en: "A tech interview is three battles: algorithms, system design, and behavioral. For algorithms, solve 1–2 LeetCode problems daily focusing on patterns not memorization: sliding window, two pointers, BFS/DFS, DP, hash maps. For system design, learn the basics of scalability, caching, databases, and rate limiting — always draw before speaking. For behavioral, prep 5 STAR stories (Situation, Task, Action, Result). Own one project so deeply you can explain every choice. Practice thinking out loud even alone. Review HTTP, Git, and SQL. Bring three sharp questions about the team, stack, and challenges — it shows real interest.",
+    },
+  },
+  {
+    title: { ar: "خوارزميات الفرز الأساسية ومتى تستخدم كلًا منها", en: "Essential Sorting Algorithms & When to Use Each" },
+    cat: "Algorithms", icon: "fa-diagram-project",
+    body: {
+      ar: "الفرز هو المدخل الأمثل لفهم تحليل التعقيد. Bubble Sort و Insertion Sort سهلا الفهم بأداء O(n²) — استخدمهما فقط لبيانات صغيرة جدًا أو شبه مرتّبة. Merge Sort يقسم البيانات ويدمجها بأداء O(n log n) مضمون، مع استقرار ممتاز لكنه يحتاج ذاكرة إضافية O(n). Quick Sort في المتوسط أسرع من Merge لكنه حساس لاختيار الـpivot؛ استخدم pivot عشوائي لتجنّب أسوأ حالة O(n²). Heap Sort يعطي O(n log n) دائمًا بدون ذاكرة إضافية وهو ممتاز للأنظمة محدودة الذاكرة. Radix Sort يعمل بلا مقارنات ويصلح للأعداد الصحيحة بأداء O(n·k). المكتبات الحديثة (JS's sort, Python's sorted) تستخدم Timsort — هجين ذكي بين Merge و Insertion يستفيد من الترتيب الجزئي في البيانات الحقيقية.",
+      en: "Sorting is the perfect gateway to complexity analysis. Bubble & Insertion are O(n²) — use only for tiny or nearly-sorted data. Merge Sort splits and merges at guaranteed O(n log n), stable but needs O(n) extra memory. Quick Sort is faster on average but pivot-sensitive; use a random pivot to avoid O(n²) worst case. Heap Sort gives guaranteed O(n log n) with no extra memory — great for memory-limited systems. Radix Sort is comparison-free at O(n·k) for integers. Modern libraries (JS's sort, Python's sorted) use Timsort — a smart Merge/Insertion hybrid that exploits partial ordering in real data.",
+    },
+  },
+  {
+    title: { ar: "الذكاء الاصطناعي عام 2026: ما الذي تغيّر فعلًا", en: "AI in 2026: What Actually Changed" },
+    cat: "AI", icon: "fa-brain",
+    body: {
+      ar: "بعد سنوات من الضجيج، استقر مشهد الذكاء الاصطناعي على ثلاث ثورات حقيقية للمطوّرين. أولًا: الوكلاء (Agents) الذين ينفّذون مهام متعددة الخطوات بدل مجرد الإجابة — تخيّل وكيلًا يفتح تذكرة، يقرأ الكود، ويقترح حلًا. ثانيًا: RAG أصبح المعيار الصناعي لدمج بياناتك الخاصة مع النماذج بدون تدريب من الصفر. ثالثًا: أدوات الكود مثل Cursor و Windsurf غيّرت طريقة الكتابة لدرجة أن السرعة تضاعفت لدى فرق كثيرة. لكن الأهم هو ما لم يتغيّر: النماذج ما زالت تُخطئ في المنطق الدقيق، وتحتاج تحقّقًا بشريًا. النصيحة العملية: استخدم الأدوات في مشاريعك الحقيقية اليوم بدل الاكتفاء بمشاهدة الفيديوهات — الفارق بين مطور 2026 والمطور التقليدي هو مَن يعرف كيف يتعاون مع الآلة.",
+      en: "After years of hype, AI settled into three real revolutions for developers. First: agents that execute multi-step tasks instead of just answering — imagine one that opens a ticket, reads code, proposes a fix. Second: RAG became the industry standard to fuse your own data with models without training from scratch. Third: code tools like Cursor and Windsurf changed how we write so much that many teams doubled their velocity. What didn't change matters most: models still miss subtle logic and need human review. Practical advice: use these tools in real projects today instead of just watching videos — the gap between a 2026 dev and a traditional one is who knows how to collaborate with the machine.",
+    },
+  },
 ];
 
 const FAQ_ITEMS = [
