@@ -128,7 +128,6 @@ const COURSES = [
 const TOOLS = [
   { name: "VS Code", icon: "fa-code", color: "#007ACC", url: "https://code.visualstudio.com/" },
   { name: "Git", icon: "fa-git-alt", brand: "fab", color: "#F05032", url: "https://git-scm.com/" },
-  { name: "GitHub", icon: "fa-github", brand: "fab", color: "#fff", url: "https://github.com/" },
   { name: "Docker", icon: "fa-docker", brand: "fab", color: "#2496ED", url: "https://www.docker.com/" },
   { name: "Linux", icon: "fa-linux", brand: "fab", color: "#FCC624", url: "https://www.linux.org/" },
   { name: "Postman", icon: "fa-paper-plane", color: "#FF6C37", url: "https://www.postman.com/" },
@@ -136,18 +135,43 @@ const TOOLS = [
   { name: "Android Studio", icon: "fa-android", brand: "fab", color: "#3DDC84", url: "https://developer.android.com/studio" },
   { name: "PyCharm", icon: "fa-python", brand: "fab", color: "#21D789", url: "https://www.jetbrains.com/pycharm/" },
   { name: "IntelliJ", icon: "fa-cube", color: "#FE2857", url: "https://www.jetbrains.com/idea/" },
-  { name: "Cursor AI", icon: "fa-i-cursor", color: "#00F5FF", url: "https://cursor.com/" },
-  { name: "Claude", icon: "fa-comment-dots", color: "#D97757", url: "https://claude.ai/login" },
-  { name: "ChatGPT", icon: "fa-comments", color: "#10A37F", url: "https://chatgpt.com/" },
-  { name: "Gemini", icon: "fa-gem", color: "#8B5CF6", url: "https://gemini.google.com/app" },
+  { name: "Cursor", icon: "fa-i-cursor", color: "#00F5FF", url: "https://cursor.com/" },
 ];
 
 
 const BLOG = [
-  { title: { ar: "10 نصائح لتحسين كودك", en: "10 Tips to Improve Your Code" }, cat: "Tips", icon: "fa-lightbulb" },
-  { title: { ar: "كيف تستعد لمقابلات العمل", en: "How to Prep for Interviews" }, cat: "Career", icon: "fa-briefcase" },
-  { title: { ar: "خوارزميات الفرز الأساسية", en: "Essential Sorting Algorithms" }, cat: "Algorithms", icon: "fa-diagram-project" },
-  { title: { ar: "أحدث أخبار الذكاء الاصطناعي", en: "Latest AI News" }, cat: "AI", icon: "fa-brain" },
+  {
+    title: { ar: "10 نصائح عملية لتحسين كودك", en: "10 Practical Tips to Improve Your Code" },
+    cat: "Tips", icon: "fa-lightbulb",
+    body: {
+      ar: "الكود الجيد ليس مجرد كود يعمل، بل كود يفهمه أي مطور بعد ستة أشهر. ابدأ باختيار أسماء متغيرات تشرح النية بدل التعليقات: اسم مثل activeUsersCount أفضل من x مع تعليق طويل. قسّم الدوال الطويلة إلى دوال صغيرة تفعل شيئًا واحدًا فقط؛ لو احتجت لكلمة 'و' في وصف الدالة فهي تفعل أكثر من اللازم. تجنّب التكرار عبر استخراج المشترك في دالة أو ملف مساعد. اهتم بمعالجة الأخطاء بدل ابتلاعها في try/catch فارغ. اكتب اختبارات لأي منطق حساس قبل النشر. استخدم Git commits قصيرة ووصفية بدل commit ضخم كل يومين. قِس الأداء قبل التحسين المسبق، فمعظم بطء التطبيقات يأتي من مكان لا تتوقعه. تعلّم اختصارات محررك يوميًا فهي توفّر ساعات أسبوعيًا. وأخيرًا اقرأ كودًا أفضل من كودك: مشاريع مفتوحة المصدر هي أفضل معلّم.",
+      en: "Good code isn't code that works — it's code any developer will understand six months later. Start with variable names that show intent instead of comments: activeUsersCount beats x + a paragraph of docs. Split long functions into small ones that do one thing; if you need 'and' to describe a function, it does too much. Kill duplication early. Handle errors — never swallow them in empty try/catch. Write tests for anything critical before shipping. Keep git commits small and descriptive instead of one massive daily dump. Measure before you optimize; slowness usually hides where you least expect. Learn editor shortcuts daily — they save hours weekly. Finally, read code better than yours: open source is the best mentor.",
+    },
+  },
+  {
+    title: { ar: "كيف تستعد لمقابلات العمل التقنية", en: "How to Prepare for Technical Interviews" },
+    cat: "Career", icon: "fa-briefcase",
+    body: {
+      ar: "المقابلة التقنية عبارة عن ثلاث معارك: الخوارزميات، تصميم النظام، والسلوكيات. للخوارزميات، حل مسألة أو مسألتين يوميًا على LeetCode مع التركيز على الأنماط بدل الحفظ: النافذة المنزلقة، المؤشرين، BFS/DFS، البرمجة الديناميكية، وHash Maps. لتصميم النظام، افهم أساسيات الـScalability والـCaching وقواعد البيانات وRate Limiting، وارسم دائمًا قبل الكلام. للسلوكيات، جهّز 5 قصص من حياتك بصيغة STAR (الموقف، المهمة، الإجراء، النتيجة). لا تُهمل مشروعًا واحدًا تعرفه من الداخل لتشرحه بثقة. تدرّب على شرح تفكيرك بصوت عالٍ حتى وأنت وحيد. راجع أساسيات HTTP، وGit، وSQL. حضّر ثلاث أسئلة ذكية للمُقابِل عن الفريق والتقنيات والتحديات — هذا يُظهر أنك مهتم فعلًا.",
+      en: "A tech interview is three battles: algorithms, system design, and behavioral. For algorithms, solve 1–2 LeetCode problems daily focusing on patterns not memorization: sliding window, two pointers, BFS/DFS, DP, hash maps. For system design, learn the basics of scalability, caching, databases, and rate limiting — always draw before speaking. For behavioral, prep 5 STAR stories (Situation, Task, Action, Result). Own one project so deeply you can explain every choice. Practice thinking out loud even alone. Review HTTP, Git, and SQL. Bring three sharp questions about the team, stack, and challenges — it shows real interest.",
+    },
+  },
+  {
+    title: { ar: "خوارزميات الفرز الأساسية ومتى تستخدم كلًا منها", en: "Essential Sorting Algorithms & When to Use Each" },
+    cat: "Algorithms", icon: "fa-diagram-project",
+    body: {
+      ar: "الفرز هو المدخل الأمثل لفهم تحليل التعقيد. Bubble Sort و Insertion Sort سهلا الفهم بأداء O(n²) — استخدمهما فقط لبيانات صغيرة جدًا أو شبه مرتّبة. Merge Sort يقسم البيانات ويدمجها بأداء O(n log n) مضمون، مع استقرار ممتاز لكنه يحتاج ذاكرة إضافية O(n). Quick Sort في المتوسط أسرع من Merge لكنه حساس لاختيار الـpivot؛ استخدم pivot عشوائي لتجنّب أسوأ حالة O(n²). Heap Sort يعطي O(n log n) دائمًا بدون ذاكرة إضافية وهو ممتاز للأنظمة محدودة الذاكرة. Radix Sort يعمل بلا مقارنات ويصلح للأعداد الصحيحة بأداء O(n·k). المكتبات الحديثة (JS's sort, Python's sorted) تستخدم Timsort — هجين ذكي بين Merge و Insertion يستفيد من الترتيب الجزئي في البيانات الحقيقية.",
+      en: "Sorting is the perfect gateway to complexity analysis. Bubble & Insertion are O(n²) — use only for tiny or nearly-sorted data. Merge Sort splits and merges at guaranteed O(n log n), stable but needs O(n) extra memory. Quick Sort is faster on average but pivot-sensitive; use a random pivot to avoid O(n²) worst case. Heap Sort gives guaranteed O(n log n) with no extra memory — great for memory-limited systems. Radix Sort is comparison-free at O(n·k) for integers. Modern libraries (JS's sort, Python's sorted) use Timsort — a smart Merge/Insertion hybrid that exploits partial ordering in real data.",
+    },
+  },
+  {
+    title: { ar: "الذكاء الاصطناعي عام 2026: ما الذي تغيّر فعلًا", en: "AI in 2026: What Actually Changed" },
+    cat: "AI", icon: "fa-brain",
+    body: {
+      ar: "بعد سنوات من الضجيج، استقر مشهد الذكاء الاصطناعي على ثلاث ثورات حقيقية للمطوّرين. أولًا: الوكلاء (Agents) الذين ينفّذون مهام متعددة الخطوات بدل مجرد الإجابة — تخيّل وكيلًا يفتح تذكرة، يقرأ الكود، ويقترح حلًا. ثانيًا: RAG أصبح المعيار الصناعي لدمج بياناتك الخاصة مع النماذج بدون تدريب من الصفر. ثالثًا: أدوات الكود مثل Cursor و Windsurf غيّرت طريقة الكتابة لدرجة أن السرعة تضاعفت لدى فرق كثيرة. لكن الأهم هو ما لم يتغيّر: النماذج ما زالت تُخطئ في المنطق الدقيق، وتحتاج تحقّقًا بشريًا. النصيحة العملية: استخدم الأدوات في مشاريعك الحقيقية اليوم بدل الاكتفاء بمشاهدة الفيديوهات — الفارق بين مطور 2026 والمطور التقليدي هو مَن يعرف كيف يتعاون مع الآلة.",
+      en: "After years of hype, AI settled into three real revolutions for developers. First: agents that execute multi-step tasks instead of just answering — imagine one that opens a ticket, reads code, proposes a fix. Second: RAG became the industry standard to fuse your own data with models without training from scratch. Third: code tools like Cursor and Windsurf changed how we write so much that many teams doubled their velocity. What didn't change matters most: models still miss subtle logic and need human review. Practical advice: use these tools in real projects today instead of just watching videos — the gap between a 2026 dev and a traditional one is who knows how to collaborate with the machine.",
+    },
+  },
 ];
 
 const FAQ_ITEMS = [
@@ -244,6 +268,32 @@ function FloatingSnippets() {
 }
 
 // ============ Components ============
+function MosLogo({ size = 36, showText = false }: { size?: number; showText?: boolean }) {
+  return (
+    <span className="inline-flex items-center gap-2" aria-label="Moslim Ebrahim">
+      <svg width={size} height={size} viewBox="0 0 48 48" fill="none" role="img">
+        <defs>
+          <linearGradient id="me-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor="#00f5ff" />
+            <stop offset="0.55" stopColor="#8b5cf6" />
+            <stop offset="1" stopColor="#00ffa3" />
+          </linearGradient>
+        </defs>
+        <rect x="2.5" y="2.5" width="43" height="43" rx="12" fill="#0b1120" stroke="url(#me-grad)" strokeWidth="1.5" />
+        <path d="M14 30 L8 24 L14 18" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M34 18 L40 24 L34 30" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M28 14 L20 34" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" />
+      </svg>
+      {showText && (
+        <span className="font-extrabold tracking-tight text-white leading-none">
+          Moslim<span className="text-gradient"> Ebrahim</span>
+        </span>
+      )}
+    </span>
+  );
+}
+
+
 function ScrollProgress() {
   const [w, setW] = useState(0);
   useEffect(() => {
@@ -282,12 +332,9 @@ function Navbar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => void; 
       <div className="mx-auto max-w-7xl px-4">
         <nav className={`glass-strong rounded-2xl px-4 sm:px-5 py-3 flex items-center gap-3 ${scrolled ? "shadow-[0_10px_40px_-15px_rgba(0,245,255,0.35)]" : ""}`}>
           <a href="#home" className="flex items-center gap-2 shrink-0 group">
-            <span className="relative grid place-items-center h-9 w-9 rounded-xl bg-[#0b1120] ring-1 ring-cyan-400/40 overflow-hidden">
-              <span className="absolute inset-0 animate-gradient" style={{ background: "linear-gradient(135deg,#00f5ff,#8b5cf6,#00ffa3)", opacity: .25 }} />
-              <i className="fa-solid fa-code text-cyan-300" />
-            </span>
-            <span className="font-extrabold tracking-tight">
-              <span className="text-gradient">Software</span> <span className="text-white">Engineer</span>
+            <MosLogo size={38} />
+            <span className="font-extrabold tracking-tight leading-none">
+              <span className="text-white">Moslim</span> <span className="text-gradient">Ebrahim</span>
             </span>
           </a>
           <ul className="hidden lg:flex items-center gap-1 mx-auto">
@@ -328,14 +375,14 @@ function HeroLaptop({ lang }: { lang: Lang }) {
   const [typed, setTyped] = useState("");
   const [done, setDone] = useState(false);
   const code = useMemo(() => [
-    "// build your future",
-    "function start() {",
-    "  const skills = ['HTML','CSS','JS'];",
-    "  skills.push('React','Node','AI');",
-    "  return launchCareer(skills);",
-    "}",
+    "// portfolio.js — Moslim Ebrahim",
+    "const me = {",
+    "  name: 'Moslim Ebrahim',",
+    "  stack: ['React','Node','Next.js'],",
+    "  focus: 'Web & Software',",
+    "};",
     "",
-    "start(); // 🚀",
+    "buildProjects(me); // 🚀",
   ].join("\n"), []);
   useEffect(() => {
     let i = 0;
@@ -355,7 +402,7 @@ function HeroLaptop({ lang }: { lang: Lang }) {
           <span className="h-3 w-3 rounded-full bg-red-400/80" />
           <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
           <span className="h-3 w-3 rounded-full bg-emerald-400/80" />
-          <span className="ms-3 text-[11px] text-white/60 font-mono">~/software-engineer/start.js</span>
+          <span className="ms-3 text-[11px] text-white/60 font-mono">~/moslim/portfolio.js</span>
         </div>
         <div className="rounded-xl bg-[#070b16]/90 ring-1 ring-cyan-400/20 p-4 font-mono text-[12.5px] leading-6 min-h-[230px] overflow-hidden">
           <pre className="whitespace-pre-wrap"><span className="text-cyan-300">{typed}</span><span className="inline-block w-2 h-4 align-[-2px] bg-cyan-300 animate-blink" /></pre>
@@ -379,26 +426,26 @@ function HeroLaptop({ lang }: { lang: Lang }) {
       <div className="absolute top-1/2 -right-8 glass rounded-2xl px-3 py-2 text-xs font-mono text-fuchsia-300 hidden md:flex items-center gap-2 animate-float" style={{ animationDelay: "-4s" }}>
         <i className="fa-solid fa-brain text-fuchsia-300" /> AI
       </div>
-      <div aria-hidden className="text-white/40 text-[10px] mt-2 text-center font-mono">{lang === "ar" ? "بيئة عمل تفاعلية" : "Live coding atmosphere"}</div>
+      <div aria-hidden className="text-white/40 text-[10px] mt-2 text-center font-mono">{lang === "ar" ? "بيئة كتابتي اليومية" : "My daily coding setup"}</div>
     </div>
   );
 }
 
 function Hero({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   return (
-    <section id="home" className="relative pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="home" className="relative pt-24 pb-14 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-28">
       <div className="absolute inset-0 -z-0" style={{ background: "var(--gradient-hero)" }} />
-      <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 items-center gap-12 relative">
-        <div className="space-y-7">
+      <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 items-center gap-10 lg:gap-12 relative">
+        <div className="space-y-5 sm:space-y-7">
           <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold glass ring-1 ring-cyan-400/30 text-cyan-200">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            {lang === "ar" ? "أكاديمية برمجة عربية حديثة" : "Modern Arabic-first coding academy"}
+            {lang === "ar" ? "مطوّر ومصمم مواقع — Moslim Ebrahim" : "Developer & web designer — Moslim Ebrahim"}
           </span>
-          <h1 className="font-extrabold leading-[1.15] text-4xl sm:text-5xl lg:text-6xl tracking-tight">
+          <h1 className="font-extrabold leading-[1.15] text-[2rem] sm:text-5xl lg:text-6xl tracking-tight">
             <span className="text-white">{t.heroTitle1} </span>
             <span className="text-gradient animate-gradient">{t.heroTitle2}</span>
           </h1>
-          <p className="text-lg text-white/70 max-w-xl leading-relaxed">{t.heroSub}</p>
+          <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed">{t.heroSub}</p>
           <div className="flex flex-wrap gap-3">
             <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-[#0b1120] animate-pulse-glow" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
               <i className="fa-solid fa-play" /> {t.ctaStart}
@@ -437,28 +484,43 @@ function SectionTitle({ kicker, title, sub }: { kicker?: string; title: string; 
 
 function RoadmapsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   return (
-    <section id="roadmaps" className="py-20">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="roadmaps" className="py-16 sm:py-20 relative">
+      <div className="absolute inset-x-0 top-0 h-40 -z-0 pointer-events-none" style={{ background: "radial-gradient(60% 100% at 50% 0%, rgba(0,245,255,0.10), transparent 70%)" }} />
+      <div className="mx-auto max-w-7xl px-4 relative">
         <SectionTitle kicker="roadmaps" title={t.roadmapsTitle} sub={t.roadmapsSub} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {ROADMAPS.map((r) => (
-            <article key={r.en} className="card-hover glass rounded-2xl p-5 relative overflow-hidden group">
-              <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full opacity-20 blur-2xl" style={{ background: `linear-gradient(135deg,#00f5ff,#8b5cf6)` }} />
-              <div className={`h-11 w-11 rounded-xl grid place-items-center bg-gradient-to-br ${r.color} text-[#0b1120]`}>
-                <i className={`${r.brand === "fab" ? "fa-brands" : "fa-solid"} ${r.icon} text-lg`} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+          {ROADMAPS.map((r, idx) => (
+            <article
+              key={r.en}
+              className="card-hover glass rounded-2xl p-5 sm:p-6 relative overflow-hidden group animate-fade-in"
+              style={{ animationDelay: `${idx * 40}ms` }}
+            >
+              <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full opacity-25 blur-3xl transition-opacity duration-500 group-hover:opacity-60" style={{ background: `linear-gradient(135deg,#00f5ff,#8b5cf6)` }} />
+              <div className="relative flex items-start justify-between gap-3">
+                <div className={`h-12 w-12 shrink-0 rounded-2xl grid place-items-center bg-gradient-to-br ${r.color} text-[#0b1120] shadow-lg`}>
+                  <i className={`${r.brand === "fab" ? "fa-brands" : "fa-solid"} ${r.icon} text-xl`} />
+                </div>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-300/80 ring-1 ring-cyan-400/20 rounded-full px-2 py-0.5">
+                  {r.pct}%
+                </span>
               </div>
-              <h3 className="mt-4 font-bold text-white text-lg">{lang === "ar" ? r.ar : r.en}</h3>
-              <p className="text-white/55 text-sm mt-1">{lang === "ar" ? "مسار متكامل من الأساسيات للاحتراف." : "Complete path from basics to mastery."}</p>
-              <div className="mt-4">
-                <div className="flex justify-between text-[11px] text-white/55 mb-1.5">
-                  <span>{lang === "ar" ? "شيوع المسار" : "Path demand"}</span><span>{r.pct}%</span>
+              <h3 className="mt-4 font-extrabold text-white text-xl tracking-tight leading-tight">
+                {lang === "ar" ? r.ar : r.en}
+              </h3>
+              <p className="text-white/60 text-[13px] mt-1.5 leading-relaxed">
+                {lang === "ar" ? "خطة تعلّم متكاملة من الأساسيات وحتى المشاريع الحقيقية." : "A full learning plan from fundamentals to real-world projects."}
+              </p>
+              <div className="mt-5">
+                <div className="flex justify-between text-[11px] text-white/55 mb-1.5 font-medium">
+                  <span>{lang === "ar" ? "شيوع المسار في السوق" : "Market demand"}</span>
                 </div>
                 <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-                  <div className="h-full rounded-full transition-all duration-700 group-hover:brightness-125" style={{ width: `${r.pct}%`, background: "linear-gradient(90deg,#00f5ff,#8b5cf6)" }} />
+                  <div className="h-full rounded-full transition-all duration-700 group-hover:brightness-125" style={{ width: `${r.pct}%`, background: "linear-gradient(90deg,#00f5ff,#8b5cf6,#00ffa3)" }} />
                 </div>
               </div>
-              <a href={r.url} target="_top" rel="noopener" className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition">
-                {lang === "ar" ? "ابدأ المسار" : "Start path"} <i className="fa-solid fa-arrow-left rtl:fa-arrow-left ltr:fa-arrow-right" />
+              <a href={r.url} target="_top" rel="noopener" className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition group/link">
+                {lang === "ar" ? "ابدأ المسار" : "Start path"}
+                <i className="fa-solid fa-arrow-left rtl:fa-arrow-left ltr:fa-arrow-right transition-transform group-hover/link:-translate-x-1 ltr:group-hover/link:translate-x-1" />
               </a>
             </article>
           ))}
@@ -690,23 +752,31 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
 }
 
 function BlogSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
+  const [open, setOpen] = useState<number | null>(null);
   return (
-    <section id="blog" className="py-20">
+    <section id="blog" className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4">
         <SectionTitle kicker="blog" title={t.blogTitle} sub={t.blogSub} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {BLOG.map((b, i) => (
-            <article key={i} className="card-hover glass rounded-2xl p-5">
-              <div className="h-10 w-10 rounded-xl grid place-items-center bg-gradient-to-br from-cyan-400/30 to-violet-500/30 ring-1 ring-white/10">
-                <i className={`fa-solid ${b.icon} text-cyan-300`} />
-              </div>
-              <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-widest text-violet-300 font-mono">{b.cat}</span>
-              <h3 className="mt-1 font-bold text-white leading-snug">{b.title[lang]}</h3>
-              <a href="#" className="mt-3 inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition">
-                {lang === "ar" ? "اقرأ المزيد" : "Read more"} <i className="fa-solid fa-arrow-left rtl:fa-arrow-left ltr:fa-arrow-right" />
-              </a>
-            </article>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {BLOG.map((b, i) => {
+            const isOpen = open === i;
+            return (
+              <article key={i} className={`card-hover glass rounded-2xl p-5 flex flex-col ${isOpen ? "sm:col-span-2 lg:col-span-4" : ""}`}>
+                <div className="h-10 w-10 rounded-xl grid place-items-center bg-gradient-to-br from-cyan-400/30 to-violet-500/30 ring-1 ring-white/10">
+                  <i className={`fa-solid ${b.icon} text-cyan-300`} />
+                </div>
+                <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-widest text-violet-300 font-mono">{b.cat}</span>
+                <h3 className="mt-1 font-bold text-white leading-snug text-base">{b.title[lang]}</h3>
+                {isOpen && (
+                  <p className="mt-3 text-sm text-white/75 leading-relaxed whitespace-pre-line">{b.body[lang]}</p>
+                )}
+                <button onClick={() => setOpen(isOpen ? null : i)} className="mt-3 self-start inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition">
+                  {isOpen ? (lang === "ar" ? "إغلاق" : "Close") : (lang === "ar" ? "اقرأ المزيد" : "Read more")}
+                  <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`} />
+                </button>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -927,9 +997,7 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
     { n: "Facebook", icon: "fa-facebook", c: "#1877F2", url: "https://www.facebook.com/share/1Fb8A9FZSV/" },
     { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366", url: "https://wa.me/201017098353" },
     { n: "Phone", icon: "fa-phone", c: "#00F5FF", solid: true, url: "tel:+201017098353" },
-    { n: "GitHub", icon: "fa-github", c: "#fff", url: "#" },
-    { n: "LinkedIn", icon: "fa-linkedin", c: "#0A66C2", url: "#" },
-    { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true, url: "mailto:hello@software-engineer.dev" },
+    { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true, url: "mailto:hello@moslimebrahim.dev" },
   ];
   return (
     <section id="contact" className="py-20">
@@ -985,7 +1053,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <span className="grid place-items-center h-9 w-9 rounded-xl bg-[#0b1120] ring-1 ring-cyan-400/40"><i className="fa-solid fa-code text-cyan-300" /></span>
+            <MosLogo size={36} />
             <span className="font-extrabold text-lg"><span className="text-gradient">Software</span> <span className="text-white">Engineer</span></span>
           </div>
           <p className="mt-3 text-white/60 text-sm max-w-md">{lang === "ar" ? "أكاديمية عربية لتعلم البرمجة وهندسة البرمجيات بأسلوب عصري." : "An Arabic-first academy for coding & software engineering."}</p>
@@ -1005,9 +1073,9 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         <div>
           <h4 className="font-bold text-white mb-3">{lang === "ar" ? "تابعنا" : "Social"}</h4>
           <div className="flex flex-wrap gap-2">
-            {[{ i: "fa-facebook", c: "#1877F2", u: "https://www.facebook.com/share/1Fb8A9FZSV/" },{ i: "fa-github", c: "#fff", u: "#" },{ i: "fa-linkedin", c: "#0A66C2", u: "#" },{ i: "fa-whatsapp", c: "#25D366", u: "#" },{ i: "fa-youtube", c: "#FF0000", u: "#" }].map((s, idx) => (
+            {[{ i: "fa-facebook", c: "#1877F2", u: "https://www.facebook.com/share/1Fb8A9FZSV/", brand: true },{ i: "fa-whatsapp", c: "#25D366", u: "https://wa.me/201017098353", brand: true },{ i: "fa-envelope", c: "#00F5FF", u: "mailto:hello@moslimebrahim.dev", brand: false },{ i: "fa-phone", c: "#00ffa3", u: "tel:+201017098353", brand: false }].map((s, idx) => (
               <a key={idx} href={s.u} target="_top" rel="noopener" aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
-                <i className={`fa-brands ${s.i}`} style={{ color: s.c }} />
+                <i className={`${s.brand ? "fa-brands" : "fa-solid"} ${s.i}`} style={{ color: s.c }} />
               </a>
             ))}
           </div>
@@ -1016,8 +1084,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       <div className="mx-auto max-w-7xl px-4 mt-10">
         <div className="glass-strong rounded-2xl p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-start">
           <div className="relative shrink-0">
-            <div className="h-20 w-20 rounded-2xl grid place-items-center text-3xl font-extrabold text-[#0b1120] ring-2 ring-cyan-400/40" style={{ background: "linear-gradient(135deg,#00f5ff,#a855f7)" }}>ME</div>
-            <span className="absolute -bottom-1 -end-1 grid place-items-center h-7 w-7 rounded-full bg-[#0b1120] ring-1 ring-cyan-400/50"><i className="fa-solid fa-code text-cyan-300 text-xs" /></span>
+            <div className="h-20 w-20 rounded-2xl grid place-items-center bg-[#0b1120] ring-2 ring-cyan-400/40"><MosLogo size={56} /></div>
           </div>
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
@@ -1070,6 +1137,14 @@ function Home() {
       document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     }
   }, [lang]);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+    if ("scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="relative min-h-screen">
       <MatrixBackground />
@@ -1077,7 +1152,6 @@ function Home() {
       <Navbar lang={lang} setLang={setLang} t={t} />
       <main>
         <Hero t={t} lang={lang} />
-        <StatsSection t={t} lang={lang} />
         <RoadmapsSection t={t} lang={lang} />
         <LanguagesSection t={t} lang={lang} />
         <CoursesSection t={t} lang={lang} />
