@@ -997,9 +997,7 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
     { n: "Facebook", icon: "fa-facebook", c: "#1877F2", url: "https://www.facebook.com/share/1Fb8A9FZSV/" },
     { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366", url: "https://wa.me/201017098353" },
     { n: "Phone", icon: "fa-phone", c: "#00F5FF", solid: true, url: "tel:+201017098353" },
-    { n: "GitHub", icon: "fa-github", c: "#fff", url: "#" },
-    { n: "LinkedIn", icon: "fa-linkedin", c: "#0A66C2", url: "#" },
-    { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true, url: "mailto:hello@software-engineer.dev" },
+    { n: "Email", icon: "fa-envelope", c: "#00F5FF", solid: true, url: "mailto:hello@moslimebrahim.dev" },
   ];
   return (
     <section id="contact" className="py-20">
