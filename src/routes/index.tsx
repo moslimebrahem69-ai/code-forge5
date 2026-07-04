@@ -426,7 +426,7 @@ function HeroLaptop({ lang }: { lang: Lang }) {
       <div className="absolute top-1/2 -right-8 glass rounded-2xl px-3 py-2 text-xs font-mono text-fuchsia-300 hidden md:flex items-center gap-2 animate-float" style={{ animationDelay: "-4s" }}>
         <i className="fa-solid fa-brain text-fuchsia-300" /> AI
       </div>
-      <div aria-hidden className="text-white/40 text-[10px] mt-2 text-center font-mono">{lang === "ar" ? "بيئة عمل تفاعلية" : "Live coding atmosphere"}</div>
+      <div aria-hidden className="text-white/40 text-[10px] mt-2 text-center font-mono">{lang === "ar" ? "بيئة كتابتي اليومية" : "My daily coding setup"}</div>
     </div>
   );
 }
