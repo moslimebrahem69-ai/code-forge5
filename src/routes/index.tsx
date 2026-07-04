@@ -433,19 +433,19 @@ function HeroLaptop({ lang }: { lang: Lang }) {
 
 function Hero({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   return (
-    <section id="home" className="relative pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="home" className="relative pt-24 pb-14 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-28">
       <div className="absolute inset-0 -z-0" style={{ background: "var(--gradient-hero)" }} />
-      <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 items-center gap-12 relative">
-        <div className="space-y-7">
+      <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 items-center gap-10 lg:gap-12 relative">
+        <div className="space-y-5 sm:space-y-7">
           <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold glass ring-1 ring-cyan-400/30 text-cyan-200">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            {lang === "ar" ? "أكاديمية برمجة عربية حديثة" : "Modern Arabic-first coding academy"}
+            {lang === "ar" ? "مطوّر ومصمم مواقع — Moslim Ebrahim" : "Developer & web designer — Moslim Ebrahim"}
           </span>
-          <h1 className="font-extrabold leading-[1.15] text-4xl sm:text-5xl lg:text-6xl tracking-tight">
+          <h1 className="font-extrabold leading-[1.15] text-[2rem] sm:text-5xl lg:text-6xl tracking-tight">
             <span className="text-white">{t.heroTitle1} </span>
             <span className="text-gradient animate-gradient">{t.heroTitle2}</span>
           </h1>
-          <p className="text-lg text-white/70 max-w-xl leading-relaxed">{t.heroSub}</p>
+          <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed">{t.heroSub}</p>
           <div className="flex flex-wrap gap-3">
             <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-[#0b1120] animate-pulse-glow" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>
               <i className="fa-solid fa-play" /> {t.ctaStart}
