@@ -752,23 +752,31 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
 }
 
 function BlogSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
+  const [open, setOpen] = useState<number | null>(null);
   return (
-    <section id="blog" className="py-20">
+    <section id="blog" className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4">
         <SectionTitle kicker="blog" title={t.blogTitle} sub={t.blogSub} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {BLOG.map((b, i) => (
-            <article key={i} className="card-hover glass rounded-2xl p-5">
-              <div className="h-10 w-10 rounded-xl grid place-items-center bg-gradient-to-br from-cyan-400/30 to-violet-500/30 ring-1 ring-white/10">
-                <i className={`fa-solid ${b.icon} text-cyan-300`} />
-              </div>
-              <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-widest text-violet-300 font-mono">{b.cat}</span>
-              <h3 className="mt-1 font-bold text-white leading-snug">{b.title[lang]}</h3>
-              <a href="#" className="mt-3 inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition">
-                {lang === "ar" ? "اقرأ المزيد" : "Read more"} <i className="fa-solid fa-arrow-left rtl:fa-arrow-left ltr:fa-arrow-right" />
-              </a>
-            </article>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {BLOG.map((b, i) => {
+            const isOpen = open === i;
+            return (
+              <article key={i} className={`card-hover glass rounded-2xl p-5 flex flex-col ${isOpen ? "sm:col-span-2 lg:col-span-4" : ""}`}>
+                <div className="h-10 w-10 rounded-xl grid place-items-center bg-gradient-to-br from-cyan-400/30 to-violet-500/30 ring-1 ring-white/10">
+                  <i className={`fa-solid ${b.icon} text-cyan-300`} />
+                </div>
+                <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-widest text-violet-300 font-mono">{b.cat}</span>
+                <h3 className="mt-1 font-bold text-white leading-snug text-base">{b.title[lang]}</h3>
+                {isOpen && (
+                  <p className="mt-3 text-sm text-white/75 leading-relaxed whitespace-pre-line">{b.body[lang]}</p>
+                )}
+                <button onClick={() => setOpen(isOpen ? null : i)} className="mt-3 self-start inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-white transition">
+                  {isOpen ? (lang === "ar" ? "إغلاق" : "Close") : (lang === "ar" ? "اقرأ المزيد" : "Read more")}
+                  <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`} />
+                </button>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
