@@ -293,6 +293,44 @@ function MosLogo({ size = 36, showText = false }: { size?: number; showText?: bo
   );
 }
 
+function CodeForgeLogo({ size = 40, showText = true }: { size?: number; showText?: boolean }) {
+  return (
+    <span className="inline-flex items-center gap-2.5" aria-label="Code Forge">
+      <svg width={size} height={size} viewBox="0 0 64 64" fill="none" role="img" className="drop-shadow-[0_0_18px_rgba(0,245,255,0.35)]">
+        <defs>
+          <linearGradient id="cf-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor="#00f5ff" />
+            <stop offset="0.55" stopColor="#8b5cf6" />
+            <stop offset="1" stopColor="#00ffa3" />
+          </linearGradient>
+          <linearGradient id="cf-spark" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#00ffa3" />
+            <stop offset="1" stopColor="#00f5ff" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {/* diamond frame */}
+        <path d="M32 4 L60 32 L32 60 L4 32 Z" fill="#0b1120" stroke="url(#cf-grad)" strokeWidth="2.2" strokeLinejoin="round" />
+        {/* left bracket */}
+        <path d="M22 26 L14 32 L22 38" stroke="url(#cf-grad)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        {/* right bracket */}
+        <path d="M42 26 L50 32 L42 38" stroke="url(#cf-grad)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        {/* anvil base */}
+        <path d="M24 44 L40 44 L38 48 L26 48 Z" fill="url(#cf-grad)" opacity="0.85" />
+        <rect x="30" y="48" width="4" height="4" fill="url(#cf-grad)" opacity="0.85" />
+        {/* hammer head */}
+        <rect x="30" y="14" width="14" height="6" rx="1.5" fill="url(#cf-grad)" transform="rotate(-25 37 17)" />
+        {/* forward slash spark */}
+        <path d="M36 22 L28 36" stroke="url(#cf-spark)" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+      {showText && (
+        <span className="font-extrabold tracking-tight text-white leading-none text-lg sm:text-xl">
+          Code<span className="text-gradient"> Forge</span>
+        </span>
+      )}
+    </span>
+  );
+}
+
 
 function ScrollProgress() {
   const [w, setW] = useState(0);
