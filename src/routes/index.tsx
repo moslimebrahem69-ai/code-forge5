@@ -65,7 +65,7 @@ const T = {
     playgroundTitle: "Live Code Playground", playgroundSub: "Write HTML/CSS/JS and preview instantly.",
     faqTitle: "Frequently Asked Questions",
     contactTitle: "Contact Us", contactSub: "We're here to help anytime.",
-    runBtn: "Run", resetBtn: "Reset", watch: "Watch", level: "Level", duration: "Duration", popularity: "Popularity", jobs: "Jobs", difficulty: "Difficulty", learnTime: "Learn time",
+    runBtn: "Run", resetBtn: "Reset", watch: "Watch", level: "Level", duration: "Duration", popularity: "Popularity", jobs: "Jobs", difficulty: "Difficulty", learnTime: "Learn time", usage: "Used for", flipHint: "Hover to see details",
     newsletter: "Subscribe to newsletter", email: "Your email", subscribe: "Subscribe",
     rights: "All rights reserved",
     backTop: "Top",
