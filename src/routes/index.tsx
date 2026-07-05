@@ -175,7 +175,7 @@ const BLOG = [
 ];
 
 const FAQ_ITEMS = [
-  { q: { ar: "هل الكورسات مجانية؟", en: "Are courses free?" }, a: { ar: "نعم، معظم محتوى Software Engineer مجاني بالكامل.", en: "Yes, most Software Engineer content is fully free." } },
+  { q: { ar: "هل الكورسات مجانية؟", en: "Are courses free?" }, a: { ar: "نعم، معظم محتوى Code Forge مجاني بالكامل.", en: "Yes, most Code Forge content is fully free." } },
   { q: { ar: "من أين أبدأ كمبتدئ؟", en: "Where to start as a beginner?" }, a: { ar: "ابدأ بمسار الواجهات الأمامية (HTML, CSS, JS) ثم اختر تخصصك.", en: "Start with Frontend (HTML, CSS, JS), then pick a specialization." } },
   { q: { ar: "هل تقدمون شهادات؟", en: "Do you provide certificates?" }, a: { ar: "نوفّر شهادات إتمام رمزية لبعض المسارات.", en: "We provide symbolic completion certificates for some tracks." } },
   { q: { ar: "كم وقت أحتاج لتعلم البرمجة؟", en: "How long to learn coding?" }, a: { ar: "من 6 إلى 12 شهرًا للوصول لمستوى احترافي بالعمل المنتظم.", en: "6–12 months of consistent work to reach a professional level." } },
@@ -236,7 +236,7 @@ function MatrixBackground() {
 }
 
 const SNIPPETS = [
-  "const dev = 'Software Engineer';",
+  "const dev = 'Code Forge';",
   "function build() { return 'future'; }",
   "<div class='hero'>👨‍💻</div>",
   "SELECT * FROM developers;",
@@ -940,7 +940,7 @@ function StatsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
 
 function Terminal({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   const [history, setHistory] = useState<{ cmd: string; out: string[] }[]>([
-    { cmd: "", out: [lang === "ar" ? "مرحبًا بك في تيرمينال Software Engineer. اكتب help للبدء." : "Welcome to Software Engineer terminal. Type 'help' to begin."] },
+    { cmd: "", out: [lang === "ar" ? "مرحبًا بك في تيرمينال Code Forge. اكتب help للبدء." : "Welcome to Code Forge terminal. Type 'help' to begin."] },
   ]);
   const [input, setInput] = useState("");
   const endRef = useRef<HTMLDivElement>(null);
@@ -953,8 +953,8 @@ function Terminal({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       case "courses": out = ["▸ Modern Web Fundamentals", "▸ React from Zero to Hero", "▸ Node.js & REST APIs", "▸ Python for AI"]; break;
       case "roadmaps": out = ["▸ Frontend  ▸ Backend  ▸ Full Stack  ▸ AI  ▸ Cybersecurity  ▸ IoT"]; break;
       case "languages": out = ["▸ Python  ▸ JavaScript  ▸ TypeScript  ▸ Java  ▸ C/C++  ▸ Go  ▸ Rust  ▸ Swift  ▸ Kotlin"]; break;
-      case "contact": out = ["facebook.com/SoftwareEngineer", "email: hello@software-engineer.dev"]; break;
-      case "about": out = ["Software Engineer — Arabic-first coding academy.", "Built with passion for the next generation of devs."]; break;
+      case "contact": out = ["facebook.com/CodeForge", "email: hello@codeforge.dev"]; break;
+      case "about": out = ["Code Forge — Arabic-first coding academy.", "Built with passion for the next generation of devs."]; break;
       case "clear": setHistory([]); return;
       case "": out = []; break;
       default: out = [`command not found: ${raw}. type 'help'`];
@@ -1084,7 +1084,7 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="glass-strong rounded-2xl p-6 space-y-4">
             <h3 className="text-xl font-bold text-white">{lang === "ar" ? "تابعنا على المنصات" : "Find us online"}</h3>
-            <p className="text-white/65 text-sm">{lang === "ar" ? "تواصل مع مجتمع Software Engineer عبر منصاتنا." : "Connect with the Software Engineer community."}</p>
+            <p className="text-white/65 text-sm">{lang === "ar" ? "تواصل مع مجتمع Code Forge عبر منصاتنا." : "Connect with the Code Forge community."}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {socials.map(s => (
                 <a key={s.n} href={s.url} target="_top" rel="noopener" className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
@@ -1182,7 +1182,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-4 mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-white/50">
-        <p>© {new Date().getFullYear()} Software Engineer — {t.rights}.</p>
+        <p>© {new Date().getFullYear()} Code Forge — {t.rights}.</p>
         <p className="font-mono">{lang === "ar" ? "تصميم وتطوير " : "Designed & developed by "}<a href="tel:+201017098353" className="text-cyan-300 hover:text-white transition">Moslim Ebrahim</a></p>
       </div>
     </footer>
