@@ -12,10 +12,10 @@ import * as THREE from "three";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Software Engineer — تعلم البرمجة واحترف هندسة البرمجيات" },
-      { name: "description", content: "أكاديمية Software Engineer: مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل بالعربية والإنجليزية." },
-      { property: "og:title", content: "Software Engineer — تعلم البرمجة" },
-      { property: "og:description", content: "أكاديمية برمجة عربية حديثة: مسارات، كورسات، مشاريع، ومجتمع." },
+      { title: "Code Forge — تعلّم البرمجة واحترف هندسة البرمجيات" },
+      { name: "description", content: "Code Forge: مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل بالعربية والإنجليزية." },
+      { property: "og:title", content: "Code Forge — تعلّم البرمجة" },
+      { property: "og:description", content: "Code Forge: مسارات، كورسات، مشاريع، ومجتمع." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
