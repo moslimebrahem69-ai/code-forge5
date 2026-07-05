@@ -43,7 +43,7 @@ const T = {
     playgroundTitle: "محرر تجريبي مباشر", playgroundSub: "اكتب HTML/CSS/JS وشاهد النتيجة فورًا.",
     faqTitle: "الأسئلة الشائعة",
     contactTitle: "تواصل معنا", contactSub: "نحن هنا لمساعدتك في أي وقت.",
-    runBtn: "تشغيل", resetBtn: "إعادة", watch: "شاهد الآن", level: "المستوى", duration: "المدة", popularity: "الشيوع", jobs: "فرص العمل", difficulty: "الصعوبة", learnTime: "وقت التعلم",
+    runBtn: "تشغيل", resetBtn: "إعادة", watch: "شاهد الآن", level: "المستوى", duration: "المدة", popularity: "الشيوع", jobs: "فرص العمل", difficulty: "الصعوبة", learnTime: "وقت التعلم", usage: "الاستخدامات", flipHint: "مرّر للاطلاع على التفاصيل",
     newsletter: "اشترك في النشرة البريدية", email: "بريدك الإلكتروني", subscribe: "اشتراك",
     rights: "جميع الحقوق محفوظة",
     backTop: "للأعلى",
