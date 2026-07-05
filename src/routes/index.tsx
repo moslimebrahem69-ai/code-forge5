@@ -1131,10 +1131,9 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <MosLogo size={36} />
-            <span className="font-extrabold text-lg"><span className="text-gradient">Software</span> <span className="text-white">Engineer</span></span>
+            <CodeForgeLogo size={40} />
           </div>
-          <p className="mt-3 text-white/60 text-sm max-w-md">{lang === "ar" ? "أكاديمية عربية لتعلم البرمجة وهندسة البرمجيات بأسلوب عصري." : "An Arabic-first academy for coding & software engineering."}</p>
+          <p className="mt-3 text-white/60 text-sm max-w-md">{lang === "ar" ? "Code Forge — منصة عربية لتعلّم البرمجة وهندسة البرمجيات بأسلوب عصري." : "Code Forge — an Arabic-first platform for coding & software engineering."}</p>
           <form className="mt-5 flex gap-2 max-w-md">
             <input type="email" placeholder={t.email} className="flex-1 bg-white/[0.04] ring-1 ring-white/10 focus:ring-cyan-400/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none" />
             <button className="rounded-xl px-4 py-2.5 font-bold text-[#0b1120] text-sm" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>{t.subscribe}</button>
