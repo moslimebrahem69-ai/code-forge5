@@ -531,30 +531,73 @@ function RoadmapsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
 }
 
 function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
+  const [flipped, setFlipped] = useState<string | null>(null);
+  const diffLabel = (d: number) =>
+    lang === "ar"
+      ? ["", "سهلة جدًا", "سهلة", "متوسطة", "صعبة", "صعبة جدًا"][d]
+      : ["", "Very Easy", "Easy", "Medium", "Hard", "Very Hard"][d];
   return (
     <section id="languages" className="py-20">
       <div className="mx-auto max-w-7xl px-4">
         <SectionTitle kicker="languages" title={t.langsTitle} sub={t.langsSub} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {LANGUAGES.map((L) => (
-            <article key={L.name} className="card-hover glass rounded-2xl p-5 group">
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0b1120]" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
-                  <i className={`${L.brand} ${L.icon} text-xl`} style={{ color: L.color }} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white">{L.name}</h3>
-                  <p className="text-[11px] text-white/50 font-mono">{L.time}</p>
+        <p className="text-center text-xs text-white/50 -mt-6 mb-6 font-mono">
+          <i className="fa-solid fa-arrows-rotate me-1" /> {t.flipHint}
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {LANGUAGES.map((L) => {
+            const isFlipped = flipped === L.name;
+            return (
+              <div
+                key={L.name}
+                className={`flip-card h-[240px] ${isFlipped ? "is-flipped" : ""}`}
+                onClick={() => setFlipped(isFlipped ? null : L.name)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped(isFlipped ? null : L.name); } }}
+                aria-label={L.name}
+              >
+                <div className="flip-card-inner">
+                  {/* Front */}
+                  <article className="flip-face glass p-5 flex flex-col justify-between" style={{ boxShadow: `inset 0 0 40px -20px ${L.color}` }}>
+                    <div className="flex items-center gap-3">
+                      <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0b1120]" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
+                        <i className={`${L.brand} ${L.icon} text-2xl`} style={{ color: L.color }} />
+                      </div>
+                      <div>
+                        <h3 className="font-extrabold text-white text-lg leading-tight">{L.name}</h3>
+                        <p className="text-[11px] text-white/50 font-mono mt-0.5"><i className="fa-regular fa-clock me-1" />{L.time}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-white/75 leading-relaxed">{L.desc[lang]}</p>
+                    <div className="flex items-center justify-between text-[11px] text-white/50 font-mono">
+                      <span className="inline-flex items-center gap-1"><span className="h-1.5 w-1.5 rounded-full" style={{ background: L.color }} /> {L.name}</span>
+                      <span className="inline-flex items-center gap-1 text-cyan-300"><i className="fa-solid fa-arrows-rotate" /> {lang === "ar" ? "اقلب" : "flip"}</span>
+                    </div>
+                  </article>
+                  {/* Back */}
+                  <article className="flip-face flip-back glass-strong p-5 flex flex-col justify-between" style={{ boxShadow: `inset 0 0 60px -20px ${L.color}, 0 0 40px -20px ${L.color}` }}>
+                    <div className="flex items-center justify-between">
+                      <h4 className="font-extrabold text-white text-base flex items-center gap-2">
+                        <i className={`${L.brand} ${L.icon} text-lg`} style={{ color: L.color }} />
+                        {L.name}
+                      </h4>
+                      <span className="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full ring-1" style={{ color: L.color, borderColor: `${L.color}66` }}>
+                        {diffLabel(L.difficulty)}
+                      </span>
+                    </div>
+                    <dl className="space-y-2 text-[11px]">
+                      <Bar label={t.difficulty} value={L.difficulty * 20} color="#00f5ff" />
+                      <Bar label={t.jobs} value={L.jobs} color="#00ffa3" />
+                    </dl>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-white/45 font-mono mb-1">{t.usage}</p>
+                      <p className="text-xs text-white/80 leading-relaxed">{L.use[lang]}</p>
+                    </div>
+                  </article>
                 </div>
               </div>
-              <p className="text-sm text-white/65 mt-3 min-h-[40px]">{L.desc[lang]}</p>
-              <dl className="mt-4 space-y-2 text-[11px]">
-                <Bar label={t.difficulty} value={L.difficulty * 20} color="#00f5ff" />
-                <Bar label={t.jobs} value={L.jobs} color="#00ffa3" />
-                <Bar label={t.popularity} value={L.pop} color="#8b5cf6" />
-              </dl>
-            </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
