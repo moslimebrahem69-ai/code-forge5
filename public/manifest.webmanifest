@@ -1,0 +1,17 @@
+{
+  "name": "Code Forge — تعلّم البرمجة واحترف هندسة البرمجيات",
+  "short_name": "Code Forge",
+  "description": "Code Forge: مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    { "src": "/codeforge-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/codeforge-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

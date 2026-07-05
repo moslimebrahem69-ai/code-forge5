@@ -12,10 +12,10 @@ import * as THREE from "three";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Software Engineer — تعلم البرمجة واحترف هندسة البرمجيات" },
-      { name: "description", content: "أكاديمية Software Engineer: مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل بالعربية والإنجليزية." },
-      { property: "og:title", content: "Software Engineer — تعلم البرمجة" },
-      { property: "og:description", content: "أكاديمية برمجة عربية حديثة: مسارات، كورسات، مشاريع، ومجتمع." },
+      { title: "Code Forge — تعلّم البرمجة واحترف هندسة البرمجيات" },
+      { name: "description", content: "Code Forge: مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل بالعربية والإنجليزية." },
+      { property: "og:title", content: "Code Forge — تعلّم البرمجة" },
+      { property: "og:description", content: "Code Forge: مسارات، كورسات، مشاريع، ومجتمع." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -43,7 +43,7 @@ const T = {
     playgroundTitle: "محرر تجريبي مباشر", playgroundSub: "اكتب HTML/CSS/JS وشاهد النتيجة فورًا.",
     faqTitle: "الأسئلة الشائعة",
     contactTitle: "تواصل معنا", contactSub: "نحن هنا لمساعدتك في أي وقت.",
-    runBtn: "تشغيل", resetBtn: "إعادة", watch: "شاهد الآن", level: "المستوى", duration: "المدة", popularity: "الشيوع", jobs: "فرص العمل", difficulty: "الصعوبة", learnTime: "وقت التعلم",
+    runBtn: "تشغيل", resetBtn: "إعادة", watch: "شاهد الآن", level: "المستوى", duration: "المدة", popularity: "الشيوع", jobs: "فرص العمل", difficulty: "الصعوبة", learnTime: "وقت التعلم", usage: "الاستخدامات", flipHint: "مرّر للاطلاع على التفاصيل",
     newsletter: "اشترك في النشرة البريدية", email: "بريدك الإلكتروني", subscribe: "اشتراك",
     rights: "جميع الحقوق محفوظة",
     backTop: "للأعلى",
@@ -65,7 +65,7 @@ const T = {
     playgroundTitle: "Live Code Playground", playgroundSub: "Write HTML/CSS/JS and preview instantly.",
     faqTitle: "Frequently Asked Questions",
     contactTitle: "Contact Us", contactSub: "We're here to help anytime.",
-    runBtn: "Run", resetBtn: "Reset", watch: "Watch", level: "Level", duration: "Duration", popularity: "Popularity", jobs: "Jobs", difficulty: "Difficulty", learnTime: "Learn time",
+    runBtn: "Run", resetBtn: "Reset", watch: "Watch", level: "Level", duration: "Duration", popularity: "Popularity", jobs: "Jobs", difficulty: "Difficulty", learnTime: "Learn time", usage: "Used for", flipHint: "Hover to see details",
     newsletter: "Subscribe to newsletter", email: "Your email", subscribe: "Subscribe",
     rights: "All rights reserved",
     backTop: "Top",
@@ -97,22 +97,22 @@ const ROADMAPS = [
 ];
 
 const LANGUAGES = [
-  { name: "Python", icon: "fa-python", brand: "fab", color: "#3776AB", desc: { ar: "لغة عامة، رائدة في AI وعلم البيانات.", en: "General-purpose, leader in AI & data." }, difficulty: 2, time: "3-6m", jobs: 95, pop: 98 },
-  { name: "JavaScript", icon: "fa-js", brand: "fab", color: "#F7DF1E", desc: { ar: "لغة الويب الأولى للمتصفح والخادم.", en: "The language of the web." }, difficulty: 2, time: "3-6m", jobs: 97, pop: 99 },
-  { name: "TypeScript", icon: "fa-code", brand: "fas", color: "#3178C6", desc: { ar: "JavaScript بأنواع قوية.", en: "JavaScript with strong typing." }, difficulty: 3, time: "1-2m", jobs: 90, pop: 93 },
-  { name: "Java", icon: "fa-java", brand: "fab", color: "#E76F00", desc: { ar: "لغة المؤسسات وأندرويد.", en: "Enterprise & Android." }, difficulty: 3, time: "6-9m", jobs: 90, pop: 88 },
-  { name: "C", icon: "fa-c", brand: "fas", color: "#A8B9CC", desc: { ar: "أساس البرمجة منخفضة المستوى.", en: "Foundation of low-level programming." }, difficulty: 4, time: "6-9m", jobs: 70, pop: 80 },
-  { name: "C++", icon: "fa-code", brand: "fas", color: "#00599C", desc: { ar: "أداء عالٍ للألعاب والأنظمة.", en: "High-performance systems & games." }, difficulty: 5, time: "9-12m", jobs: 75, pop: 82 },
-  { name: "C#", icon: "fa-hashtag", brand: "fas", color: "#9B4F96", desc: { ar: "ألعاب Unity وتطبيقات .NET.", en: "Unity games & .NET apps." }, difficulty: 3, time: "4-6m", jobs: 78, pop: 80 },
-  { name: "PHP", icon: "fa-php", brand: "fab", color: "#777BB4", desc: { ar: "خادم الويب الكلاسيكي.", en: "Classic server-side web." }, difficulty: 2, time: "3-5m", jobs: 70, pop: 70 },
-  { name: "Go", icon: "fa-golang", brand: "fab", color: "#00ADD8", desc: { ar: "بساطة وسرعة للخوادم.", en: "Simple & fast servers." }, difficulty: 3, time: "3-5m", jobs: 80, pop: 78 },
-  { name: "Rust", icon: "fa-rust", brand: "fab", color: "#DEA584", desc: { ar: "أمان الذاكرة والأداء.", en: "Memory safety & speed." }, difficulty: 5, time: "9-12m", jobs: 72, pop: 84 },
-  { name: "Swift", icon: "fa-swift", brand: "fab", color: "#FA7343", desc: { ar: "تطبيقات iOS الحديثة.", en: "Modern iOS apps." }, difficulty: 3, time: "5-7m", jobs: 75, pop: 76 },
-  { name: "Kotlin", icon: "fa-android", brand: "fab", color: "#7F52FF", desc: { ar: "أندرويد الحديث.", en: "Modern Android." }, difficulty: 3, time: "4-6m", jobs: 78, pop: 78 },
-  { name: "Dart", icon: "fa-mobile-screen", brand: "fas", color: "#0175C2", desc: { ar: "لغة Flutter للموبايل.", en: "Flutter mobile language." }, difficulty: 2, time: "3-5m", jobs: 70, pop: 74 },
-  { name: "SQL", icon: "fa-database", brand: "fas", color: "#00758F", desc: { ar: "لغة قواعد البيانات.", en: "Database language." }, difficulty: 2, time: "1-2m", jobs: 92, pop: 95 },
-  { name: "HTML", icon: "fa-html5", brand: "fab", color: "#E34F26", desc: { ar: "هيكل صفحات الويب.", en: "Web page structure." }, difficulty: 1, time: "2-4w", jobs: 85, pop: 99 },
-  { name: "CSS", icon: "fa-css3-alt", brand: "fab", color: "#1572B6", desc: { ar: "تصميم وتنسيق الويب.", en: "Web styling." }, difficulty: 2, time: "1-3m", jobs: 85, pop: 99 },
+  { name: "Python", icon: "fa-python", brand: "fab", color: "#3776AB", desc: { ar: "لغة عامة، رائدة في AI وعلم البيانات.", en: "General-purpose, leader in AI & data." }, use: { ar: "الذكاء الاصطناعي، تحليل البيانات، أتمتة، خوادم ويب.", en: "AI, data analysis, automation, web backends." }, difficulty: 2, time: "3-6m", jobs: 95, pop: 98 },
+  { name: "JavaScript", icon: "fa-js", brand: "fab", color: "#F7DF1E", desc: { ar: "لغة الويب الأولى للمتصفح والخادم.", en: "The language of the web." }, use: { ar: "مواقع تفاعلية، تطبيقات ويب، Node.js للخوادم.", en: "Interactive sites, web apps, Node.js backends." }, difficulty: 2, time: "3-6m", jobs: 97, pop: 99 },
+  { name: "TypeScript", icon: "fa-code", brand: "fas", color: "#3178C6", desc: { ar: "JavaScript بأنواع قوية.", en: "JavaScript with strong typing." }, use: { ar: "تطبيقات كبيرة، فرق عمل، React/Next.js آمن.", en: "Large apps, teams, safe React/Next.js." }, difficulty: 3, time: "1-2m", jobs: 90, pop: 93 },
+  { name: "Java", icon: "fa-java", brand: "fab", color: "#E76F00", desc: { ar: "لغة المؤسسات وأندرويد.", en: "Enterprise & Android." }, use: { ar: "أنظمة البنوك، خوادم Spring، تطبيقات أندرويد.", en: "Banking systems, Spring servers, Android apps." }, difficulty: 3, time: "6-9m", jobs: 90, pop: 88 },
+  { name: "C", icon: "fa-c", brand: "fas", color: "#A8B9CC", desc: { ar: "أساس البرمجة منخفضة المستوى.", en: "Foundation of low-level programming." }, use: { ar: "أنظمة تشغيل، أنظمة مدمجة، تعريفات hardware.", en: "OS kernels, embedded systems, drivers." }, difficulty: 4, time: "6-9m", jobs: 70, pop: 80 },
+  { name: "C++", icon: "fa-code", brand: "fas", color: "#00599C", desc: { ar: "أداء عالٍ للألعاب والأنظمة.", en: "High-performance systems & games." }, use: { ar: "محركات ألعاب، تداول عالي التردد، تطبيقات ثقيلة.", en: "Game engines, HFT, heavy apps." }, difficulty: 5, time: "9-12m", jobs: 75, pop: 82 },
+  { name: "C#", icon: "fa-hashtag", brand: "fas", color: "#9B4F96", desc: { ar: "ألعاب Unity وتطبيقات .NET.", en: "Unity games & .NET apps." }, use: { ar: "ألعاب Unity، تطبيقات ويندوز، ASP.NET.", en: "Unity games, Windows apps, ASP.NET." }, difficulty: 3, time: "4-6m", jobs: 78, pop: 80 },
+  { name: "PHP", icon: "fa-php", brand: "fab", color: "#777BB4", desc: { ar: "خادم الويب الكلاسيكي.", en: "Classic server-side web." }, use: { ar: "WordPress، Laravel، مواقع e-commerce.", en: "WordPress, Laravel, e-commerce sites." }, difficulty: 2, time: "3-5m", jobs: 70, pop: 70 },
+  { name: "Go", icon: "fa-golang", brand: "fab", color: "#00ADD8", desc: { ar: "بساطة وسرعة للخوادم.", en: "Simple & fast servers." }, use: { ar: "الميكروسيرفس، أدوات DevOps، Docker/K8s.", en: "Microservices, DevOps tools, Docker/K8s." }, difficulty: 3, time: "3-5m", jobs: 80, pop: 78 },
+  { name: "Rust", icon: "fa-rust", brand: "fab", color: "#DEA584", desc: { ar: "أمان الذاكرة والأداء.", en: "Memory safety & speed." }, use: { ar: "أنظمة، محركات متصفح، WebAssembly، Blockchain.", en: "Systems, browser engines, WASM, blockchain." }, difficulty: 5, time: "9-12m", jobs: 72, pop: 84 },
+  { name: "Swift", icon: "fa-swift", brand: "fab", color: "#FA7343", desc: { ar: "تطبيقات iOS الحديثة.", en: "Modern iOS apps." }, use: { ar: "تطبيقات iPhone و iPad و macOS.", en: "iPhone, iPad, macOS apps." }, difficulty: 3, time: "5-7m", jobs: 75, pop: 76 },
+  { name: "Kotlin", icon: "fa-android", brand: "fab", color: "#7F52FF", desc: { ar: "أندرويد الحديث.", en: "Modern Android." }, use: { ar: "تطبيقات أندرويد، Server-side مع Ktor.", en: "Android apps, server-side with Ktor." }, difficulty: 3, time: "4-6m", jobs: 78, pop: 78 },
+  { name: "Dart", icon: "fa-mobile-screen", brand: "fas", color: "#0175C2", desc: { ar: "لغة Flutter للموبايل.", en: "Flutter mobile language." }, use: { ar: "تطبيقات Flutter لكل المنصات.", en: "Cross-platform Flutter apps." }, difficulty: 2, time: "3-5m", jobs: 70, pop: 74 },
+  { name: "SQL", icon: "fa-database", brand: "fas", color: "#00758F", desc: { ar: "لغة قواعد البيانات.", en: "Database language." }, use: { ar: "استعلام البيانات، تحليلات، أي تطبيق يحتاج تخزين.", en: "Querying data, analytics, any storage need." }, difficulty: 2, time: "1-2m", jobs: 92, pop: 95 },
+  { name: "HTML", icon: "fa-html5", brand: "fab", color: "#E34F26", desc: { ar: "هيكل صفحات الويب.", en: "Web page structure." }, use: { ar: "بنية أي صفحة ويب على الإطلاق.", en: "The structure of every web page." }, difficulty: 1, time: "2-4w", jobs: 85, pop: 99 },
+  { name: "CSS", icon: "fa-css3-alt", brand: "fab", color: "#1572B6", desc: { ar: "تصميم وتنسيق الويب.", en: "Web styling." }, use: { ar: "تنسيق، ألوان، تخطيطات responsive، وأنيميشن.", en: "Styling, colors, responsive layouts, animations." }, difficulty: 2, time: "1-3m", jobs: 85, pop: 99 },
 ];
 
 const COURSES = [
@@ -175,7 +175,7 @@ const BLOG = [
 ];
 
 const FAQ_ITEMS = [
-  { q: { ar: "هل الكورسات مجانية؟", en: "Are courses free?" }, a: { ar: "نعم، معظم محتوى Software Engineer مجاني بالكامل.", en: "Yes, most Software Engineer content is fully free." } },
+  { q: { ar: "هل الكورسات مجانية؟", en: "Are courses free?" }, a: { ar: "نعم، معظم محتوى Code Forge مجاني بالكامل.", en: "Yes, most Code Forge content is fully free." } },
   { q: { ar: "من أين أبدأ كمبتدئ؟", en: "Where to start as a beginner?" }, a: { ar: "ابدأ بمسار الواجهات الأمامية (HTML, CSS, JS) ثم اختر تخصصك.", en: "Start with Frontend (HTML, CSS, JS), then pick a specialization." } },
   { q: { ar: "هل تقدمون شهادات؟", en: "Do you provide certificates?" }, a: { ar: "نوفّر شهادات إتمام رمزية لبعض المسارات.", en: "We provide symbolic completion certificates for some tracks." } },
   { q: { ar: "كم وقت أحتاج لتعلم البرمجة؟", en: "How long to learn coding?" }, a: { ar: "من 6 إلى 12 شهرًا للوصول لمستوى احترافي بالعمل المنتظم.", en: "6–12 months of consistent work to reach a professional level." } },
@@ -236,7 +236,7 @@ function MatrixBackground() {
 }
 
 const SNIPPETS = [
-  "const dev = 'Software Engineer';",
+  "const dev = 'Code Forge';",
   "function build() { return 'future'; }",
   "<div class='hero'>👨‍💻</div>",
   "SELECT * FROM developers;",
@@ -293,6 +293,44 @@ function MosLogo({ size = 36, showText = false }: { size?: number; showText?: bo
   );
 }
 
+function CodeForgeLogo({ size = 40, showText = true }: { size?: number; showText?: boolean }) {
+  return (
+    <span className="inline-flex items-center gap-2.5" aria-label="Code Forge">
+      <svg width={size} height={size} viewBox="0 0 64 64" fill="none" role="img" className="drop-shadow-[0_0_18px_rgba(0,245,255,0.35)]">
+        <defs>
+          <linearGradient id="cf-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor="#00f5ff" />
+            <stop offset="0.55" stopColor="#8b5cf6" />
+            <stop offset="1" stopColor="#00ffa3" />
+          </linearGradient>
+          <linearGradient id="cf-spark" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#00ffa3" />
+            <stop offset="1" stopColor="#00f5ff" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {/* diamond frame */}
+        <path d="M32 4 L60 32 L32 60 L4 32 Z" fill="#0b1120" stroke="url(#cf-grad)" strokeWidth="2.2" strokeLinejoin="round" />
+        {/* left bracket */}
+        <path d="M22 26 L14 32 L22 38" stroke="url(#cf-grad)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        {/* right bracket */}
+        <path d="M42 26 L50 32 L42 38" stroke="url(#cf-grad)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        {/* anvil base */}
+        <path d="M24 44 L40 44 L38 48 L26 48 Z" fill="url(#cf-grad)" opacity="0.85" />
+        <rect x="30" y="48" width="4" height="4" fill="url(#cf-grad)" opacity="0.85" />
+        {/* hammer head */}
+        <rect x="30" y="14" width="14" height="6" rx="1.5" fill="url(#cf-grad)" transform="rotate(-25 37 17)" />
+        {/* forward slash spark */}
+        <path d="M36 22 L28 36" stroke="url(#cf-spark)" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+      {showText && (
+        <span className="font-extrabold tracking-tight text-white leading-none text-lg sm:text-xl">
+          Code<span className="text-gradient"> Forge</span>
+        </span>
+      )}
+    </span>
+  );
+}
+
 
 function ScrollProgress() {
   const [w, setW] = useState(0);
@@ -332,10 +370,7 @@ function Navbar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => void; 
       <div className="mx-auto max-w-7xl px-4">
         <nav className={`glass-strong rounded-2xl px-4 sm:px-5 py-3 flex items-center gap-3 ${scrolled ? "shadow-[0_10px_40px_-15px_rgba(0,245,255,0.35)]" : ""}`}>
           <a href="#home" className="flex items-center gap-2 shrink-0 group">
-            <MosLogo size={38} />
-            <span className="font-extrabold tracking-tight leading-none">
-              <span className="text-white">Moslim</span> <span className="text-gradient">Ebrahim</span>
-            </span>
+            <CodeForgeLogo size={38} />
           </a>
           <ul className="hidden lg:flex items-center gap-1 mx-auto">
             {links.map((l) => (
@@ -531,30 +566,73 @@ function RoadmapsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
 }
 
 function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
+  const [flipped, setFlipped] = useState<string | null>(null);
+  const diffLabel = (d: number) =>
+    lang === "ar"
+      ? ["", "سهلة جدًا", "سهلة", "متوسطة", "صعبة", "صعبة جدًا"][d]
+      : ["", "Very Easy", "Easy", "Medium", "Hard", "Very Hard"][d];
   return (
     <section id="languages" className="py-20">
       <div className="mx-auto max-w-7xl px-4">
         <SectionTitle kicker="languages" title={t.langsTitle} sub={t.langsSub} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {LANGUAGES.map((L) => (
-            <article key={L.name} className="card-hover glass rounded-2xl p-5 group">
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0b1120]" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
-                  <i className={`${L.brand} ${L.icon} text-xl`} style={{ color: L.color }} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white">{L.name}</h3>
-                  <p className="text-[11px] text-white/50 font-mono">{L.time}</p>
+        <p className="text-center text-xs text-white/50 -mt-6 mb-6 font-mono">
+          <i className="fa-solid fa-arrows-rotate me-1" /> {t.flipHint}
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {LANGUAGES.map((L) => {
+            const isFlipped = flipped === L.name;
+            return (
+              <div
+                key={L.name}
+                className={`flip-card h-[240px] ${isFlipped ? "is-flipped" : ""}`}
+                onClick={() => setFlipped(isFlipped ? null : L.name)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped(isFlipped ? null : L.name); } }}
+                aria-label={L.name}
+              >
+                <div className="flip-card-inner">
+                  {/* Front */}
+                  <article className="flip-face glass p-5 flex flex-col justify-between" style={{ boxShadow: `inset 0 0 40px -20px ${L.color}` }}>
+                    <div className="flex items-center gap-3">
+                      <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0b1120]" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
+                        <i className={`${L.brand} ${L.icon} text-2xl`} style={{ color: L.color }} />
+                      </div>
+                      <div>
+                        <h3 className="font-extrabold text-white text-lg leading-tight">{L.name}</h3>
+                        <p className="text-[11px] text-white/50 font-mono mt-0.5"><i className="fa-regular fa-clock me-1" />{L.time}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-white/75 leading-relaxed">{L.desc[lang]}</p>
+                    <div className="flex items-center justify-between text-[11px] text-white/50 font-mono">
+                      <span className="inline-flex items-center gap-1"><span className="h-1.5 w-1.5 rounded-full" style={{ background: L.color }} /> {L.name}</span>
+                      <span className="inline-flex items-center gap-1 text-cyan-300"><i className="fa-solid fa-arrows-rotate" /> {lang === "ar" ? "اقلب" : "flip"}</span>
+                    </div>
+                  </article>
+                  {/* Back */}
+                  <article className="flip-face flip-back glass-strong p-5 flex flex-col justify-between" style={{ boxShadow: `inset 0 0 60px -20px ${L.color}, 0 0 40px -20px ${L.color}` }}>
+                    <div className="flex items-center justify-between">
+                      <h4 className="font-extrabold text-white text-base flex items-center gap-2">
+                        <i className={`${L.brand} ${L.icon} text-lg`} style={{ color: L.color }} />
+                        {L.name}
+                      </h4>
+                      <span className="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full ring-1" style={{ color: L.color, borderColor: `${L.color}66` }}>
+                        {diffLabel(L.difficulty)}
+                      </span>
+                    </div>
+                    <dl className="space-y-2 text-[11px]">
+                      <Bar label={t.difficulty} value={L.difficulty * 20} color="#00f5ff" />
+                      <Bar label={t.jobs} value={L.jobs} color="#00ffa3" />
+                    </dl>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-white/45 font-mono mb-1">{t.usage}</p>
+                      <p className="text-xs text-white/80 leading-relaxed">{L.use[lang]}</p>
+                    </div>
+                  </article>
                 </div>
               </div>
-              <p className="text-sm text-white/65 mt-3 min-h-[40px]">{L.desc[lang]}</p>
-              <dl className="mt-4 space-y-2 text-[11px]">
-                <Bar label={t.difficulty} value={L.difficulty * 20} color="#00f5ff" />
-                <Bar label={t.jobs} value={L.jobs} color="#00ffa3" />
-                <Bar label={t.popularity} value={L.pop} color="#8b5cf6" />
-              </dl>
-            </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
@@ -862,7 +940,7 @@ function StatsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
 
 function Terminal({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   const [history, setHistory] = useState<{ cmd: string; out: string[] }[]>([
-    { cmd: "", out: [lang === "ar" ? "مرحبًا بك في تيرمينال Software Engineer. اكتب help للبدء." : "Welcome to Software Engineer terminal. Type 'help' to begin."] },
+    { cmd: "", out: [lang === "ar" ? "مرحبًا بك في تيرمينال Code Forge. اكتب help للبدء." : "Welcome to Code Forge terminal. Type 'help' to begin."] },
   ]);
   const [input, setInput] = useState("");
   const endRef = useRef<HTMLDivElement>(null);
@@ -875,8 +953,8 @@ function Terminal({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       case "courses": out = ["▸ Modern Web Fundamentals", "▸ React from Zero to Hero", "▸ Node.js & REST APIs", "▸ Python for AI"]; break;
       case "roadmaps": out = ["▸ Frontend  ▸ Backend  ▸ Full Stack  ▸ AI  ▸ Cybersecurity  ▸ IoT"]; break;
       case "languages": out = ["▸ Python  ▸ JavaScript  ▸ TypeScript  ▸ Java  ▸ C/C++  ▸ Go  ▸ Rust  ▸ Swift  ▸ Kotlin"]; break;
-      case "contact": out = ["facebook.com/SoftwareEngineer", "email: hello@software-engineer.dev"]; break;
-      case "about": out = ["Software Engineer — Arabic-first coding academy.", "Built with passion for the next generation of devs."]; break;
+      case "contact": out = ["facebook.com/CodeForge", "email: hello@codeforge.dev"]; break;
+      case "about": out = ["Code Forge — Arabic-first coding academy.", "Built with passion for the next generation of devs."]; break;
       case "clear": setHistory([]); return;
       case "": out = []; break;
       default: out = [`command not found: ${raw}. type 'help'`];
@@ -1006,7 +1084,7 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="glass-strong rounded-2xl p-6 space-y-4">
             <h3 className="text-xl font-bold text-white">{lang === "ar" ? "تابعنا على المنصات" : "Find us online"}</h3>
-            <p className="text-white/65 text-sm">{lang === "ar" ? "تواصل مع مجتمع Software Engineer عبر منصاتنا." : "Connect with the Software Engineer community."}</p>
+            <p className="text-white/65 text-sm">{lang === "ar" ? "تواصل مع مجتمع Code Forge عبر منصاتنا." : "Connect with the Code Forge community."}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {socials.map(s => (
                 <a key={s.n} href={s.url} target="_top" rel="noopener" className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
@@ -1053,10 +1131,9 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <MosLogo size={36} />
-            <span className="font-extrabold text-lg"><span className="text-gradient">Software</span> <span className="text-white">Engineer</span></span>
+            <CodeForgeLogo size={40} />
           </div>
-          <p className="mt-3 text-white/60 text-sm max-w-md">{lang === "ar" ? "أكاديمية عربية لتعلم البرمجة وهندسة البرمجيات بأسلوب عصري." : "An Arabic-first academy for coding & software engineering."}</p>
+          <p className="mt-3 text-white/60 text-sm max-w-md">{lang === "ar" ? "Code Forge — منصة عربية لتعلّم البرمجة وهندسة البرمجيات بأسلوب عصري." : "Code Forge — an Arabic-first platform for coding & software engineering."}</p>
           <form className="mt-5 flex gap-2 max-w-md">
             <input type="email" placeholder={t.email} className="flex-1 bg-white/[0.04] ring-1 ring-white/10 focus:ring-cyan-400/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none" />
             <button className="rounded-xl px-4 py-2.5 font-bold text-[#0b1120] text-sm" style={{ background: "linear-gradient(135deg,#00f5ff,#00ffa3)" }}>{t.subscribe}</button>
@@ -1104,7 +1181,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-4 mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-white/50">
-        <p>© {new Date().getFullYear()} Software Engineer — {t.rights}.</p>
+        <p>© {new Date().getFullYear()} Code Forge — {t.rights}.</p>
         <p className="font-mono">{lang === "ar" ? "تصميم وتطوير " : "Designed & developed by "}<a href="tel:+201017098353" className="text-cyan-300 hover:text-white transition">Moslim Ebrahim</a></p>
       </div>
     </footer>
