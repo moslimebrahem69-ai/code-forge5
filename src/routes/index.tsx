@@ -47,10 +47,10 @@ const LANG_BG: Record<string, string> = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Code Forge — تعلّم البرمجة واحترف هندسة البرمجيات" },
+      { title: "Code Forge" },
       { name: "description", content: "Code Forge: مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل بالعربية والإنجليزية." },
-      { property: "og:title", content: "Code Forge — تعلّم البرمجة" },
-      { property: "og:description", content: "Code Forge: مسارات، كورسات، مشاريع، ومجتمع." },
+      { property: "og:title", content: "Code Forge" },
+      { property: "og:description", content: "Code Forge: مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل بالعربية والإنجليزية." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
