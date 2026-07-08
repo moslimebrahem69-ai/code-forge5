@@ -7,7 +7,42 @@ import nextjsCourseBg from "@/assets/nextjs-course.png.asset.json";
 import pythonCourseBg from "@/assets/python-course.png.asset.json";
 import dsaCourseBg from "@/assets/dsa-course.png.asset.json";
 import cybersecCourseBg from "@/assets/cybersec-course.png.asset.json";
+import langPython from "@/assets/langs/python.jpg.asset.json";
+import langJavaScript from "@/assets/langs/javascript.jpg.asset.json";
+import langTypeScript from "@/assets/langs/typescript.jpg.asset.json";
+import langJava from "@/assets/langs/java.jpg.asset.json";
+import langC from "@/assets/langs/c.jpg.asset.json";
+import langCpp from "@/assets/langs/cpp.jpg.asset.json";
+import langCsharp from "@/assets/langs/csharp.jpg.asset.json";
+import langPhp from "@/assets/langs/php.jpg.asset.json";
+import langGo from "@/assets/langs/go.jpg.asset.json";
+import langRust from "@/assets/langs/rust.jpg.asset.json";
+import langSwift from "@/assets/langs/swift.jpg.asset.json";
+import langKotlin from "@/assets/langs/kotlin.jpg.asset.json";
+import langDart from "@/assets/langs/dart.jpg.asset.json";
+import langSql from "@/assets/langs/sql.jpg.asset.json";
+import langHtml from "@/assets/langs/html.jpg.asset.json";
+import langCss from "@/assets/langs/css.jpg.asset.json";
 import * as THREE from "three";
+
+const LANG_BG: Record<string, string> = {
+  Python: langPython.url,
+  JavaScript: langJavaScript.url,
+  TypeScript: langTypeScript.url,
+  Java: langJava.url,
+  C: langC.url,
+  "C++": langCpp.url,
+  "C#": langCsharp.url,
+  PHP: langPhp.url,
+  Go: langGo.url,
+  Rust: langRust.url,
+  Swift: langSwift.url,
+  Kotlin: langKotlin.url,
+  Dart: langDart.url,
+  SQL: langSql.url,
+  HTML: langHtml.url,
+  CSS: langCss.url,
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -593,18 +628,29 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               >
                 <div className="flip-card-inner">
                   {/* Front */}
-                  <article className="flip-face glass p-5 flex flex-col justify-between" style={{ boxShadow: `inset 0 0 40px -20px ${L.color}` }}>
+                  <article className="flip-face glass p-5 flex flex-col justify-between relative overflow-hidden" style={{ boxShadow: `inset 0 0 40px -20px ${L.color}` }}>
+                    <div
+                      className="absolute inset-0 -z-10"
+                      style={{
+                        backgroundImage: `url(${LANG_BG[L.name] ?? ""})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        opacity: 0.28,
+                      }}
+                      aria-hidden
+                    />
+                    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0b1120]/40 via-[#0b1120]/55 to-[#0b1120]/85" aria-hidden />
                     <div className="flex items-center gap-3">
-                      <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0b1120]" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
+                      <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0b1120]/70 backdrop-blur-sm" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
                         <i className={`${L.brand} ${L.icon} text-2xl`} style={{ color: L.color }} />
                       </div>
                       <div>
-                        <h3 className="font-extrabold text-white text-lg leading-tight">{L.name}</h3>
-                        <p className="text-[11px] text-white/50 font-mono mt-0.5"><i className="fa-regular fa-clock me-1" />{L.time}</p>
+                        <h3 className="font-extrabold text-white text-lg leading-tight drop-shadow">{L.name}</h3>
+                        <p className="text-[11px] text-white/60 font-mono mt-0.5"><i className="fa-regular fa-clock me-1" />{L.time}</p>
                       </div>
                     </div>
-                    <p className="text-sm text-white/75 leading-relaxed">{L.desc[lang]}</p>
-                    <div className="flex items-center justify-between text-[11px] text-white/50 font-mono">
+                    <p className="text-sm text-white/85 leading-relaxed drop-shadow">{L.desc[lang]}</p>
+                    <div className="flex items-center justify-between text-[11px] text-white/60 font-mono">
                       <span className="inline-flex items-center gap-1"><span className="h-1.5 w-1.5 rounded-full" style={{ background: L.color }} /> {L.name}</span>
                       <span className="inline-flex items-center gap-1 text-cyan-300"><i className="fa-solid fa-arrows-rotate" /> {lang === "ar" ? "اقلب" : "flip"}</span>
                     </div>
