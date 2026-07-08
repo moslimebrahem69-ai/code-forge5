@@ -7,7 +7,42 @@ import nextjsCourseBg from "@/assets/nextjs-course.png.asset.json";
 import pythonCourseBg from "@/assets/python-course.png.asset.json";
 import dsaCourseBg from "@/assets/dsa-course.png.asset.json";
 import cybersecCourseBg from "@/assets/cybersec-course.png.asset.json";
+import langPython from "@/assets/langs/python.jpg.asset.json";
+import langJavaScript from "@/assets/langs/javascript.jpg.asset.json";
+import langTypeScript from "@/assets/langs/typescript.jpg.asset.json";
+import langJava from "@/assets/langs/java.jpg.asset.json";
+import langC from "@/assets/langs/c.jpg.asset.json";
+import langCpp from "@/assets/langs/cpp.jpg.asset.json";
+import langCsharp from "@/assets/langs/csharp.jpg.asset.json";
+import langPhp from "@/assets/langs/php.jpg.asset.json";
+import langGo from "@/assets/langs/go.jpg.asset.json";
+import langRust from "@/assets/langs/rust.jpg.asset.json";
+import langSwift from "@/assets/langs/swift.jpg.asset.json";
+import langKotlin from "@/assets/langs/kotlin.jpg.asset.json";
+import langDart from "@/assets/langs/dart.jpg.asset.json";
+import langSql from "@/assets/langs/sql.jpg.asset.json";
+import langHtml from "@/assets/langs/html.jpg.asset.json";
+import langCss from "@/assets/langs/css.jpg.asset.json";
 import * as THREE from "three";
+
+const LANG_BG: Record<string, string> = {
+  Python: langPython.url,
+  JavaScript: langJavaScript.url,
+  TypeScript: langTypeScript.url,
+  Java: langJava.url,
+  C: langC.url,
+  "C++": langCpp.url,
+  "C#": langCsharp.url,
+  PHP: langPhp.url,
+  Go: langGo.url,
+  Rust: langRust.url,
+  Swift: langSwift.url,
+  Kotlin: langKotlin.url,
+  Dart: langDart.url,
+  SQL: langSql.url,
+  HTML: langHtml.url,
+  CSS: langCss.url,
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
