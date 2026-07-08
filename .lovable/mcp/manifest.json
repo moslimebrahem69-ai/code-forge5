@@ -7,9 +7,9 @@
   },
   "mcp": {
     "server": {
-      "name": "software-engineer-academy",
+      "name": "code-forge",
       "version": "0.1.0",
-      "title": "Software Engineer Academy"
+      "title": "Code Forge"
     },
     "tools": [
       {
