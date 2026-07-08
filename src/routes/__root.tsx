@@ -91,8 +91,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Code Forge" },
       { name: "twitter:description", content: "Code Forge: مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل بالعربية والإنجليزية." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a97bb32b-605a-48d6-b6de-17547c9d5fad/id-preview-9b126bf1--69e7707b-b1ff-4c4e-86b4-43aff6bf7af9.lovable.app-1783536887756.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a97bb32b-605a-48d6-b6de-17547c9d5fad/id-preview-9b126bf1--69e7707b-b1ff-4c4e-86b4-43aff6bf7af9.lovable.app-1783536887756.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wlzWZTDoVwWNjXJA4sjY216eQm53/social-images/social-1783538163487-ChatGPT_Image_8_يوليو_2026،_09_57_36_م.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wlzWZTDoVwWNjXJA4sjY216eQm53/social-images/social-1783538163487-ChatGPT_Image_8_يوليو_2026،_09_57_36_م.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
