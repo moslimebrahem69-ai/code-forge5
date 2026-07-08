@@ -628,18 +628,29 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               >
                 <div className="flip-card-inner">
                   {/* Front */}
-                  <article className="flip-face glass p-5 flex flex-col justify-between" style={{ boxShadow: `inset 0 0 40px -20px ${L.color}` }}>
+                  <article className="flip-face glass p-5 flex flex-col justify-between relative overflow-hidden" style={{ boxShadow: `inset 0 0 40px -20px ${L.color}` }}>
+                    <div
+                      className="absolute inset-0 -z-10"
+                      style={{
+                        backgroundImage: `url(${LANG_BG[L.name] ?? ""})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        opacity: 0.28,
+                      }}
+                      aria-hidden
+                    />
+                    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0b1120]/40 via-[#0b1120]/55 to-[#0b1120]/85" aria-hidden />
                     <div className="flex items-center gap-3">
-                      <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0b1120]" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
+                      <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0b1120]/70 backdrop-blur-sm" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
                         <i className={`${L.brand} ${L.icon} text-2xl`} style={{ color: L.color }} />
                       </div>
                       <div>
-                        <h3 className="font-extrabold text-white text-lg leading-tight">{L.name}</h3>
-                        <p className="text-[11px] text-white/50 font-mono mt-0.5"><i className="fa-regular fa-clock me-1" />{L.time}</p>
+                        <h3 className="font-extrabold text-white text-lg leading-tight drop-shadow">{L.name}</h3>
+                        <p className="text-[11px] text-white/60 font-mono mt-0.5"><i className="fa-regular fa-clock me-1" />{L.time}</p>
                       </div>
                     </div>
-                    <p className="text-sm text-white/75 leading-relaxed">{L.desc[lang]}</p>
-                    <div className="flex items-center justify-between text-[11px] text-white/50 font-mono">
+                    <p className="text-sm text-white/85 leading-relaxed drop-shadow">{L.desc[lang]}</p>
+                    <div className="flex items-center justify-between text-[11px] text-white/60 font-mono">
                       <span className="inline-flex items-center gap-1"><span className="h-1.5 w-1.5 rounded-full" style={{ background: L.color }} /> {L.name}</span>
                       <span className="inline-flex items-center gap-1 text-cyan-300"><i className="fa-solid fa-arrows-rotate" /> {lang === "ar" ? "اقلب" : "flip"}</span>
                     </div>
