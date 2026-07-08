@@ -64,8 +64,8 @@ const T = {
   ar: {
     dir: "rtl",
     nav: { home: "الرئيسية", roadmaps: "مسارات التعلم", langs: "لغات البرمجة", courses: "الكورسات", blog: "المقالات", projects: "المشاريع", faq: "الأسئلة الشائعة", contact: "تواصل معنا" },
-    heroTitle1: "تعلّم البرمجة وابدأ مستقبلك في عالم",
-    heroTitle2: "Software Engineering",
+    heroTitle1: "تعلم البرمجه من الصفر مع",
+    heroTitle2: "Code Forge",
     heroSub: "تعلّم البرمجة من الصفر حتى الاحتراف مع شروحات مبسّطة، مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل.",
     ctaStart: "ابدأ التعلم", ctaRoadmaps: "استكشف المسارات", ctaFb: "Join Facebook Page", ctaCourses: "Watch Courses",
     roadmapsTitle: "مسارات التعلم", roadmapsSub: "اختر مسارك وابدأ رحلتك خطوة بخطوة.",
