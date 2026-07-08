@@ -86,8 +86,8 @@ const T = {
   en: {
     dir: "ltr",
     nav: { home: "Home", roadmaps: "Roadmaps", langs: "Languages", courses: "Courses", blog: "Blog", projects: "Projects", faq: "FAQ", contact: "Contact" },
-    heroTitle1: "Learn to code and shape your future in",
-    heroTitle2: "Software Engineering",
+    heroTitle1: "Learn programming from scratch with",
+    heroTitle2: "Code Forge",
     heroSub: "Master programming from zero to pro with clear guides, learning paths, free courses, real projects, and career advice.",
     ctaStart: "Start Learning", ctaRoadmaps: "Explore Roadmaps", ctaFb: "Join Facebook Page", ctaCourses: "Watch Courses",
     roadmapsTitle: "Learning Roadmaps", roadmapsSub: "Pick your path and start step by step.",
