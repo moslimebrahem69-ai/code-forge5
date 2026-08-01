@@ -11,7 +11,8 @@ export default defineTool({
     search: z.string().optional().describe("Optional keyword to match in the roadmap name (English or Arabic)."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: ({ search }) => {
+  handler: ({ search }, ctx) => {
+    if (!ctx.isAuthenticated()) return { content: [{ type: "text" as const, text: "Not authenticated" }], isError: true };
     const q = search?.toLowerCase();
     const rows = q
       ? ROADMAPS.filter(

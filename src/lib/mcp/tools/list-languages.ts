@@ -17,7 +17,8 @@ export default defineTool({
       .describe("Only include languages with difficulty <= this value."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: ({ max_difficulty }) => {
+  handler: ({ max_difficulty }, ctx) => {
+    if (!ctx.isAuthenticated()) return { content: [{ type: "text" as const, text: "Not authenticated" }], isError: true };
     const rows =
       max_difficulty == null
         ? LANGUAGES
