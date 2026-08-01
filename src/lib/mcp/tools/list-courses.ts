@@ -12,7 +12,8 @@ export default defineTool({
     level: z.string().optional().describe("Filter by level (case-insensitive)."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: ({ category, level }) => {
+  handler: ({ category, level }, ctx) => {
+    if (!ctx.isAuthenticated()) return { content: [{ type: "text" as const, text: "Not authenticated" }], isError: true };
     const cat = category?.toLowerCase();
     const lvl = level?.toLowerCase();
     const rows = COURSES.filter(
