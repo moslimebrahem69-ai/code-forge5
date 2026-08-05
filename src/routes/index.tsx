@@ -1103,11 +1103,17 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   );
 }
 
-function Field({ label, type }: { label: string; type: string }) {
+function Field({ label, type, value, onChange, required }: { label: string; type: string; value?: string; onChange?: (v: string) => void; required?: boolean }) {
   return (
     <div>
       <label className="text-xs text-white/60">{label}</label>
-      <input type={type} className="mt-1 w-full bg-white/[0.04] ring-1 ring-white/10 focus:ring-amber-400/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition" />
+      <input
+        type={type}
+        value={value}
+        required={required}
+        onChange={(e) => onChange?.(e.target.value)}
+        className="mt-1 w-full bg-white/[0.04] ring-1 ring-white/10 focus:ring-amber-400/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition"
+      />
     </div>
   );
 }
@@ -1115,7 +1121,7 @@ function Field({ label, type }: { label: string; type: string }) {
 function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   return (
     <footer className="pt-16 pb-8 border-t border-white/5 mt-10">
-      <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-4 gap-8">
+      <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-3 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
             <CodeForgeLogo size={40} />
@@ -1133,16 +1139,6 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               <li key={k}><a href={`#${k}`} className="hover:text-amber-300 transition">{(t.nav as any)[k === "languages" ? "langs" : k] || k}</a></li>
             ))}
           </ul>
-        </div>
-        <div>
-          <h4 className="font-bold text-white mb-3">{lang === "ar" ? "تابعنا" : "Social"}</h4>
-          <div className="flex flex-wrap gap-2">
-            {[{ i: "fa-facebook", c: "#1877F2", u: "https://www.facebook.com/share/1Fb8A9FZSV/", brand: true },{ i: "fa-whatsapp", c: "#25D366", u: "https://wa.me/201017098353", brand: true },{ i: "fa-envelope", c: "#f59e0b", u: "mailto:hello@moslimebrahim.dev", brand: false },{ i: "fa-phone", c: "#fbbf24", u: "tel:+201017098353", brand: false }].map((s, idx) => (
-              <a key={idx} href={s.u} target="_top" rel="noopener" aria-label={s.i} className="grid place-items-center h-10 w-10 rounded-xl glass hover:scale-110 transition">
-                <i className={`${s.brand ? "fa-brands" : "fa-solid"} ${s.i}`} style={{ color: s.c }} />
-              </a>
-            ))}
-          </div>
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-4 mt-10">
