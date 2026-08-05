@@ -7,42 +7,8 @@ import nextjsCourseBg from "@/assets/nextjs-course.png.asset.json";
 import pythonCourseBg from "@/assets/python-course.png.asset.json";
 import dsaCourseBg from "@/assets/dsa-course.png.asset.json";
 import cybersecCourseBg from "@/assets/cybersec-course.png.asset.json";
-import langPython from "@/assets/langs/python.jpg.asset.json";
-import langJavaScript from "@/assets/langs/javascript.jpg.asset.json";
-import langTypeScript from "@/assets/langs/typescript.jpg.asset.json";
-import langJava from "@/assets/langs/java.jpg.asset.json";
-import langC from "@/assets/langs/c.jpg.asset.json";
-import langCpp from "@/assets/langs/cpp.jpg.asset.json";
-import langCsharp from "@/assets/langs/csharp.jpg.asset.json";
-import langPhp from "@/assets/langs/php.jpg.asset.json";
-import langGo from "@/assets/langs/go.jpg.asset.json";
-import langRust from "@/assets/langs/rust.jpg.asset.json";
-import langSwift from "@/assets/langs/swift.jpg.asset.json";
-import langKotlin from "@/assets/langs/kotlin.jpg.asset.json";
-import langDart from "@/assets/langs/dart.jpg.asset.json";
-import langSql from "@/assets/langs/sql.jpg.asset.json";
-import langHtml from "@/assets/langs/html.jpg.asset.json";
-import langCss from "@/assets/langs/css.jpg.asset.json";
 import * as THREE from "three";
 
-const LANG_BG: Record<string, string> = {
-  Python: langPython.url,
-  JavaScript: langJavaScript.url,
-  TypeScript: langTypeScript.url,
-  Java: langJava.url,
-  C: langC.url,
-  "C++": langCpp.url,
-  "C#": langCsharp.url,
-  PHP: langPhp.url,
-  Go: langGo.url,
-  Rust: langRust.url,
-  Swift: langSwift.url,
-  Kotlin: langKotlin.url,
-  Dart: langDart.url,
-  SQL: langSql.url,
-  HTML: langHtml.url,
-  CSS: langCss.url,
-};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -269,37 +235,6 @@ function MatrixBackground() {
   );
 }
 
-const SNIPPETS = [
-  "const dev = 'Code Forge';",
-  "function build() { return 'future'; }",
-  "<div class='hero'>👨‍💻</div>",
-  "SELECT * FROM developers;",
-  "git commit -m 'ship it 🚀'",
-  "print('Hello, World!')",
-  "import torch as t",
-  "npm run dev",
-  "export default App;",
-  "if (passion) keepLearning();",
-];
-function FloatingSnippets() {
-  const items = useMemo(() => Array.from({ length: 14 }, (_, i) => ({
-    text: SNIPPETS[i % SNIPPETS.length],
-    left: Math.random() * 100,
-    dur: 18 + Math.random() * 22,
-    delay: -Math.random() * 30,
-    size: 11 + Math.random() * 4,
-  })), []);
-  return (
-    <div className="absolute inset-0">
-      {items.map((it, i) => (
-        <div key={i} className="absolute font-mono whitespace-nowrap text-amber-300/30"
-          style={{ left: `${it.left}%`, fontSize: `${it.size}px`, top: "-10%", animation: `drift ${it.dur}s linear ${it.delay}s infinite` }}>
-          {it.text}
-        </div>
-      ))}
-    </div>
-  );
-}
 
 // ============ Components ============
 function MosLogo({ size = 36, showText = false }: { size?: number; showText?: boolean }) {
@@ -615,7 +550,7 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             return (
               <div
                 key={L.name}
-                className={`flip-card h-[240px] ${isFlipped ? "is-flipped" : ""}`}
+                className={`flip-card group h-[250px] ${isFlipped ? "is-flipped" : ""}`}
                 onClick={() => setFlipped(isFlipped ? null : L.name)}
                 role="button"
                 tabIndex={0}
@@ -628,14 +563,15 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                     <div
                       className="absolute inset-0 -z-10"
                       style={{
-                        backgroundImage: `url(${LANG_BG[L.name] ?? ""})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        opacity: 0.28,
+                        background: `radial-gradient(120% 90% at 100% 0%, ${L.color}2e, transparent 60%), linear-gradient(160deg, rgba(255,255,255,0.05), rgba(0,0,0,0.25))`,
                       }}
                       aria-hidden
                     />
-                    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0e0f13]/40 via-[#0e0f13]/55 to-[#0e0f13]/85" aria-hidden />
+                    <i
+                      className={`${L.brand} ${L.icon} pointer-events-none absolute -bottom-6 -start-4 -z-10 text-[8rem] leading-none opacity-[0.09] transition-transform duration-700 group-hover:scale-110`}
+                      style={{ color: L.color }}
+                      aria-hidden
+                    />
                     <div className="flex items-center gap-3">
                       <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0e0f13]/70 backdrop-blur-sm" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
                         <i className={`${L.brand} ${L.icon} text-2xl`} style={{ color: L.color }} />
@@ -663,8 +599,8 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                       </span>
                     </div>
                     <dl className="space-y-2 text-[11px]">
-                      <Bar label={t.difficulty} value={L.difficulty * 20} color="#f59e0b" />
-                      <Bar label={t.jobs} value={L.jobs} color="#fbbf24" />
+                      <Bar label={t.difficulty} value={L.difficulty * 20} color={L.color} />
+                      <Bar label={t.jobs} value={L.jobs} color="#f59e0b" />
                     </dl>
                     <div>
                       <p className="text-[10px] uppercase tracking-widest text-white/45 font-mono mb-1">{t.usage}</p>
@@ -1248,7 +1184,7 @@ function BackToTop({ t }: { t: typeof T.ar }) {
 
 // ============ Main ============
 function Home() {
-  const [lang, setLang] = useState<Lang>("ar");
+  const lang: Lang = "ar";
   const t = T[lang];
   useEffect(() => {
     if (typeof document !== "undefined") {
