@@ -63,7 +63,7 @@ type Lang = "ar" | "en";
 const T = {
   ar: {
     dir: "rtl",
-    nav: { home: "الرئيسية", roadmaps: "مسارات التعلم", langs: "لغات البرمجة", courses: "الكورسات", blog: "المقالات", projects: "المشاريع", faq: "الأسئلة الشائعة", contact: "تواصل معنا" },
+    nav: { home: "الرئيسية", roadmaps: "مسارات التعلم", langs: "لغات البرمجة", courses: "الكورسات", blog: "المقالات", projects: "أدوات المبرمج", faq: "الأسئلة الشائعة", contact: "تواصل معنا" },
     heroTitle1: "تعلم البرمجه من الصفر مع",
     heroTitle2: "Code Forge",
     heroSub: "تعلّم البرمجة من الصفر حتى الاحتراف مع شروحات مبسّطة، مسارات تعليمية، كورسات مجانية، مشاريع عملية، ونصائح لسوق العمل.",
@@ -85,7 +85,7 @@ const T = {
   },
   en: {
     dir: "ltr",
-    nav: { home: "Home", roadmaps: "Roadmaps", langs: "Languages", courses: "Courses", blog: "Blog", projects: "Projects", faq: "FAQ", contact: "Contact" },
+    nav: { home: "Home", roadmaps: "Roadmaps", langs: "Languages", courses: "Courses", blog: "Blog", projects: "Developer Tools", faq: "FAQ", contact: "Contact" },
     heroTitle1: "Learn programming from scratch with",
     heroTitle2: "Code Forge",
     heroSub: "Master programming from zero to pro with clear guides, learning paths, free courses, real projects, and career advice.",
@@ -251,7 +251,7 @@ function MatrixBackground() {
         const x = i * fontSize;
         const y = drops[i] * fontSize;
         const hue = (i * 7) % 360;
-        ctx.fillStyle = i % 9 === 0 ? `hsla(${180 + (hue % 80)}, 100%, 70%, 0.9)` : "rgba(245,158,11,0.35)";
+        ctx.fillStyle = i % 9 === 0 ? `hsla(${30 + (hue % 20)}, 80%, 62%, 0.75)` : "rgba(245,158,11,0.35)";
         ctx.fillText(text, x, y);
         if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
         drops[i]++;
@@ -263,9 +263,8 @@ function MatrixBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <div className="absolute inset-0" style={{ background: "radial-gradient(60% 40% at 50% 0%, rgba(245,158,11,0.12), transparent 70%), radial-gradient(50% 40% at 80% 80%, rgba(234,88,12,0.14), transparent 70%), linear-gradient(180deg,#0e0f13,#14161b 60%,#0e0f13)" }} />
-      <canvas ref={ref} className="absolute inset-0 opacity-40" />
-      <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "linear-gradient(rgba(245,158,11,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.4) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
-      <FloatingSnippets />
+      <canvas ref={ref} className="absolute inset-0 opacity-[0.14]" />
+      <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(rgba(245,158,11,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.4) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
     </div>
   );
 }
@@ -381,7 +380,7 @@ function ScrollProgress() {
   return <div className="fixed top-0 inset-x-0 z-[60] h-[3px] bg-transparent"><div className="h-full" style={{ width: `${w}%`, background: "linear-gradient(90deg,#f59e0b,#fbbf24,#ea580c)" }} /></div>;
 }
 
-function Navbar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => void; t: typeof T.ar }) {
+function Navbar({ t }: { t: typeof T.ar }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -418,9 +417,6 @@ function Navbar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => void; 
             ))}
           </ul>
           <div className="flex items-center gap-2 ms-auto lg:ms-0">
-            <button onClick={() => setLang(lang === "ar" ? "en" : "ar")} className="hidden sm:inline-flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold text-white/90 ring-1 ring-white/10 hover:ring-amber-400/50 transition" aria-label="Switch language">
-              <i className="fa-solid fa-language" /> {lang === "ar" ? "EN" : "AR"}
-            </button>
             <a href="#courses" className="hidden md:inline-flex btn-magnetic items-center gap-2 rounded-xl px-4 py-2 text-sm font-bold text-[#0e0f13]" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
               <i className="fa-solid fa-rocket" /> {t.ctaStart}
             </a>
@@ -1272,7 +1268,7 @@ function Home() {
     <div className="relative min-h-screen">
       <MatrixBackground />
       <ScrollProgress />
-      <Navbar lang={lang} setLang={setLang} t={t} />
+      <Navbar t={t} />
       <main>
         <Hero t={t} lang={lang} />
         <RoadmapsSection t={t} lang={lang} />
