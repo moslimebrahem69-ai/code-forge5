@@ -473,12 +473,36 @@ function Hero({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   );
 }
 
+function useReveal<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return ref;
+}
+
 function SectionTitle({ kicker, title, sub }: { kicker?: string; title: string; sub?: string }) {
+  const ref = useReveal<HTMLDivElement>();
   return (
-    <div className="text-center max-w-2xl mx-auto mb-12">
-      {kicker && <div className="inline-block mb-3 text-xs font-bold tracking-widest uppercase text-amber-300 font-mono">// {kicker}</div>}
-      <h2 className="text-3xl sm:text-4xl font-extrabold"><span className="text-white">{title.split(" ").slice(0,-1).join(" ")} </span><span className="text-gradient">{title.split(" ").slice(-1)}</span></h2>
-      {sub && <p className="mt-3 text-white/65">{sub}</p>}
+    <div ref={ref} className="reveal text-center max-w-2xl mx-auto mb-9 sm:mb-12 px-2">
+      {kicker && <div className="inline-block mb-3 text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-amber-300/90 font-mono">// {kicker}</div>}
+      <h2 className="text-2xl sm:text-4xl font-extrabold leading-snug"><span className="text-white">{title.split(" ").slice(0,-1).join(" ")} </span><span className="text-gradient">{title.split(" ").slice(-1)}</span></h2>
+      {sub && <p className="mt-3 text-sm sm:text-base text-white/60">{sub}</p>}
+      <div className="mx-auto mt-5 h-px w-24 bg-gradient-to-r from-transparent via-amber-400/60 to-transparent" />
     </div>
   );
 }
