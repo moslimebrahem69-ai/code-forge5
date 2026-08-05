@@ -1047,48 +1047,57 @@ function FAQ({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   );
 }
 
+const CONTACT_EMAIL = "moslimebrahem69@gmail.com";
+
 function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   const [sent, setSent] = useState(false);
-  const socials = [
-    { n: "Facebook", icon: "fa-facebook", c: "#1877F2", url: "https://www.facebook.com/share/1Fb8A9FZSV/" },
-    { n: "WhatsApp", icon: "fa-whatsapp", c: "#25D366", url: "https://wa.me/201017098353" },
-    { n: "Phone", icon: "fa-phone", c: "#f59e0b", solid: true, url: "tel:+201017098353" },
-    { n: "Email", icon: "fa-envelope", c: "#f59e0b", solid: true, url: "mailto:hello@moslimebrahim.dev" },
-  ];
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const set = (k: keyof typeof form) => (v: string) => setForm((f) => ({ ...f, [k]: v }));
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(form.subject || `رسالة من ${form.name || "زائر"} — Code Forge`);
+    const body = encodeURIComponent(
+      `الاسم: ${form.name}\nالبريد: ${form.email}\n\n${form.message}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    setSent(true);
+    setTimeout(() => setSent(false), 5000);
+  };
+
   return (
-    <section id="contact" className="py-20">
-      <div className="mx-auto max-w-6xl px-4">
+    <section id="contact" className="py-16 sm:py-20">
+      <div className="mx-auto max-w-3xl px-4">
         <SectionTitle kicker="contact" title={t.contactTitle} sub={t.contactSub} />
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div className="glass-strong rounded-2xl p-6 space-y-4">
-            <h3 className="text-xl font-bold text-white">{lang === "ar" ? "تابعنا على المنصات" : "Find us online"}</h3>
-            <p className="text-white/65 text-sm">{lang === "ar" ? "تواصل مع مجتمع Code Forge عبر منصاتنا." : "Connect with the Code Forge community."}</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {socials.map(s => (
-                <a key={s.n} href={s.url} target="_top" rel="noopener" className="card-hover glass rounded-xl p-4 flex flex-col items-center gap-2 text-center">
-                  <i className={`${s.solid ? "fa-solid" : "fa-brands"} ${s.icon} text-2xl`} style={{ color: s.c }} />
-                  <span className="text-xs font-bold text-white">{s.n}</span>
-                </a>
-              ))}
-            </div>
+        <form onSubmit={onSubmit} className="glass-strong rounded-2xl p-5 sm:p-7 space-y-4">
+          <h3 className="text-lg sm:text-xl font-bold text-white">أرسل لنا رسالة</h3>
+          <p className="text-white/55 text-xs sm:text-sm">
+            سيتم إرسال رسالتك مباشرة إلى <span className="font-mono text-amber-300">{CONTACT_EMAIL}</span>
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            <Field label="الاسم" type="text" value={form.name} onChange={set("name")} required />
+            <Field label="البريد" type="email" value={form.email} onChange={set("email")} required />
           </div>
-          <form onSubmit={(e) => { e.preventDefault(); setSent(true); setTimeout(() => setSent(false), 3000); }} className="glass-strong rounded-2xl p-6 space-y-4">
-            <h3 className="text-xl font-bold text-white">{lang === "ar" ? "أرسل لنا رسالة" : "Send us a message"}</h3>
-            <div className="grid sm:grid-cols-2 gap-3">
-              <Field label={lang === "ar" ? "الاسم" : "Name"} type="text" />
-              <Field label={lang === "ar" ? "البريد" : "Email"} type="email" />
+          <Field label="الموضوع" type="text" value={form.subject} onChange={set("subject")} />
+          <div>
+            <label className="text-xs text-white/60">الرسالة</label>
+            <textarea
+              rows={5}
+              required
+              value={form.message}
+              onChange={(e) => set("message")(e.target.value)}
+              className="mt-1 w-full bg-white/[0.04] ring-1 ring-white/10 focus:ring-amber-400/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition"
+            />
+          </div>
+          <button className="btn-magnetic w-full rounded-xl px-4 py-3 font-bold text-[#0e0f13]" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
+            <i className="fa-solid fa-paper-plane me-2" /> إرسال
+          </button>
+          {sent && (
+            <div className="text-emerald-300 text-sm text-center" role="status">
+              <i className="fa-solid fa-check-circle me-1" /> تم فتح بريدك لإرسال الرسالة.
             </div>
-            <Field label={lang === "ar" ? "الموضوع" : "Subject"} type="text" />
-            <div>
-              <label className="text-xs text-white/60">{lang === "ar" ? "الرسالة" : "Message"}</label>
-              <textarea rows={4} className="mt-1 w-full bg-white/[0.04] ring-1 ring-white/10 focus:ring-amber-400/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition" />
-            </div>
-            <button className="btn-magnetic w-full rounded-xl px-4 py-3 font-bold text-[#0e0f13]" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
-              <i className="fa-solid fa-paper-plane me-2" /> {lang === "ar" ? "إرسال" : "Send"}
-            </button>
-            {sent && <div className="text-emerald-300 text-sm text-center" role="status"><i className="fa-solid fa-check-circle" /> {lang === "ar" ? "تم الإرسال بنجاح!" : "Sent successfully!"}</div>}
-          </form>
-        </div>
+          )}
+        </form>
       </div>
     </section>
   );
