@@ -245,7 +245,6 @@
 }
 
 @media (max-width: 640px) {
-  section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
   h1 { line-height: 1.25; }
   .flip-card { height: 230px; }
   ::-webkit-scrollbar { width: 4px; }
