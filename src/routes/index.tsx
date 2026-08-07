@@ -499,7 +499,7 @@ function SectionTitle({ kicker, title, sub }: { kicker?: string; title: string; 
   const ref = useReveal<HTMLDivElement>();
   return (
     <div ref={ref} className="reveal text-center max-w-2xl mx-auto mb-9 sm:mb-12 px-2">
-      {kicker && <div className="inline-block mb-3 text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-amber-300/90 font-mono">// {kicker}</div>}
+      {kicker && <div className="inline-block mb-3 text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-amber-300/90">{kicker}</div>}
       <h2 className="text-2xl sm:text-4xl font-extrabold leading-snug"><span className="text-white">{title.split(" ").slice(0,-1).join(" ")} </span><span className="text-gradient">{title.split(" ").slice(-1)}</span></h2>
       {sub && <p className="mt-3 text-sm sm:text-base text-white/60">{sub}</p>}
       <div className="mx-auto mt-5 h-px w-24 bg-gradient-to-r from-transparent via-amber-400/60 to-transparent" />
