@@ -75,26 +75,26 @@ const T = {
 
 // ============ Data ============
 const ROADMAPS = [
-  { en: "Frontend", ar: "الواجهات الأمامية", icon: "fa-code", color: "from-amber-400 to-amber-500", pct: 85, url: "https://www.freecodecamp.org/learn/front-end-development-libraries-v9/" },
+  { en: "Frontend", ar: "الواجهات الأمامية", icon: "fa-code", color: "from-slate-400 to-slate-500", pct: 85, url: "https://www.freecodecamp.org/learn/front-end-development-libraries-v9/" },
   { en: "Backend", ar: "الواجهات الخلفية", icon: "fa-server", color: "from-emerald-400 to-teal-500", pct: 78, url: "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/" },
-  { en: "Full Stack", ar: "Full Stack", icon: "fa-layer-group", color: "from-orange-400 to-orange-500", pct: 92, url: "https://www.freecodecamp.org/learn/full-stack-developer-v9/" },
-  { en: "Python", ar: "Python", icon: "fa-python", color: "from-yellow-300 to-amber-500", pct: 95, brand: "fab", url: "https://www.freecodecamp.org/learn/python-v9/" },
-  { en: "Java", ar: "Java", icon: "fa-java", color: "from-orange-400 to-red-500", pct: 80, brand: "fab", url: "https://www.freecodecamp.org/news/the-java-handbook/" },
-  { en: "C++", ar: "C++", icon: "fa-code", color: "from-amber-400 to-orange-600", pct: 70, url: "https://elzero.org/study/cplusplus-study-plan/" },
-  { en: "C#", ar: "C#", icon: "fa-hashtag", color: "from-orange-500 to-orange-700", pct: 72, url: "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/" },
-  { en: "JavaScript", ar: "JavaScript", icon: "fa-js", color: "from-yellow-300 to-amber-500", pct: 96, brand: "fab", url: "https://www.freecodecamp.org/learn/javascript-v9/" },
-  { en: "React", ar: "React", icon: "fa-react", color: "from-amber-300 to-amber-500", pct: 90, brand: "fab", url: "https://www.freecodecamp.org/news/react-for-beginners-handbook/" },
+  { en: "Full Stack", ar: "Full Stack", icon: "fa-layer-group", color: "from-sky-400 to-sky-500", pct: 92, url: "https://www.freecodecamp.org/learn/full-stack-developer-v9/" },
+  { en: "Python", ar: "Python", icon: "fa-python", color: "from-slate-300 to-slate-500", pct: 95, brand: "fab", url: "https://www.freecodecamp.org/learn/python-v9/" },
+  { en: "Java", ar: "Java", icon: "fa-java", color: "from-sky-400 to-red-500", pct: 80, brand: "fab", url: "https://www.freecodecamp.org/news/the-java-handbook/" },
+  { en: "C++", ar: "C++", icon: "fa-code", color: "from-slate-400 to-sky-600", pct: 70, url: "https://elzero.org/study/cplusplus-study-plan/" },
+  { en: "C#", ar: "C#", icon: "fa-hashtag", color: "from-sky-500 to-sky-700", pct: 72, url: "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/" },
+  { en: "JavaScript", ar: "JavaScript", icon: "fa-js", color: "from-slate-300 to-slate-500", pct: 96, brand: "fab", url: "https://www.freecodecamp.org/learn/javascript-v9/" },
+  { en: "React", ar: "React", icon: "fa-react", color: "from-slate-300 to-slate-500", pct: 90, brand: "fab", url: "https://www.freecodecamp.org/news/react-for-beginners-handbook/" },
   { en: "Node.js", ar: "Node.js", icon: "fa-node-js", color: "from-emerald-400 to-green-600", pct: 88, brand: "fab", url: "https://www.freecodecamp.org/news/get-started-with-nodejs/" },
-  { en: "Flutter", ar: "Flutter", icon: "fa-mobile-screen", color: "from-amber-400 to-amber-600", pct: 76, url: "https://bamboogeeks.dev/courses/flutter-academy_ar/8736" },
-  { en: "AI", ar: "الذكاء الاصطناعي", icon: "fa-brain", color: "from-orange-400 to-orange-600", pct: 91, url: "https://www.freecodecamp.org/learn/learn-rag-mcp-fundamentals" },
+  { en: "Flutter", ar: "Flutter", icon: "fa-mobile-screen", color: "from-slate-400 to-slate-600", pct: 76, url: "https://bamboogeeks.dev/courses/flutter-academy_ar/8736" },
+  { en: "AI", ar: "الذكاء الاصطناعي", icon: "fa-brain", color: "from-sky-400 to-sky-600", pct: 91, url: "https://www.freecodecamp.org/learn/learn-rag-mcp-fundamentals" },
   { en: "Machine Learning", ar: "تعلم الآلة", icon: "fa-robot", color: "from-pink-400 to-rose-500", pct: 84, url: "https://www.freecodecamp.org/learn/introduction-to-algorithms-and-data-structures" },
-  { en: "Cyber Security", ar: "الأمن السيبراني", icon: "fa-shield-halved", color: "from-red-400 to-orange-500", pct: 82, url: "https://tryhackme.com/" },
-  { en: "Data Science", ar: "علم البيانات", icon: "fa-chart-line", color: "from-teal-400 to-amber-500", pct: 87, url: "https://www.freecodecamp.org/learn/relational-databases-v9/" },
-  { en: "Mechatronics", ar: "ميكاترونكس", icon: "fa-gears", color: "from-amber-400 to-orange-600", pct: 65, url: "https://www.coursera.org/" },
+  { en: "Cyber Security", ar: "الأمن السيبراني", icon: "fa-shield-halved", color: "from-red-400 to-sky-500", pct: 82, url: "https://tryhackme.com/" },
+  { en: "Data Science", ar: "علم البيانات", icon: "fa-chart-line", color: "from-teal-400 to-slate-500", pct: 87, url: "https://www.freecodecamp.org/learn/relational-databases-v9/" },
+  { en: "Mechatronics", ar: "ميكاترونكس", icon: "fa-gears", color: "from-slate-400 to-sky-600", pct: 65, url: "https://www.coursera.org/" },
   { en: "Embedded Systems", ar: "الأنظمة المدمجة", icon: "fa-microchip", color: "from-lime-400 to-green-600", pct: 68, url: "https://www.edx.org/learn/embedded-systems" },
-  { en: "Arduino", ar: "Arduino", icon: "fa-bolt", color: "from-amber-400 to-teal-500", pct: 60, url: "https://docs.arduino.cc/" },
-  { en: "ESP32", ar: "ESP32", icon: "fa-wifi", color: "from-amber-400 to-orange-500", pct: 62, url: "https://www.espressif.com/en/support/documents/technical-documents" },
-  { en: "IoT", ar: "إنترنت الأشياء", icon: "fa-network-wired", color: "from-emerald-400 to-amber-500", pct: 74, url: "https://randomnerdtutorials.com/" },
+  { en: "Arduino", ar: "Arduino", icon: "fa-bolt", color: "from-slate-400 to-teal-500", pct: 60, url: "https://docs.arduino.cc/" },
+  { en: "ESP32", ar: "ESP32", icon: "fa-wifi", color: "from-slate-400 to-sky-500", pct: 62, url: "https://www.espressif.com/en/support/documents/technical-documents" },
+  { en: "IoT", ar: "إنترنت الأشياء", icon: "fa-network-wired", color: "from-emerald-400 to-slate-500", pct: 74, url: "https://randomnerdtutorials.com/" },
 ];
 
 const LANGUAGES = [
@@ -117,13 +117,13 @@ const LANGUAGES = [
 ];
 
 const COURSES = [
-  { title: { ar: "أساسيات الويب الحديث", en: "Modern Web Fundamentals" }, cat: "Frontend", level: "Beginner", dur: "12h", grad: "from-amber-500/30 to-amber-600/30", icon: "fa-globe", bg: webFundamentalsBg.url, url: "https://youtube.com/playlist?list=PL7VOgFQ42C7e-lWJiV4QeqRg3GqCOgoab" },
-  { title: { ar: "React من الصفر للاحتراف", en: "React from Zero to Hero" }, cat: "Frontend", level: "Intermediate", dur: "18h", grad: "from-amber-400/30 to-orange-600/30", icon: "fa-react", brand: "fab", bg: reactCourseBg.url, url: "https://youtube.com/playlist?list=PL8q8h6vqfkSVeuw14BwrtJRIg3tAwq0ds" },
+  { title: { ar: "أساسيات الويب الحديث", en: "Modern Web Fundamentals" }, cat: "Frontend", level: "Beginner", dur: "12h", grad: "from-slate-500/30 to-slate-600/30", icon: "fa-globe", bg: webFundamentalsBg.url, url: "https://youtube.com/playlist?list=PL7VOgFQ42C7e-lWJiV4QeqRg3GqCOgoab" },
+  { title: { ar: "React من الصفر للاحتراف", en: "React from Zero to Hero" }, cat: "Frontend", level: "Intermediate", dur: "18h", grad: "from-slate-400/30 to-sky-600/30", icon: "fa-react", brand: "fab", bg: reactCourseBg.url, url: "https://youtube.com/playlist?list=PL8q8h6vqfkSVeuw14BwrtJRIg3tAwq0ds" },
   { title: { ar: "Node.js و REST APIs", en: "Node.js & REST APIs" }, cat: "Backend", level: "Intermediate", dur: "14h", grad: "from-emerald-400/30 to-teal-600/30", icon: "fa-node-js", brand: "fab", bg: nodejsCourseBg.url, url: "https://youtu.be/pLl1aQv07D0" },
   { title: { ar: "Next.js المتقدم", en: "Advanced Next.js" }, cat: "Frontend", level: "Advanced", dur: "16h", grad: "from-slate-400/30 to-zinc-700/30", icon: "fa-n", bg: nextjsCourseBg.url, url: "https://youtube.com/playlist?list=PLQtNtS-WfRa8OF9juY3k6WUWayMfDKHK2" },
-  { title: { ar: "Python للذكاء الاصطناعي", en: "Python for AI" }, cat: "AI", level: "Advanced", dur: "22h", grad: "from-yellow-400/30 to-amber-500/30", icon: "fa-brain", bg: pythonCourseBg.url, url: "https://youtube.com/playlist?list=PLXlHqMRg9lAbzySbK_1P6ZNAqI0ckBzqO" },
-  { title: { ar: "هياكل البيانات والخوارزميات", en: "Data Structures & Algorithms" }, cat: "CS", level: "Intermediate", dur: "20h", grad: "from-orange-400/30 to-orange-600/30", icon: "fa-diagram-project", bg: dsaCourseBg.url, url: "https://youtube.com/playlist?list=PLL2zWZTDFZzjxarUL23ydiOgibhRipGYC" },
-  { title: { ar: "الأمن السيبراني", en: "Cybersecurity" }, cat: "Security", level: "Beginner", dur: "10h", grad: "from-red-400/30 to-orange-500/30", icon: "fa-shield-halved", bg: cybersecCourseBg.url, url: "https://youtube.com/playlist?list=PLMuAdKgHarVrcZCqzJFdNlTiKz66U19Xk" },
+  { title: { ar: "Python للذكاء الاصطناعي", en: "Python for AI" }, cat: "AI", level: "Advanced", dur: "22h", grad: "from-slate-400/30 to-slate-500/30", icon: "fa-brain", bg: pythonCourseBg.url, url: "https://youtube.com/playlist?list=PLXlHqMRg9lAbzySbK_1P6ZNAqI0ckBzqO" },
+  { title: { ar: "هياكل البيانات والخوارزميات", en: "Data Structures & Algorithms" }, cat: "CS", level: "Intermediate", dur: "20h", grad: "from-sky-400/30 to-sky-600/30", icon: "fa-diagram-project", bg: dsaCourseBg.url, url: "https://youtube.com/playlist?list=PLL2zWZTDFZzjxarUL23ydiOgibhRipGYC" },
+  { title: { ar: "الأمن السيبراني", en: "Cybersecurity" }, cat: "Security", level: "Beginner", dur: "10h", grad: "from-red-400/30 to-sky-500/30", icon: "fa-shield-halved", bg: cybersecCourseBg.url, url: "https://youtube.com/playlist?list=PLMuAdKgHarVrcZCqzJFdNlTiKz66U19Xk" },
 ];
 
 const TOOLS = [
@@ -136,7 +136,7 @@ const TOOLS = [
   { name: "Android Studio", icon: "fa-android", brand: "fab", color: "#3DDC84", url: "https://developer.android.com/studio" },
   { name: "PyCharm", icon: "fa-python", brand: "fab", color: "#21D789", url: "https://www.jetbrains.com/pycharm/" },
   { name: "IntelliJ", icon: "fa-cube", color: "#FE2857", url: "https://www.jetbrains.com/idea/" },
-  { name: "Cursor", icon: "fa-i-cursor", color: "#f59e0b", url: "https://cursor.com/" },
+  { name: "Cursor", icon: "fa-i-cursor", color: "#7aa2c9", url: "https://cursor.com/" },
 ];
 
 
@@ -178,7 +178,6 @@ const BLOG = [
 const FAQ_ITEMS = [
   { q: { ar: "هل الكورسات مجانية؟", en: "Are courses free?" }, a: { ar: "نعم، معظم محتوى Code Forge مجاني بالكامل.", en: "Yes, most Code Forge content is fully free." } },
   { q: { ar: "من أين أبدأ كمبتدئ؟", en: "Where to start as a beginner?" }, a: { ar: "ابدأ بمسار الواجهات الأمامية (HTML, CSS, JS) ثم اختر تخصصك.", en: "Start with Frontend (HTML, CSS, JS), then pick a specialization." } },
-  { q: { ar: "هل تقدمون شهادات؟", en: "Do you provide certificates?" }, a: { ar: "نوفّر شهادات إتمام رمزية لبعض المسارات.", en: "We provide symbolic completion certificates for some tracks." } },
   { q: { ar: "كم وقت أحتاج لتعلم البرمجة؟", en: "How long to learn coding?" }, a: { ar: "من 6 إلى 12 شهرًا للوصول لمستوى احترافي بالعمل المنتظم.", en: "6–12 months of consistent work to reach a professional level." } },
 ];
 
@@ -217,7 +216,7 @@ function MatrixBackground() {
         const x = i * fontSize;
         const y = drops[i] * fontSize;
         const hue = (i * 7) % 360;
-        ctx.fillStyle = i % 9 === 0 ? `hsla(${30 + (hue % 20)}, 80%, 62%, 0.75)` : "rgba(245,158,11,0.35)";
+        ctx.fillStyle = i % 9 === 0 ? `hsla(${208 + (hue % 14)}, 32%, 66%, 0.5)` : "rgba(122,162,201,0.35)";
         ctx.fillText(text, x, y);
         if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
         drops[i]++;
@@ -228,9 +227,9 @@ function MatrixBackground() {
   }, []);
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <div className="absolute inset-0" style={{ background: "radial-gradient(60% 40% at 50% 0%, rgba(245,158,11,0.12), transparent 70%), radial-gradient(50% 40% at 80% 80%, rgba(234,88,12,0.14), transparent 70%), linear-gradient(180deg,#0e0f13,#14161b 60%,#0e0f13)" }} />
+      <div className="absolute inset-0" style={{ background: "radial-gradient(60% 40% at 50% 0%, rgba(122,162,201,0.12), transparent 70%), radial-gradient(50% 40% at 80% 80%, rgba(51,86,111,0.14), transparent 70%), linear-gradient(180deg,#0e1116,#14161b 60%,#0e1116)" }} />
       <canvas ref={ref} className="absolute inset-0 opacity-[0.14]" />
-      <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(rgba(245,158,11,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.4) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
+      <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(rgba(122,162,201,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(122,162,201,0.4) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
     </div>
   );
 }
@@ -243,12 +242,12 @@ function MosLogo({ size = 36, showText = false }: { size?: number; showText?: bo
       <svg width={size} height={size} viewBox="0 0 48 48" fill="none" role="img">
         <defs>
           <linearGradient id="me-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stopColor="#f59e0b" />
-            <stop offset="0.55" stopColor="#ea580c" />
-            <stop offset="1" stopColor="#fbbf24" />
+            <stop offset="0" stopColor="#7aa2c9" />
+            <stop offset="0.55" stopColor="#33566f" />
+            <stop offset="1" stopColor="#a8c4de" />
           </linearGradient>
         </defs>
-        <rect x="2.5" y="2.5" width="43" height="43" rx="12" fill="#0e0f13" stroke="url(#me-grad)" strokeWidth="1.5" />
+        <rect x="2.5" y="2.5" width="43" height="43" rx="12" fill="#0e1116" stroke="url(#me-grad)" strokeWidth="1.5" />
         <path d="M14 30 L8 24 L14 18" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
         <path d="M34 18 L40 24 L34 30" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
         <path d="M28 14 L20 34" stroke="url(#me-grad)" strokeWidth="2.6" strokeLinecap="round" />
@@ -265,20 +264,20 @@ function MosLogo({ size = 36, showText = false }: { size?: number; showText?: bo
 function CodeForgeLogo({ size = 40, showText = true }: { size?: number; showText?: boolean }) {
   return (
     <span className="inline-flex items-center gap-2.5" aria-label="Code Forge">
-      <svg width={size} height={size} viewBox="0 0 64 64" fill="none" role="img" className="drop-shadow-[0_0_18px_rgba(245,158,11,0.35)]">
+      <svg width={size} height={size} viewBox="0 0 64 64" fill="none" role="img" className="drop-shadow-[0_0_18px_rgba(122,162,201,0.35)]">
         <defs>
           <linearGradient id="cf-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stopColor="#f59e0b" />
-            <stop offset="0.55" stopColor="#ea580c" />
-            <stop offset="1" stopColor="#fbbf24" />
+            <stop offset="0" stopColor="#7aa2c9" />
+            <stop offset="0.55" stopColor="#33566f" />
+            <stop offset="1" stopColor="#a8c4de" />
           </linearGradient>
           <linearGradient id="cf-spark" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#fbbf24" />
-            <stop offset="1" stopColor="#f59e0b" stopOpacity="0" />
+            <stop offset="0" stopColor="#a8c4de" />
+            <stop offset="1" stopColor="#7aa2c9" stopOpacity="0" />
           </linearGradient>
         </defs>
         {/* diamond frame */}
-        <path d="M32 4 L60 32 L32 60 L4 32 Z" fill="#0e0f13" stroke="url(#cf-grad)" strokeWidth="2.2" strokeLinejoin="round" />
+        <path d="M32 4 L60 32 L32 60 L4 32 Z" fill="#0e1116" stroke="url(#cf-grad)" strokeWidth="2.2" strokeLinejoin="round" />
         {/* left bracket */}
         <path d="M22 26 L14 32 L22 38" stroke="url(#cf-grad)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
         {/* right bracket */}
@@ -312,7 +311,7 @@ function ScrollProgress() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  return <div className="fixed top-0 inset-x-0 z-[60] h-[3px] bg-transparent"><div className="h-full" style={{ width: `${w}%`, background: "linear-gradient(90deg,#f59e0b,#fbbf24,#ea580c)" }} /></div>;
+  return <div className="fixed top-0 inset-x-0 z-[60] h-[3px] bg-transparent"><div className="h-full" style={{ width: `${w}%`, background: "linear-gradient(90deg,#7aa2c9,#a8c4de,#33566f)" }} /></div>;
 }
 
 function Navbar({ t }: { t: typeof T.ar }) {
@@ -337,7 +336,7 @@ function Navbar({ t }: { t: typeof T.ar }) {
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "py-2" : "py-4"}`}>
       <div className="mx-auto max-w-7xl px-4">
-        <nav className={`glass-strong rounded-2xl px-4 sm:px-5 py-3 flex items-center gap-3 ${scrolled ? "shadow-[0_10px_40px_-15px_rgba(245,158,11,0.35)]" : ""}`}>
+        <nav className={`glass-strong rounded-2xl px-4 sm:px-5 py-3 flex items-center gap-3 ${scrolled ? "shadow-[0_10px_40px_-15px_rgba(122,162,201,0.35)]" : ""}`}>
           <a href="#home" className="flex items-center gap-2 shrink-0 group">
             <CodeForgeLogo size={38} />
           </a>
@@ -346,13 +345,13 @@ function Navbar({ t }: { t: typeof T.ar }) {
               <li key={l.id}>
                 <a href={`#${l.id}`} className="relative px-3 py-2 text-sm text-white/80 hover:text-white transition group">
                   {l.label}
-                  <span className="pointer-events-none absolute inset-x-3 -bottom-0.5 h-px scale-x-0 group-hover:scale-x-100 origin-center transition-transform" style={{ background: "linear-gradient(90deg,#f59e0b,#ea580c)" }} />
+                  <span className="pointer-events-none absolute inset-x-3 -bottom-0.5 h-px scale-x-0 group-hover:scale-x-100 origin-center transition-transform" style={{ background: "linear-gradient(90deg,#7aa2c9,#33566f)" }} />
                 </a>
               </li>
             ))}
           </ul>
           <div className="flex items-center gap-2 ms-auto lg:ms-0">
-            <a href="#courses" className="hidden md:inline-flex btn-magnetic items-center gap-2 rounded-xl px-4 py-2 text-sm font-bold text-[#0e0f13]" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
+            <a href="#courses" className="hidden md:inline-flex btn-magnetic items-center gap-2 rounded-xl px-4 py-2 text-sm font-bold text-[#0e1116]" style={{ background: "linear-gradient(135deg,#7aa2c9,#a8c4de)" }}>
               <i className="fa-solid fa-rocket" /> {t.ctaStart}
             </a>
             <button onClick={() => setOpen(v => !v)} className="lg:hidden grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10" aria-label="Menu">
@@ -398,34 +397,34 @@ function HeroLaptop({ lang }: { lang: Lang }) {
   }, [code]);
   return (
     <div className="relative mx-auto w-full max-w-2xl" dir="ltr">
-      <div className="relative rounded-[22px] p-3 glass-strong shadow-[0_40px_120px_-30px_rgba(245,158,11,0.35)] animate-float">
+      <div className="relative rounded-[22px] p-3 glass-strong shadow-[0_40px_120px_-30px_rgba(122,162,201,0.35)] animate-float">
         <div className="flex items-center gap-1.5 px-2 pb-2">
           <span className="h-3 w-3 rounded-full bg-red-400/80" />
-          <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
+          <span className="h-3 w-3 rounded-full bg-slate-400/80" />
           <span className="h-3 w-3 rounded-full bg-emerald-400/80" />
           <span className="ms-3 text-[11px] text-white/60 font-mono">~/moslim/portfolio.js</span>
         </div>
-        <div className="rounded-xl bg-[#0a0b0e]/90 ring-1 ring-amber-400/20 p-4 font-mono text-[12.5px] leading-6 min-h-[230px] overflow-hidden">
-          <pre className="whitespace-pre-wrap"><span className="text-amber-300">{typed}</span><span className="inline-block w-2 h-4 align-[-2px] bg-amber-300 animate-blink" /></pre>
+        <div className="rounded-xl bg-[#0a0b0e]/90 ring-1 ring-slate-400/20 p-4 font-mono text-[12.5px] leading-6 min-h-[230px] overflow-hidden">
+          <pre className="whitespace-pre-wrap"><span className="text-slate-300">{typed}</span><span className="inline-block w-2 h-4 align-[-2px] bg-slate-300 animate-blink" /></pre>
           {done && (
             <div className="mt-3 space-y-1 text-[12px]">
               <div className="text-white/60">$ npm run build</div>
-              <div className="text-orange-300">▸ compiling modules...</div>
-              <div className="text-amber-300">▸ optimizing bundles...</div>
+              <div className="text-sky-300">▸ compiling modules...</div>
+              <div className="text-slate-300">▸ optimizing bundles...</div>
               <div className="text-emerald-300 font-bold">✔ Build Successful — ready in 1.42s</div>
             </div>
           )}
         </div>
       </div>
       {/* floating chips */}
-      <div className="absolute -top-6 -left-6 glass rounded-2xl px-3 py-2 text-xs font-mono text-amber-300 hidden sm:flex items-center gap-2 animate-float" style={{ animationDelay: "-1s" }}>
-        <i className="fa-brands fa-react text-amber-300" /> React
+      <div className="absolute -top-6 -left-6 glass rounded-2xl px-3 py-2 text-xs font-mono text-slate-300 hidden sm:flex items-center gap-2 animate-float" style={{ animationDelay: "-1s" }}>
+        <i className="fa-brands fa-react text-slate-300" /> React
       </div>
       <div className="absolute -bottom-5 -right-4 glass rounded-2xl px-3 py-2 text-xs font-mono text-emerald-300 hidden sm:flex items-center gap-2 animate-float" style={{ animationDelay: "-2.5s" }}>
         <i className="fa-brands fa-node-js text-emerald-300" /> Node.js
       </div>
-      <div className="absolute top-1/2 -right-8 glass rounded-2xl px-3 py-2 text-xs font-mono text-orange-300 hidden md:flex items-center gap-2 animate-float" style={{ animationDelay: "-4s" }}>
-        <i className="fa-solid fa-brain text-orange-300" /> AI
+      <div className="absolute top-1/2 -right-8 glass rounded-2xl px-3 py-2 text-xs font-mono text-sky-300 hidden md:flex items-center gap-2 animate-float" style={{ animationDelay: "-4s" }}>
+        <i className="fa-solid fa-brain text-sky-300" /> AI
       </div>
       <div aria-hidden className="text-white/40 text-[10px] mt-2 text-center font-mono">{lang === "ar" ? "بيئة كتابتي اليومية" : "My daily coding setup"}</div>
     </div>
@@ -438,7 +437,7 @@ function Hero({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       <div className="absolute inset-0 -z-0" style={{ background: "var(--gradient-hero)" }} />
       <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 items-center gap-10 lg:gap-12 relative">
         <div className="space-y-5 sm:space-y-7">
-          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold glass ring-1 ring-amber-400/30 text-amber-200">
+          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold glass ring-1 ring-slate-400/30 text-slate-200">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             {lang === "ar" ? "مطوّر ومصمم مواقع — Moslim Ebrahim" : "Developer & web designer — Moslim Ebrahim"}
           </span>
@@ -448,23 +447,23 @@ function Hero({ t, lang }: { t: typeof T.ar; lang: Lang }) {
           </h1>
           <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed">{t.heroSub}</p>
           <div className="flex flex-wrap gap-3">
-            <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-[#0e0f13] animate-pulse-glow" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
+            <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-[#0e1116] animate-pulse-glow" style={{ background: "linear-gradient(135deg,#7aa2c9,#a8c4de)" }}>
               <i className="fa-solid fa-play" /> {t.ctaStart}
             </a>
-            <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-white/15 hover:ring-amber-400/50 glass">
+            <a href="#roadmaps" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-white/15 hover:ring-slate-400/50 glass">
               <i className="fa-solid fa-route" /> {t.ctaRoadmaps}
             </a>
-            <a href="https://www.facebook.com/share/1Fb8A9FZSV/" target="_top" rel="noopener" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-amber-400/40 glass">
-              <i className="fa-brands fa-facebook text-amber-400" /> {t.ctaFb}
+            <a href="https://www.facebook.com/share/1Fb8A9FZSV/" target="_top" rel="noopener" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-slate-400/40 glass">
+              <i className="fa-brands fa-facebook text-slate-400" /> {t.ctaFb}
             </a>
-            <a href="#courses" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-orange-400/40 glass">
-              <i className="fa-solid fa-circle-play text-orange-300" /> {t.ctaCourses}
+            <a href="#courses" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white ring-1 ring-sky-400/40 glass">
+              <i className="fa-solid fa-circle-play text-sky-300" /> {t.ctaCourses}
             </a>
           </div>
           <div className="flex flex-wrap items-center gap-6 pt-2 text-xs text-white/60">
             <span className="flex items-center gap-2"><i className="fa-solid fa-shield-halved text-emerald-300" /> {lang === "ar" ? "محتوى موثوق" : "Trusted content"}</span>
-            <span className="flex items-center gap-2"><i className="fa-solid fa-bolt text-amber-300" /> {lang === "ar" ? "تحديث مستمر" : "Always fresh"}</span>
-            <span className="flex items-center gap-2"><i className="fa-solid fa-users text-orange-300" /> {lang === "ar" ? "مجتمع نشط" : "Active community"}</span>
+            <span className="flex items-center gap-2"><i className="fa-solid fa-bolt text-slate-300" /> {lang === "ar" ? "تحديث مستمر" : "Always fresh"}</span>
+            <span className="flex items-center gap-2"><i className="fa-solid fa-users text-sky-300" /> {lang === "ar" ? "مجتمع نشط" : "Active community"}</span>
           </div>
         </div>
         <HeroLaptop lang={lang} />
@@ -499,10 +498,10 @@ function SectionTitle({ kicker, title, sub }: { kicker?: string; title: string; 
   const ref = useReveal<HTMLDivElement>();
   return (
     <div ref={ref} className="reveal text-center max-w-2xl mx-auto mb-9 sm:mb-12 px-2">
-      {kicker && <div className="inline-block mb-3 text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-amber-300/90">{kicker}</div>}
+      {kicker && <div className="inline-block mb-3 text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-slate-300/90">{kicker}</div>}
       <h2 className="text-2xl sm:text-4xl font-extrabold leading-snug"><span className="text-white">{title.split(" ").slice(0,-1).join(" ")} </span><span className="text-gradient">{title.split(" ").slice(-1)}</span></h2>
       {sub && <p className="mt-3 text-sm sm:text-base text-white/60">{sub}</p>}
-      <div className="mx-auto mt-5 h-px w-24 bg-gradient-to-r from-transparent via-amber-400/60 to-transparent" />
+      <div className="mx-auto mt-5 h-px w-24 bg-gradient-to-r from-transparent via-slate-400/60 to-transparent" />
     </div>
   );
 }
@@ -510,7 +509,7 @@ function SectionTitle({ kicker, title, sub }: { kicker?: string; title: string; 
 function RoadmapsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
   return (
     <section id="roadmaps" className="py-16 sm:py-20 relative">
-      <div className="absolute inset-x-0 top-0 h-40 -z-0 pointer-events-none" style={{ background: "radial-gradient(60% 100% at 50% 0%, rgba(245,158,11,0.10), transparent 70%)" }} />
+      <div className="absolute inset-x-0 top-0 h-40 -z-0 pointer-events-none" style={{ background: "radial-gradient(60% 100% at 50% 0%, rgba(122,162,201,0.10), transparent 70%)" }} />
       <div className="mx-auto max-w-7xl px-4 relative">
         <SectionTitle kicker="roadmaps" title={t.roadmapsTitle} sub={t.roadmapsSub} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
@@ -520,12 +519,12 @@ function RoadmapsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               className="card-hover glass rounded-2xl p-5 sm:p-6 relative overflow-hidden group animate-fade-in"
               style={{ animationDelay: `${idx * 40}ms` }}
             >
-              <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full opacity-25 blur-3xl transition-opacity duration-500 group-hover:opacity-60" style={{ background: `linear-gradient(135deg,#f59e0b,#ea580c)` }} />
+              <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full opacity-25 blur-3xl transition-opacity duration-500 group-hover:opacity-60" style={{ background: `linear-gradient(135deg,#7aa2c9,#33566f)` }} />
               <div className="relative flex items-start justify-between gap-3">
-                <div className={`h-12 w-12 shrink-0 rounded-2xl grid place-items-center bg-gradient-to-br ${r.color} text-[#0e0f13] shadow-lg`}>
+                <div className={`h-12 w-12 shrink-0 rounded-2xl grid place-items-center bg-gradient-to-br ${r.color} text-[#0e1116] shadow-lg`}>
                   <i className={`${r.brand === "fab" ? "fa-brands" : "fa-solid"} ${r.icon} text-xl`} />
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-amber-300/80 ring-1 ring-amber-400/20 rounded-full px-2 py-0.5">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-slate-300/80 ring-1 ring-slate-400/20 rounded-full px-2 py-0.5">
                   {r.pct}%
                 </span>
               </div>
@@ -540,10 +539,10 @@ function RoadmapsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                   <span>{lang === "ar" ? "شيوع المسار في السوق" : "Market demand"}</span>
                 </div>
                 <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-                  <div className="h-full rounded-full transition-all duration-700 group-hover:brightness-125" style={{ width: `${r.pct}%`, background: "linear-gradient(90deg,#f59e0b,#ea580c,#fbbf24)" }} />
+                  <div className="h-full rounded-full transition-all duration-700 group-hover:brightness-125" style={{ width: `${r.pct}%`, background: "linear-gradient(90deg,#7aa2c9,#33566f,#a8c4de)" }} />
                 </div>
               </div>
-              <a href={r.url} target="_top" rel="noopener" className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-amber-300 hover:text-white transition group/link">
+              <a href={r.url} target="_top" rel="noopener" className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition group/link">
                 {lang === "ar" ? "ابدأ المسار" : "Start path"}
                 <i className="fa-solid fa-arrow-left rtl:fa-arrow-left ltr:fa-arrow-right transition-transform group-hover/link:-translate-x-1 ltr:group-hover/link:translate-x-1" />
               </a>
@@ -565,9 +564,6 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
     <section id="languages" className="py-20">
       <div className="mx-auto max-w-7xl px-4">
         <SectionTitle kicker="languages" title={t.langsTitle} sub={t.langsSub} />
-        <p className="text-center text-xs text-white/50 -mt-6 mb-6 font-mono">
-          <i className="fa-solid fa-arrows-rotate me-1" /> {t.flipHint}
-        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {LANGUAGES.map((L) => {
             const isFlipped = flipped === L.name;
@@ -597,7 +593,7 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                       aria-hidden
                     />
                     <div className="flex items-center gap-3">
-                      <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0e0f13]/70 backdrop-blur-sm" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
+                      <div className="h-14 w-14 grid place-items-center rounded-xl ring-1 ring-white/10 bg-[#0e1116]/70 backdrop-blur-sm" style={{ boxShadow: `0 0 30px -10px ${L.color}` }}>
                         <i className={`${L.brand} ${L.icon} text-2xl`} style={{ color: L.color }} />
                       </div>
                       <div>
@@ -608,7 +604,6 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                     <p className="text-sm text-white/85 leading-relaxed drop-shadow">{L.desc[lang]}</p>
                     <div className="flex items-center justify-between text-[11px] text-white/60 font-mono">
                       <span className="inline-flex items-center gap-1"><span className="h-1.5 w-1.5 rounded-full" style={{ background: L.color }} /> {L.name}</span>
-                      <span className="inline-flex items-center gap-1 text-amber-300"><i className="fa-solid fa-arrows-rotate" /> {lang === "ar" ? "اقلب" : "flip"}</span>
                     </div>
                   </article>
                   {/* Back */}
@@ -624,7 +619,7 @@ function LanguagesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                     </div>
                     <dl className="space-y-2 text-[11px]">
                       <Bar label={t.difficulty} value={L.difficulty * 20} color={L.color} />
-                      <Bar label={t.jobs} value={L.jobs} color="#f59e0b" />
+                      <Bar label={t.jobs} value={L.jobs} color="#7aa2c9" />
                     </dl>
                     <div>
                       <p className="text-[10px] uppercase tracking-widest text-white/45 font-mono mb-1">{t.usage}</p>
@@ -787,7 +782,7 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             >
               <div
                 className="pointer-events-none absolute inset-0 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ background: "radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(245,158,11,0.18), transparent 45%)" }}
+                style={{ background: "radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(122,162,201,0.18), transparent 45%)" }}
               />
               <div className={`relative h-44 bg-gradient-to-br ${c.grad} grid place-items-center overflow-hidden`}>
                 {c.bg ? (
@@ -798,24 +793,24 @@ function CoursesSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
                   />
                 ) : (
-                  <i className={`${c.brand === "fab" ? "fa-brands" : "fa-solid"} ${c.icon} text-6xl text-white/85 drop-shadow-[0_4px_20px_rgba(245,158,11,0.4)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6`} />
+                  <i className={`${c.brand === "fab" ? "fa-brands" : "fa-solid"} ${c.icon} text-6xl text-white/85 drop-shadow-[0_4px_20px_rgba(122,162,201,0.4)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6`} />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%)" }} />
-                <span className="absolute top-3 left-3 z-10 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase bg-black/50 backdrop-blur-md text-amber-200 ring-1 ring-amber-400/40">{c.cat}</span>
-                <button onClick={() => setLiked(s => ({ ...s, [i]: !s[i] }))} aria-label="Bookmark" className="absolute top-3 right-3 z-10 grid place-items-center h-9 w-9 rounded-xl bg-black/50 backdrop-blur-md ring-1 ring-white/10 hover:scale-110 hover:ring-amber-400/50 transition">
-                  <i className={`fa-${liked[i] ? "solid" : "regular"} fa-bookmark ${liked[i] ? "text-amber-300" : "text-white/80"}`} />
+                <span className="absolute top-3 left-3 z-10 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase bg-black/50 backdrop-blur-md text-slate-200 ring-1 ring-slate-400/40">{c.cat}</span>
+                <button onClick={() => setLiked(s => ({ ...s, [i]: !s[i] }))} aria-label="Bookmark" className="absolute top-3 right-3 z-10 grid place-items-center h-9 w-9 rounded-xl bg-black/50 backdrop-blur-md ring-1 ring-white/10 hover:scale-110 hover:ring-slate-400/50 transition">
+                  <i className={`fa-${liked[i] ? "solid" : "regular"} fa-bookmark ${liked[i] ? "text-slate-300" : "text-white/80"}`} />
                 </button>
               </div>
               <div className="relative p-5" style={{ transform: "translateZ(30px)" }}>
                 <h3 className="font-bold text-white text-lg">{c.title[lang]}</h3>
                 <p className="text-white/60 text-sm mt-1">{lang === "ar" ? "كورس عملي بمشاريع حقيقية." : "Hands-on course with real projects."}</p>
                 <div className="flex items-center gap-3 mt-3 text-[11px] text-white/55 font-mono">
-                  <span><i className="fa-solid fa-signal me-1 text-amber-300" /> {c.level}</span>
-                  <span><i className="fa-solid fa-clock me-1 text-orange-300" /> {c.dur}</span>
+                  <span><i className="fa-solid fa-signal me-1 text-slate-300" /> {c.level}</span>
+                  <span><i className="fa-solid fa-clock me-1 text-sky-300" /> {c.dur}</span>
                 </div>
                 <div className="mt-5 flex items-center gap-2">
-                  <a href={c.url} target="_top" rel="noopener" className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0e0f13] transition-transform hover:scale-[1.03]" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
+                  <a href={c.url} target="_top" rel="noopener" className="flex-1 btn-magnetic inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0e1116] transition-transform hover:scale-[1.03]" style={{ background: "linear-gradient(135deg,#7aa2c9,#a8c4de)" }}>
                     <i className="fa-solid fa-play" /> {t.watch}
                   </a>
                   <button aria-label="Like" className="grid place-items-center h-10 w-10 rounded-xl ring-1 ring-white/10 hover:ring-rose-400/40 hover:scale-110 transition cursor-pointer">
@@ -842,15 +837,15 @@ function BlogSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
             const isOpen = open === i;
             return (
               <article key={i} className={`card-hover glass rounded-2xl p-5 flex flex-col ${isOpen ? "sm:col-span-2 lg:col-span-4" : ""}`}>
-                <div className="h-10 w-10 rounded-xl grid place-items-center bg-gradient-to-br from-amber-400/30 to-orange-500/30 ring-1 ring-white/10">
-                  <i className={`fa-solid ${b.icon} text-amber-300`} />
+                <div className="h-10 w-10 rounded-xl grid place-items-center bg-gradient-to-br from-slate-400/30 to-sky-500/30 ring-1 ring-white/10">
+                  <i className={`fa-solid ${b.icon} text-slate-300`} />
                 </div>
-                <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-widest text-orange-300 font-mono">{b.cat}</span>
+                <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-widest text-sky-300 font-mono">{b.cat}</span>
                 <h3 className="mt-1 font-bold text-white leading-snug text-base">{b.title[lang]}</h3>
                 {isOpen && (
                   <p className="mt-3 text-sm text-white/75 leading-relaxed whitespace-pre-line">{b.body[lang]}</p>
                 )}
-                <button onClick={() => setOpen(isOpen ? null : i)} className="mt-3 self-start inline-flex items-center gap-2 text-xs font-bold text-amber-300 hover:text-white transition">
+                <button onClick={() => setOpen(isOpen ? null : i)} className="mt-3 self-start inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition">
                   {isOpen ? (lang === "ar" ? "إغلاق" : "Close") : (lang === "ar" ? "اقرأ المزيد" : "Read more")}
                   <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`} />
                 </button>
@@ -871,12 +866,12 @@ function ToolsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {TOOLS.map((tool) => (
             <article key={tool.name} className="card-hover glass rounded-2xl p-4 flex items-center gap-3 group">
-              <div className="h-11 w-11 rounded-xl grid place-items-center bg-[#0e0f13] ring-1 ring-white/10 shrink-0" style={{ boxShadow: `0 0 24px -10px ${tool.color}` }}>
+              <div className="h-11 w-11 rounded-xl grid place-items-center bg-[#0e1116] ring-1 ring-white/10 shrink-0" style={{ boxShadow: `0 0 24px -10px ${tool.color}` }}>
                 <i className={`${tool.brand || "fa-solid"} ${tool.icon} text-lg`} style={{ color: tool.color }} />
               </div>
               <div className="min-w-0">
                 <h3 className="font-bold text-white text-sm truncate">{tool.name}</h3>
-                <a href={tool.url} target="_top" rel="noopener" className="text-[11px] text-white/55 hover:text-amber-300 transition">{lang === "ar" ? "زيارة الأداة" : "Visit tool"} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" /></a>
+                <a href={tool.url} target="_top" rel="noopener" className="text-[11px] text-white/55 hover:text-slate-300 transition">{lang === "ar" ? "زيارة الأداة" : "Visit tool"} <i className="fa-solid fa-arrow-up-right-from-square text-[9px]" /></a>
               </div>
             </article>
           ))}
@@ -921,13 +916,13 @@ function StatsSection({ t, lang }: { t: typeof T.ar; lang: Lang }) {
     <section className="py-16">
       <div className="mx-auto max-w-7xl px-4">
         <div className="glass-strong rounded-3xl p-8 sm:p-10 relative overflow-hidden">
-          <div className="absolute inset-0 -z-0 opacity-30" style={{ background: "radial-gradient(60% 100% at 50% 0%, rgba(245,158,11,0.3), transparent 70%)" }} />
+          <div className="absolute inset-0 -z-0 opacity-30" style={{ background: "radial-gradient(60% 100% at 50% 0%, rgba(122,162,201,0.3), transparent 70%)" }} />
           <h2 className="sr-only">{t.statsTitle}</h2>
           <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((s, i) => (
               <div key={i} className="text-center">
-                <div className="mx-auto h-12 w-12 rounded-2xl grid place-items-center bg-gradient-to-br from-amber-400/30 to-orange-500/30 ring-1 ring-amber-400/30 mb-3">
-                  <i className={`fa-solid ${s.icon} text-amber-300`} />
+                <div className="mx-auto h-12 w-12 rounded-2xl grid place-items-center bg-gradient-to-br from-slate-400/30 to-sky-500/30 ring-1 ring-slate-400/30 mb-3">
+                  <i className={`fa-solid ${s.icon} text-slate-300`} />
                 </div>
                 <div className="text-4xl sm:text-5xl font-extrabold text-gradient"><Counter to={s.n} /></div>
                 <div className="text-sm text-white/65 mt-1">{s.label}</div>
@@ -967,74 +962,25 @@ function Terminal({ t, lang }: { t: typeof T.ar; lang: Lang }) {
     <section className="py-20">
       <div className="mx-auto max-w-5xl px-4">
         <SectionTitle kicker="terminal" title={t.terminalTitle} sub={t.terminalSub} />
-        <div className="glass-strong rounded-2xl overflow-hidden ring-1 ring-amber-400/20 shadow-[0_30px_80px_-30px_rgba(245,158,11,0.4)]" dir="ltr">
+        <div className="glass-strong rounded-2xl overflow-hidden ring-1 ring-slate-400/20 shadow-[0_30px_80px_-30px_rgba(122,162,201,0.4)]" dir="ltr">
           <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/5">
             <span className="h-3 w-3 rounded-full bg-red-400/80" />
-            <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
+            <span className="h-3 w-3 rounded-full bg-slate-400/80" />
             <span className="h-3 w-3 rounded-full bg-emerald-400/80" />
             <span className="ms-3 text-[11px] text-white/50 font-mono">guest@software-engineer:~$</span>
           </div>
           <div className="bg-[#06090f]/80 p-5 font-mono text-sm min-h-[280px] max-h-[420px] overflow-auto">
             {history.map((h, i) => (
               <div key={i} className="mb-2">
-                {h.cmd && <div className="text-white/90"><span className="text-emerald-400">➜</span> <span className="text-amber-300">~</span> {h.cmd}</div>}
+                {h.cmd && <div className="text-white/90"><span className="text-emerald-400">➜</span> <span className="text-slate-300">~</span> {h.cmd}</div>}
                 {h.out.map((line, j) => <div key={j} className="text-white/75">{line}</div>)}
               </div>
             ))}
             <form onSubmit={(e) => { e.preventDefault(); run(input); setInput(""); }} className="flex items-center gap-2 mt-1">
-              <span className="text-emerald-400">➜</span><span className="text-amber-300">~</span>
+              <span className="text-emerald-400">➜</span><span className="text-slate-300">~</span>
               <input autoFocus value={input} onChange={(e) => setInput(e.target.value)} className="flex-1 bg-transparent outline-none text-white placeholder:text-white/30" placeholder="type command..." aria-label="terminal input" />
             </form>
             <div ref={endRef} />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Playground({ t }: { t: typeof T.ar }) {
-  const [html, setHtml] = useState('<h1 style="font-family:system-ui">Hello, Engineer 👨‍💻</h1>\n<p>Build the future.</p>');
-  const [css, setCss] = useState("body{background:#0e0f13;color:#fff;padding:24px;font-family:sans-serif}h1{color:#f59e0b}");
-  const [js, setJs] = useState("document.body.innerHTML += '<p style=\"color:#fbbf24\">JS is running ✓</p>'");
-  const [srcDoc, setSrcDoc] = useState("");
-  const run = () => setSrcDoc(`<style>${css}</style>${html}<script>${js}<\/script>`);
-  useEffect(() => { run(); /* eslint-disable-next-line */ }, []);
-  const reset = () => {
-    setHtml('<h1 style="font-family:system-ui">Hello, Engineer 👨‍💻</h1>\n<p>Build the future.</p>');
-    setCss("body{background:#0e0f13;color:#fff;padding:24px;font-family:sans-serif}h1{color:#f59e0b}");
-    setJs("document.body.innerHTML += '<p style=\"color:#fbbf24\">JS is running ✓</p>'");
-  };
-  return (
-    <section className="py-20">
-      <div className="mx-auto max-w-7xl px-4">
-        <SectionTitle kicker="playground" title={t.playgroundTitle} sub={t.playgroundSub} />
-        <div className="grid lg:grid-cols-2 gap-4" dir="ltr">
-          <div className="space-y-3">
-            {[
-              { label: "HTML", v: html, set: setHtml, color: "#E34F26" },
-              { label: "CSS", v: css, set: setCss, color: "#1572B6" },
-              { label: "JS", v: js, set: setJs, color: "#F7DF1E" },
-            ].map((e) => (
-              <div key={e.label} className="glass rounded-2xl overflow-hidden">
-                <div className="px-4 py-2 text-xs font-mono border-b border-white/5 flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full" style={{ background: e.color }} /> {e.label}
-                </div>
-                <textarea value={e.v} onChange={(ev) => e.set(ev.target.value)} spellCheck={false} className="w-full bg-[#06090f]/70 text-amber-200 font-mono text-xs p-4 outline-none resize-none" rows={e.label === "HTML" ? 5 : 4} />
-              </div>
-            ))}
-            <div className="flex gap-2">
-              <button onClick={run} className="btn-magnetic flex-1 rounded-xl px-4 py-3 font-bold text-[#0e0f13]" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
-                <i className="fa-solid fa-play me-2" /> {t.runBtn}
-              </button>
-              <button onClick={reset} className="rounded-xl px-4 py-3 font-bold text-white ring-1 ring-white/10 hover:ring-white/30">
-                <i className="fa-solid fa-rotate-left me-2" /> {t.resetBtn}
-              </button>
-            </div>
-          </div>
-          <div className="glass rounded-2xl overflow-hidden min-h-[400px]">
-            <div className="px-4 py-2 text-xs font-mono border-b border-white/5 text-white/60">Live Preview</div>
-            <iframe title="preview" srcDoc={srcDoc} sandbox="allow-scripts" className="w-full h-[420px] bg-white" />
           </div>
         </div>
       </div>
@@ -1055,7 +1001,7 @@ function FAQ({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               <div key={i} className="glass rounded-2xl overflow-hidden">
                 <button onClick={() => setOpen(isOpen ? null : i)} className="w-full flex items-center justify-between px-5 py-4 text-start" aria-expanded={isOpen}>
                   <span className="font-bold text-white">{f.q[lang]}</span>
-                  <i className={`fa-solid fa-chevron-down text-amber-300 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                  <i className={`fa-solid fa-chevron-down text-slate-300 transition-transform ${isOpen ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
                   <div className="overflow-hidden">
@@ -1096,7 +1042,7 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
         <form onSubmit={onSubmit} className="glass-strong rounded-2xl p-5 sm:p-7 space-y-4">
           <h3 className="text-lg sm:text-xl font-bold text-white">أرسل لنا رسالة</h3>
           <p className="text-white/55 text-xs sm:text-sm">
-            سيتم إرسال رسالتك مباشرة إلى <span className="font-mono text-amber-300">{CONTACT_EMAIL}</span>
+            سيتم إرسال رسالتك مباشرة إلى <span className="font-mono text-slate-300">{CONTACT_EMAIL}</span>
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             <Field label="الاسم" type="text" value={form.name} onChange={set("name")} required />
@@ -1110,10 +1056,10 @@ function Contact({ t, lang }: { t: typeof T.ar; lang: Lang }) {
               required
               value={form.message}
               onChange={(e) => set("message")(e.target.value)}
-              className="mt-1 w-full bg-white/[0.04] ring-1 ring-white/10 focus:ring-amber-400/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition"
+              className="mt-1 w-full bg-white/[0.04] ring-1 ring-white/10 focus:ring-slate-400/50 rounded-xl px-4 py-3 text-sm text-white outline-none transition"
             />
           </div>
-          <button className="btn-magnetic w-full rounded-xl px-4 py-3 font-bold text-[#0e0f13]" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
+          <button className="btn-magnetic w-full rounded-xl px-4 py-3 font-bold text-[#0e1116]" style={{ background: "linear-gradient(135deg,#7aa2c9,#a8c4de)" }}>
             <i className="fa-solid fa-paper-plane me-2" /> إرسال
           </button>
           {sent && (
@@ -1136,7 +1082,7 @@ function Field({ label, type, value, onChange, required }: { label: string; type
         value={value}
         required={required}
         onChange={(e) => onChange?.(e.target.value)}
-        className="mt-1 w-full bg-white/[0.04] ring-1 ring-white/10 focus:ring-amber-400/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition"
+        className="mt-1 w-full bg-white/[0.04] ring-1 ring-white/10 focus:ring-slate-400/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition"
       />
     </div>
   );
@@ -1152,15 +1098,15 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
           </div>
           <p className="mt-3 text-white/60 text-sm max-w-md">{lang === "ar" ? "Code Forge — منصة عربية لتعلّم البرمجة وهندسة البرمجيات بأسلوب عصري." : "Code Forge — an Arabic-first platform for coding & software engineering."}</p>
           <form className="mt-5 flex gap-2 max-w-md">
-            <input type="email" placeholder={t.email} className="flex-1 bg-white/[0.04] ring-1 ring-white/10 focus:ring-amber-400/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none" />
-            <button className="rounded-xl px-4 py-2.5 font-bold text-[#0e0f13] text-sm" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>{t.subscribe}</button>
+            <input type="email" placeholder={t.email} className="flex-1 bg-white/[0.04] ring-1 ring-white/10 focus:ring-slate-400/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none" />
+            <button className="rounded-xl px-4 py-2.5 font-bold text-[#0e1116] text-sm" style={{ background: "linear-gradient(135deg,#7aa2c9,#a8c4de)" }}>{t.subscribe}</button>
           </form>
         </div>
         <div>
           <h4 className="font-bold text-white mb-3">{lang === "ar" ? "روابط سريعة" : "Quick Links"}</h4>
           <ul className="space-y-2 text-sm text-white/65">
             {["home","roadmaps","languages","courses","faq"].map(k => (
-              <li key={k}><a href={`#${k}`} className="hover:text-amber-300 transition">{(t.nav as any)[k === "languages" ? "langs" : k] || k}</a></li>
+              <li key={k}><a href={`#${k}`} className="hover:text-slate-300 transition">{(t.nav as any)[k === "languages" ? "langs" : k] || k}</a></li>
             ))}
           </ul>
         </div>
@@ -1168,17 +1114,17 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       <div className="mx-auto max-w-7xl px-4 mt-10">
         <div className="glass-strong rounded-2xl p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-start">
           <div className="relative shrink-0">
-            <div className="h-20 w-20 rounded-2xl grid place-items-center bg-[#0e0f13] ring-2 ring-amber-400/40"><MosLogo size={56} /></div>
+            <div className="h-20 w-20 rounded-2xl grid place-items-center bg-[#0e1116] ring-2 ring-slate-400/40"><MosLogo size={56} /></div>
           </div>
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
               <h3 className="text-lg font-extrabold text-white">{lang === "ar" ? "عن المطوّر — Moslim Ebrahim" : "About the Developer — Moslim Ebrahim"}</h3>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-amber-300 ring-1 ring-amber-400/30 rounded-full px-2 py-0.5">{lang === "ar" ? "مصمم ومطوّر" : "Designer & Developer"}</span>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-slate-300 ring-1 ring-slate-400/30 rounded-full px-2 py-0.5">{lang === "ar" ? "مصمم ومطوّر" : "Designer & Developer"}</span>
             </div>
-            <p className="mt-2 text-sm text-white/70 max-w-2xl">{lang === "ar" ? "أنا مسلم إبراهيم، أتعلم مجال البرمجة ولديّ خبرة في تصميم المواقع وتطويرها، وأمتلك العديد من المشاريع والتطبيقات." : "I'm Moslim Ebrahim, a self-taught developer with experience in web design and development, and a portfolio of projects and applications."}</p>
+            <p className="mt-2 text-sm text-white/70 max-w-2xl">{lang === "ar" ? "Front-End Developer | AI Automation Developer | HTML • CSS • JavaScript • React • n8n" : "Front-End Developer | AI Automation Developer | HTML • CSS • JavaScript • React • n8n"}</p>
           </div>
           <div className="flex items-center gap-2">
-            <a href="tel:+201017098353" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0e0f13]" style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }}>
+            <a href="tel:+201017098353" className="btn-magnetic inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-[#0e1116]" style={{ background: "linear-gradient(135deg,#7aa2c9,#a8c4de)" }}>
               <i className="fa-solid fa-phone" /> 01017098353
             </a>
             <a href="https://wa.me/201017098353" target="_top" rel="noopener" aria-label="WhatsApp" className="grid place-items-center h-11 w-11 rounded-xl glass hover:scale-110 transition">
@@ -1189,7 +1135,7 @@ function Footer({ t, lang }: { t: typeof T.ar; lang: Lang }) {
       </div>
       <div className="mx-auto max-w-7xl px-4 mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-white/50">
         <p>© {new Date().getFullYear()} Code Forge — {t.rights}.</p>
-        <p className="font-mono">{lang === "ar" ? "تصميم وتطوير " : "Designed & developed by "}<a href="tel:+201017098353" className="text-amber-300 hover:text-white transition">Moslim Ebrahim</a></p>
+        <p className="font-mono">{lang === "ar" ? "تصميم وتطوير " : "Designed & developed by "}<a href="tel:+201017098353" className="text-slate-300 hover:text-white transition">Moslim Ebrahim</a></p>
       </div>
     </footer>
   );
@@ -1204,8 +1150,8 @@ function BackToTop({ t }: { t: typeof T.ar }) {
   }, []);
   return (
     <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className={`fixed bottom-6 end-6 z-40 grid place-items-center h-12 w-12 rounded-full text-[#0e0f13] font-bold shadow-[0_10px_30px_-5px_rgba(245,158,11,0.6)] transition ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
-      style={{ background: "linear-gradient(135deg,#f59e0b,#fbbf24)" }} aria-label={t.backTop}>
+      className={`fixed bottom-6 end-6 z-40 grid place-items-center h-12 w-12 rounded-full text-[#0e1116] font-bold shadow-[0_10px_30px_-5px_rgba(122,162,201,0.6)] transition ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+      style={{ background: "linear-gradient(135deg,#7aa2c9,#a8c4de)" }} aria-label={t.backTop}>
       <i className="fa-solid fa-arrow-up" />
     </button>
   );
@@ -1240,7 +1186,6 @@ function Home() {
         <LanguagesSection t={t} lang={lang} />
         <CoursesSection t={t} lang={lang} />
         <Terminal t={t} lang={lang} />
-        <Playground t={t} />
         <BlogSection t={t} lang={lang} />
         <ToolsSection t={t} lang={lang} />
         <FAQ t={t} lang={lang} />
